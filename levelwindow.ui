@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QWidget" name="bg" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>1920</width>
+      <height>1080</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 85, 255, 255), stop:1 rgba(170, 255, 255, 255));</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="title_frame">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>30</y>
+      <width>900</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="lvl_title">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>10</y>
+       <width>551</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Showcard Gothic</family>
+       <pointsize>26</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(255, 255, 255)</string>
+     </property>
+     <property name="text">
+      <string>Synonyme</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="content_frame">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>140</y>
+      <width>1761</width>
+      <height>811</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="B_word5">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>340</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:10px;
+background-color: rgb(85, 255, 0);
+font: 700 16pt &quot;System&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>mot5</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="B_word1">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>50</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:10px;
+background-color: rgb(85, 255, 0);
+font: 700 16pt &quot;System&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>mot1</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="G_word5">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>410</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="B_word9">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>630</y>
+       <width>251</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:10px;
+background-color: rgb(85, 255, 0);
+font: 700 16pt &quot;System&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>mot9</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="G_word9">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>700</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="G_word1">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>120</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="G_word2">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>120</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="G_word10">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>700</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="B_word2">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>50</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:10px;
+background-color: rgb(85, 255, 0);
+font: 700 16pt &quot;System&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>mot2</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="B_word6">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>340</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:10px;
+background-color: rgb(85, 255, 0);
+font: 700 16pt &quot;System&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>mot6</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="B_word10">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>630</y>
+       <width>251</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:10px;
+background-color: rgb(85, 255, 0);
+font: 700 16pt &quot;System&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>mot10</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="G_word6">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>410</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="G_word4">
+     <property name="geometry">
+      <rect>
+       <x>1470</x>
+       <y>120</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="G_word8">
+     <property name="geometry">
+      <rect>
+       <x>1470</x>
+       <y>410</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="B_word12">
+     <property name="geometry">
+      <rect>
+       <x>1450</x>
+       <y>630</y>
+       <width>251</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:10px;
+background-color: rgb(85, 255, 0);
+font: 700 16pt &quot;System&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>mot12</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="B_word4">
+     <property name="geometry">
+      <rect>
+       <x>1450</x>
+       <y>50</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:10px;
+background-color: rgb(85, 255, 0);
+font: 700 16pt &quot;System&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>mot4</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="G_word12">
+     <property name="geometry">
+      <rect>
+       <x>1480</x>
+       <y>700</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="B_word8">
+     <property name="geometry">
+      <rect>
+       <x>1450</x>
+       <y>340</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:10px;
+background-color: rgb(85, 255, 0);
+font: 700 16pt &quot;System&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>mot8</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="B_word7">
+     <property name="geometry">
+      <rect>
+       <x>1010</x>
+       <y>340</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:10px;
+background-color: rgb(85, 255, 0);
+font: 700 16pt &quot;System&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>mot7</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="B_word11">
+     <property name="geometry">
+      <rect>
+       <x>1010</x>
+       <y>630</y>
+       <width>251</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:10px;
+background-color: rgb(85, 255, 0);
+font: 700 16pt &quot;System&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>mot11</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="G_word11">
+     <property name="geometry">
+      <rect>
+       <x>1040</x>
+       <y>700</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="G_word7">
+     <property name="geometry">
+      <rect>
+       <x>1030</x>
+       <y>410</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="B_word3">
+     <property name="geometry">
+      <rect>
+       <x>1010</x>
+       <y>50</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:10px;
+background-color: rgb(85, 255, 0);
+font: 700 16pt &quot;System&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>mot3</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="G_word3">
+     <property name="geometry">
+      <rect>
+       <x>1030</x>
+       <y>120</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
