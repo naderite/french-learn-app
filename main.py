@@ -1,5 +1,4 @@
 import sys
-from turtle import title
 
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
@@ -15,7 +14,6 @@ class HomeScreen(QMainWindow):
         self.widget = widget
         loadUi("mainwindow.ui", self)
 
-        # HomeScreen buttons setup
         self.btn_syn_lvl1.clicked.connect(lambda: self.gotoLevel("syn", 0))
         self.btn_syn_lvl2.clicked.connect(lambda: self.gotoLevel("syn", 1))
         self.btn_syn_lvl3.clicked.connect(lambda: self.gotoLevel("syn", 2))

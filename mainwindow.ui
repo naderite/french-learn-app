@@ -27,16 +27,16 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 85, 255, 255), stop:1 rgba(170, 255, 255, 255));</string>
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0.21, x2:1, y2:1, stop:0 rgba(199, 103, 107, 255), stop:1 rgba(248, 161, 121, 255));</string>
     </property>
    </widget>
    <widget class="QFrame" name="title_frame">
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>30</y>
-      <width>1201</width>
-      <height>100</height>
+      <y>29</y>
+      <width>1431</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -48,33 +48,36 @@
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>10</y>
-       <width>551</width>
-       <height>81</height>
+       <x>130</x>
+       <y>-20</y>
+       <width>1421</width>
+       <height>151</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Showcard Gothic</family>
-       <pointsize>26</pointsize>
+       <family>Sitka Heading Semibold</family>
+       <pointsize>61</pointsize>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:rgb(255, 255, 255)</string>
+      <string notr="true">color:rgb(255, 202, 71)</string>
      </property>
      <property name="text">
       <string>Révision de vocabulaire</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
    <widget class="QFrame" name="content_frame">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>349</x>
       <y>140</y>
-      <width>1200</width>
-      <height>791</height>
+      <width>1631</width>
+      <height>851</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -86,15 +89,23 @@
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>50</y>
-       <width>191</width>
-       <height>61</height>
+       <x>230</x>
+       <y>130</y>
+       <width>431</width>
+       <height>121</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Sitka Subheading</family>
+       <pointsize>46</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(255, 170, 0);
-font: 700 24pt &quot;Sitka Subheading&quot;;</string>
+      <string notr="true">color:rgb(255, 202, 71);
+font: 700 46pt &quot;Sitka Subheading&quot;;</string>
      </property>
      <property name="text">
       <string>Synonyme</string>
@@ -103,15 +114,23 @@ font: 700 24pt &quot;Sitka Subheading&quot;;</string>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>920</x>
-       <y>40</y>
-       <width>191</width>
-       <height>81</height>
+       <x>1080</x>
+       <y>130</y>
+       <width>431</width>
+       <height>121</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Sitka Subheading</family>
+       <pointsize>46</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(255, 170, 0);
-font: 700 24pt &quot;Sitka Subheading&quot;;</string>
+      <string notr="true">color:rgb(255, 202, 71);
+font: 700 46pt &quot;Sitka Subheading&quot;;</string>
      </property>
      <property name="text">
       <string>Antonyme</string>
@@ -120,17 +139,30 @@ font: 700 24pt &quot;Sitka Subheading&quot;;</string>
     <widget class="QPushButton" name="btn_syn_lvl1">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>150</y>
-       <width>201</width>
-       <height>61</height>
+       <x>130</x>
+       <y>320</y>
+       <width>241</width>
+       <height>71</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Tahoma</family>
+       <pointsize>20</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-radius:10px;
-background-color: rgb(85, 255, 0);
-font: 700 16pt &quot;System&quot;;
-color: rgb(0, 0, 0);</string>
+      <string notr="true">border-radius:20px;
+background-color:rgb(102, 109, 198); 
+font: 700 20pt &quot;Tahoma&quot;;
+color: rgb(255, 255, 255);
+
+</string>
      </property>
      <property name="text">
       <string>Niveau 1</string>
@@ -139,17 +171,21 @@ color: rgb(0, 0, 0);</string>
     <widget class="QPushButton" name="btn_syn_lvl2">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>290</y>
-       <width>201</width>
-       <height>61</height>
+       <x>440</x>
+       <y>320</y>
+       <width>241</width>
+       <height>71</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-radius:10px;
-background-color: rgb(85, 255, 0);
-font: 700 16pt &quot;System&quot;;
-color: rgb(0, 0, 0);</string>
+      <string notr="true">border-radius:20px;
+background-color:rgb(102, 109, 198); 
+font: 700 20pt &quot;Tahoma&quot;;
+color: rgb(255, 255, 255);
+</string>
      </property>
      <property name="text">
       <string>Niveau 2</string>
@@ -159,16 +195,20 @@ color: rgb(0, 0, 0);</string>
      <property name="geometry">
       <rect>
        <x>120</x>
-       <y>430</y>
-       <width>191</width>
-       <height>61</height>
+       <y>560</y>
+       <width>241</width>
+       <height>71</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-radius:10px;
-background-color: rgb(85, 255, 0);
-font: 700 16pt &quot;System&quot;;
-color: rgb(0, 0, 0);</string>
+      <string notr="true">border-radius:20px;
+background-color:rgb(102, 109, 198); 
+font: 700 20pt &quot;Tahoma&quot;;
+color: rgb(255, 255, 255);
+</string>
      </property>
      <property name="text">
       <string>Niveau 3</string>
@@ -177,17 +217,21 @@ color: rgb(0, 0, 0);</string>
     <widget class="QPushButton" name="btn_ant_lvl3">
      <property name="geometry">
       <rect>
-       <x>920</x>
-       <y>430</y>
-       <width>191</width>
-       <height>61</height>
+       <x>1010</x>
+       <y>550</y>
+       <width>241</width>
+       <height>71</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-radius:10px;
-background-color: rgb(85, 255, 0);
-font: 700 16pt &quot;System&quot;;
-color: rgb(0, 0, 0);</string>
+      <string notr="true">border-radius:20px;
+background-color:rgb(102, 109, 198); 
+font: 700 20pt &quot;Tahoma&quot;;
+color: rgb(255, 255, 255);
+</string>
      </property>
      <property name="text">
       <string>Niveau 3</string>
@@ -196,17 +240,21 @@ color: rgb(0, 0, 0);</string>
     <widget class="QPushButton" name="btn_ant_lvl1">
      <property name="geometry">
       <rect>
-       <x>920</x>
-       <y>150</y>
-       <width>201</width>
-       <height>61</height>
+       <x>1010</x>
+       <y>310</y>
+       <width>241</width>
+       <height>71</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-radius:10px;
-background-color: rgb(85, 255, 0);
-font: 700 16pt &quot;System&quot;;
-color: rgb(0, 0, 0);</string>
+      <string notr="true">border-radius:20px;
+background-color:rgb(102, 109, 198); 
+font: 700 20pt &quot;Tahoma&quot;;
+color: rgb(255, 255, 255);
+</string>
      </property>
      <property name="text">
       <string>Niveau 1</string>
@@ -215,17 +263,21 @@ color: rgb(0, 0, 0);</string>
     <widget class="QPushButton" name="btn_ant_lvl2">
      <property name="geometry">
       <rect>
-       <x>920</x>
-       <y>290</y>
-       <width>201</width>
-       <height>61</height>
+       <x>1320</x>
+       <y>310</y>
+       <width>241</width>
+       <height>71</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-radius:10px;
-background-color: rgb(85, 255, 0);
-font: 700 16pt &quot;System&quot;;
-color: rgb(0, 0, 0);</string>
+      <string notr="true">border-radius:20px;
+background-color:rgb(102, 109, 198); 
+font: 700 20pt &quot;Tahoma&quot;;
+color: rgb(255, 255, 255);
+</string>
      </property>
      <property name="text">
       <string>Niveau 2</string>
@@ -234,17 +286,21 @@ color: rgb(0, 0, 0);</string>
     <widget class="QPushButton" name="btn_syn_lvl4">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>580</y>
-       <width>191</width>
-       <height>61</height>
+       <x>440</x>
+       <y>560</y>
+       <width>241</width>
+       <height>71</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-radius:10px;
-background-color: rgb(85, 255, 0);
-font: 700 16pt &quot;System&quot;;
-color: rgb(0, 0, 0);</string>
+      <string notr="true">border-radius:20px;
+background-color:rgb(102, 109, 198); 
+font: 700 20pt &quot;Tahoma&quot;;
+color: rgb(255, 255, 255);
+</string>
      </property>
      <property name="text">
       <string>Niveau 4</string>
@@ -253,20 +309,109 @@ color: rgb(0, 0, 0);</string>
     <widget class="QPushButton" name="btn_ant_lvl4">
      <property name="geometry">
       <rect>
-       <x>920</x>
-       <y>580</y>
-       <width>191</width>
-       <height>61</height>
+       <x>1320</x>
+       <y>550</y>
+       <width>241</width>
+       <height>71</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-radius:10px;
-background-color: rgb(85, 255, 0);
-font: 700 16pt &quot;System&quot;;
-color: rgb(0, 0, 0);</string>
+      <string notr="true">border-radius:20px;
+background-color:rgb(102, 109, 198); 
+font: 700 20pt &quot;Tahoma&quot;;
+color: rgb(255, 255, 255);
+</string>
      </property>
      <property name="text">
       <string>Niveau 4</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>331</width>
+      <height>1111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(184, 95, 101);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QToolButton" name="toolButton">
+     <property name="geometry">
+      <rect>
+       <x>-60</x>
+       <y>150</y>
+       <width>391</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 202, 71);
+border-radius: 30px;
+color: white;
+font: 700 22pt &quot;Segoe UI Variable Display&quot;;</string>
+     </property>
+     <property name="text">
+      <string>      Vocabulaire</string>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="toolButton_2">
+     <property name="geometry">
+      <rect>
+       <x>-60</x>
+       <y>320</y>
+       <width>391</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 202, 71);
+border-radius: 30px;
+color: white;
+font: 700 22pt &quot;Segoe UI Variable Display&quot;;</string>
+     </property>
+     <property name="text">
+      <string>      Grammaire</string>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="toolButton_3">
+     <property name="geometry">
+      <rect>
+       <x>-60</x>
+       <y>500</y>
+       <width>391</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 202, 71);
+border-radius: 30px;
+color: white;
+font: 700 22pt &quot;Segoe UI Variable Display&quot;;</string>
+     </property>
+     <property name="text">
+      <string>      Conjugaison</string>
      </property>
     </widget>
    </widget>
