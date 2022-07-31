@@ -2,7 +2,7 @@ import sys
 
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QStackedWidget, QApplication, QWidget, QMainWindow
+from PyQt5.QtWidgets import QStackedWidget, QApplication, QWidget, QMainWindow, QDialog
 
 from dictionary import synonyms, antonims
 
@@ -24,21 +24,23 @@ class HomeScreen(QMainWindow):
         self.btn_ant_lvl3.clicked.connect(lambda: self.gotoLevel("ant", 2))
         self.btn_ant_lvl4.clicked.connect(lambda: self.gotoLevel("ant", 3))
 
-    def gotoLevel(self, genre, index):
+    def gotoLevel(self, genre, diffculty):
 
-        level_ui = LevelScreen(genre, index)
+        level_ui = LevelScreen(genre, diffculty)
         self.widget.addWidget(level_ui)
         self.widget.setCurrentIndex(widget.currentIndex()+1)
 
 
 class LevelScreen(QMainWindow):
-    def __init__(self, genre, index):
+    def __init__(self, genre, diffculty):
         super(LevelScreen, self).__init__()
-        loadUi("levelwindow.ui", self)
-        self.generateLevel(genre, index)
+        loadUi("LevelWindow.ui", self)
+        self.lvl=self.generateLevel(genre, diffculty)
+        self.btn_correct.clicked.connect(self.correct)
 
-    def generateLevel(self, genre, index):
-        level = Level(genre, index)
+
+    def generateLevel(self, genre, diffculty):
+        level = Level(genre, diffculty)
 
         #write level title
         self.lvl_title.setText(level.title)
@@ -56,7 +58,59 @@ class LevelScreen(QMainWindow):
         self.B_word10.setText(level.words[9].name)
         self.B_word11.setText(level.words[10].name)
         self.B_word12.setText(level.words[11].name)
+        
+        return level
 
+    def correct(self):
+        guesses = self.get_guesses()
+        score = 0
+        for index in  range(12):
+            if guesses[index] == self.lvl.words[index].match:
+                score+=1
+
+        #setup message box and show the solution
+        solution_box = MessageBox(self.lvl.words,score)
+
+        solution_box.show()
+        solution_box.exec_()
+
+        
+
+
+    def get_guesses(self):
+        guesses = []
+        
+        guesses.append(self.word1_guess.text())
+        guesses.append(self.word2_guess.text())
+        guesses.append(self.word3_guess.text())        
+        guesses.append(self.word4_guess.text())
+        guesses.append(self.word5_guess.text())
+        guesses.append(self.word6_guess.text())
+        guesses.append(self.word7_guess.text())
+        guesses.append(self.word8_guess.text())
+        guesses.append(self.word9_guess.text())
+        guesses.append(self.word10_guess.text())
+        guesses.append(self.word11_guess.text())
+        guesses.append(self.word12_guess.text())
+
+        return guesses
+
+
+class MessageBox(QDialog):
+    def __init__(self,words,score):
+        super(MessageBox, self).__init__()
+        loadUi("CorrectionMessageBox.ui", self)
+        self.showSolution(words, score)
+
+        
+
+
+    def showSolution(self, words, score):
+        solution_txt= f"Votre score est: {score}\ 12 \n"
+        for word in words:
+            solution_txt += f"{word.name} = {word.match} \n"
+        self.msg_txt.setText(solution_txt)
+            
 
 # backend classes
 class Level():
@@ -100,8 +154,6 @@ class Word():
 
 # main
 app = QApplication(sys.argv)
-
-
 widget = QStackedWidget()
 home = HomeScreen(widget)
 widget.addWidget(home)
