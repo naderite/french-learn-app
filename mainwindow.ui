@@ -89,7 +89,7 @@
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>230</x>
+       <x>190</x>
        <y>130</y>
        <width>431</width>
        <height>121</height>
@@ -97,15 +97,15 @@
      </property>
      <property name="font">
       <font>
-       <family>Sitka Subheading</family>
-       <pointsize>46</pointsize>
+       <family>Verdana</family>
+       <pointsize>40</pointsize>
        <italic>false</italic>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
       <string notr="true">color:rgb(255, 202, 71);
-font: 700 46pt &quot;Sitka Subheading&quot;;</string>
+font: 700 40pt &quot;Verdana&quot;;</string>
      </property>
      <property name="text">
       <string>Synonyme</string>
@@ -114,7 +114,7 @@ font: 700 46pt &quot;Sitka Subheading&quot;;</string>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>1080</x>
+       <x>1100</x>
        <y>130</y>
        <width>431</width>
        <height>121</height>
@@ -122,15 +122,15 @@ font: 700 46pt &quot;Sitka Subheading&quot;;</string>
      </property>
      <property name="font">
       <font>
-       <family>Sitka Subheading</family>
-       <pointsize>46</pointsize>
+       <family>Verdana</family>
+       <pointsize>40</pointsize>
        <italic>false</italic>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
       <string notr="true">color:rgb(255, 202, 71);
-font: 700 46pt &quot;Sitka Subheading&quot;;</string>
+font: 700 40pt &quot;Verdana&quot;;</string>
      </property>
      <property name="text">
       <string>Antonyme</string>
@@ -165,7 +165,7 @@ color: rgb(255, 255, 255);
 </string>
      </property>
      <property name="text">
-      <string>Niveau 1</string>
+      <string>Niveau 0</string>
      </property>
     </widget>
     <widget class="QPushButton" name="btn_syn_lvl2">
@@ -188,7 +188,7 @@ color: rgb(255, 255, 255);
 </string>
      </property>
      <property name="text">
-      <string>Niveau 2</string>
+      <string>Niveau 1</string>
      </property>
     </widget>
     <widget class="QPushButton" name="btn_syn_lvl3">
@@ -211,7 +211,7 @@ color: rgb(255, 255, 255);
 </string>
      </property>
      <property name="text">
-      <string>Niveau 3</string>
+      <string>Niveau 2</string>
      </property>
     </widget>
     <widget class="QPushButton" name="btn_ant_lvl3">
@@ -234,7 +234,7 @@ color: rgb(255, 255, 255);
 </string>
      </property>
      <property name="text">
-      <string>Niveau 3</string>
+      <string>Niveau 2</string>
      </property>
     </widget>
     <widget class="QPushButton" name="btn_ant_lvl1">
@@ -257,7 +257,7 @@ color: rgb(255, 255, 255);
 </string>
      </property>
      <property name="text">
-      <string>Niveau 1</string>
+      <string>Niveau 0</string>
      </property>
     </widget>
     <widget class="QPushButton" name="btn_ant_lvl2">
@@ -280,7 +280,7 @@ color: rgb(255, 255, 255);
 </string>
      </property>
      <property name="text">
-      <string>Niveau 2</string>
+      <string>Niveau 1</string>
      </property>
     </widget>
     <widget class="QPushButton" name="btn_syn_lvl4">
@@ -303,7 +303,7 @@ color: rgb(255, 255, 255);
 </string>
      </property>
      <property name="text">
-      <string>Niveau 4</string>
+      <string>Niveau 3</string>
      </property>
     </widget>
     <widget class="QPushButton" name="btn_ant_lvl4">
@@ -326,7 +326,7 @@ color: rgb(255, 255, 255);
 </string>
      </property>
      <property name="text">
-      <string>Niveau 4</string>
+      <string>Niveau 3</string>
      </property>
     </widget>
    </widget>
@@ -340,7 +340,9 @@ color: rgb(255, 255, 255);
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(184, 95, 101);</string>
+     <string notr="true">
+;
+background-color: rgb(157, 81, 88);</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
