@@ -48,7 +48,7 @@ font: 700 18pt &quot;Segoe UI Variable Text&quot;;</string>
       <string>Corriger</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btn_return">
+    <widget class="QPushButton" name="btn_return_home">
      <property name="geometry">
       <rect>
        <x>110</x>
@@ -127,7 +127,7 @@ font: 700 64pt &quot;Tw Cen MT&quot;;</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="B_word5">
+    <widget class="QPushButton" name="btn_word5">
      <property name="geometry">
       <rect>
        <x>130</x>
@@ -147,7 +147,7 @@ color:rgb(225, 255, 255);</string>
       <string>mot5</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="B_word1">
+    <widget class="QPushButton" name="btn_word1">
      <property name="geometry">
       <rect>
        <x>130</x>
@@ -194,7 +194,7 @@ color: rgb(43, 43, 43);</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QPushButton" name="B_word9">
+    <widget class="QPushButton" name="btn_word9">
      <property name="geometry">
       <rect>
        <x>130</x>
@@ -299,7 +299,7 @@ color: rgb(43, 43, 43);</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QPushButton" name="B_word2">
+    <widget class="QPushButton" name="btn_word2">
      <property name="geometry">
       <rect>
        <x>570</x>
@@ -319,7 +319,7 @@ color:rgb(225, 255, 255);</string>
       <string>mot2</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="B_word6">
+    <widget class="QPushButton" name="btn_word6">
      <property name="geometry">
       <rect>
        <x>570</x>
@@ -339,7 +339,7 @@ color:rgb(225, 255, 255);</string>
       <string>mot6</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="B_word10">
+    <widget class="QPushButton" name="btn_word10">
      <property name="geometry">
       <rect>
        <x>570</x>
@@ -416,7 +416,7 @@ color: rgb(43, 43, 43);</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QPushButton" name="B_word12">
+    <widget class="QPushButton" name="btn_word12">
      <property name="geometry">
       <rect>
        <x>1450</x>
@@ -436,7 +436,7 @@ color:rgb(225, 255, 255);</string>
       <string>mot12</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="B_word4">
+    <widget class="QPushButton" name="btn_word4">
      <property name="geometry">
       <rect>
        <x>1450</x>
@@ -475,7 +475,7 @@ color: rgb(43, 43, 43);</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QPushButton" name="B_word8">
+    <widget class="QPushButton" name="btn_word8">
      <property name="geometry">
       <rect>
        <x>1450</x>
@@ -495,7 +495,7 @@ color:rgb(225, 255, 255);</string>
       <string>mot8</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="B_word7">
+    <widget class="QPushButton" name="btn_word7">
      <property name="geometry">
       <rect>
        <x>1010</x>
@@ -515,7 +515,7 @@ color:rgb(225, 255, 255);</string>
       <string>mot7</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="B_word11">
+    <widget class="QPushButton" name="btn_word11">
      <property name="geometry">
       <rect>
        <x>1010</x>
@@ -573,7 +573,7 @@ color: rgb(43, 43, 43);</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QPushButton" name="B_word3">
+    <widget class="QPushButton" name="btn_word3">
      <property name="geometry">
       <rect>
        <x>1010</x>
