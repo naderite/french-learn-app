@@ -108,15 +108,18 @@
 font: 700 40pt &quot;Verdana&quot;;</string>
      </property>
      <property name="text">
-      <string>Synonyme</string>
+      <string>Adjectifs</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>1100</x>
+       <x>1070</x>
        <y>130</y>
-       <width>431</width>
+       <width>441</width>
        <height>121</height>
       </rect>
      </property>
@@ -133,10 +136,13 @@ font: 700 40pt &quot;Verdana&quot;;</string>
 font: 700 40pt &quot;Verdana&quot;;</string>
      </property>
      <property name="text">
-      <string>Antonyme</string>
+      <string>Verbes</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QPushButton" name="btn_syn_lvl1">
+    <widget class="QPushButton" name="btn_adj_lvl1">
      <property name="geometry">
       <rect>
        <x>130</x>
@@ -168,7 +174,7 @@ color: rgb(255, 255, 255);
       <string>Niveau 0</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btn_syn_lvl2">
+    <widget class="QPushButton" name="btn_adj_lvl2">
      <property name="geometry">
       <rect>
        <x>440</x>
@@ -191,7 +197,7 @@ color: rgb(255, 255, 255);
       <string>Niveau 1</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btn_syn_lvl3">
+    <widget class="QPushButton" name="btn_adj_lvl3">
      <property name="geometry">
       <rect>
        <x>120</x>
@@ -214,7 +220,7 @@ color: rgb(255, 255, 255);
       <string>Niveau 2</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btn_ant_lvl3">
+    <widget class="QPushButton" name="btn_vrb_lvl3">
      <property name="geometry">
       <rect>
        <x>1010</x>
@@ -237,7 +243,7 @@ color: rgb(255, 255, 255);
       <string>Niveau 2</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btn_ant_lvl1">
+    <widget class="QPushButton" name="btn_vrb_lvl1">
      <property name="geometry">
       <rect>
        <x>1010</x>
@@ -260,7 +266,7 @@ color: rgb(255, 255, 255);
       <string>Niveau 0</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btn_ant_lvl2">
+    <widget class="QPushButton" name="btn_vrb_lvl2">
      <property name="geometry">
       <rect>
        <x>1320</x>
@@ -283,7 +289,7 @@ color: rgb(255, 255, 255);
       <string>Niveau 1</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btn_syn_lvl4">
+    <widget class="QPushButton" name="btn_adj_lvl4">
      <property name="geometry">
       <rect>
        <x>440</x>
@@ -306,7 +312,7 @@ color: rgb(255, 255, 255);
       <string>Niveau 3</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btn_ant_lvl4">
+    <widget class="QPushButton" name="btn_vrb_lvl4">
      <property name="geometry">
       <rect>
        <x>1320</x>

@@ -5,7 +5,7 @@ from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QStackedWidget, QApplication, QWidget, QMainWindow, QDialog
 
-from dictionary import synonyms, antonims
+from dictionary import adjectives, verbes
 
 
 # screens
@@ -15,15 +15,15 @@ class HomeScreen(QMainWindow):
         self.widget = widget
         loadUi("mainwindow.ui", self)
 
-        self.btn_syn_lvl1.clicked.connect(lambda: self.goto_level("syn", 0))
-        self.btn_syn_lvl2.clicked.connect(lambda: self.goto_level("syn", 1))
-        self.btn_syn_lvl3.clicked.connect(lambda: self.goto_level("syn", 2))
-        self.btn_syn_lvl4.clicked.connect(lambda: self.goto_level("syn", 3))
+        self.btn_adj_lvl1.clicked.connect(lambda: self.goto_level("adj", 0))
+        self.btn_adj_lvl2.clicked.connect(lambda: self.goto_level("adj", 1))
+        self.btn_adj_lvl3.clicked.connect(lambda: self.goto_level("adj", 2))
+        self.btn_adj_lvl4.clicked.connect(lambda: self.goto_level("adj", 3))
 
-        self.btn_ant_lvl1.clicked.connect(lambda: self.goto_level("ant", 0))
-        self.btn_ant_lvl2.clicked.connect(lambda: self.goto_level("ant", 1))
-        self.btn_ant_lvl3.clicked.connect(lambda: self.goto_level("ant", 2))
-        self.btn_ant_lvl4.clicked.connect(lambda: self.goto_level("ant", 3))
+        self.btn_vrb_lvl1.clicked.connect(lambda: self.goto_level("vrb", 0))
+        self.btn_vrb_lvl2.clicked.connect(lambda: self.goto_level("vrb", 1))
+        self.btn_vrb_lvl3.clicked.connect(lambda: self.goto_level("vrb", 2))
+        self.btn_vrb_lvl4.clicked.connect(lambda: self.goto_level("vrb", 3))
 
     def goto_level(self, genre, diffculty):
 
@@ -64,7 +64,7 @@ class LevelScreen(QMainWindow):
         self.btn_word11.setText(level.words[10].name)
         self.btn_word12.setText(level.words[11].name)
         
-        #setup LevelScreen buttons function
+        #connect LevelScreen buttons to the sound playing function
         self.btn_word1.clicked.connect(lambda: self.hear(level.words[0].sound))
         self.btn_word2.clicked.connect(lambda: self.hear(level.words[1].sound))
         self.btn_word3.clicked.connect(lambda: self.hear(level.words[2].sound))
@@ -84,7 +84,7 @@ class LevelScreen(QMainWindow):
         guesses = self.get_guesses()
         score = 0
         for index in  range(12):
-            if guesses[index] == self.lvl.words[index].match:
+            if guesses[index].strip() in self.lvl.words[index].match and  guesses[index].strip() != "":
                 score+=1
 
         #setup message box and show the solution
@@ -140,29 +140,29 @@ class Level():
         self.title = self.get_title(self.genre, self.index)
 
     def get_title(self, genre, index):
-        if genre == "syn":
-            title = "Synonyme " + str(index)
-        elif genre == "ant":
-            title = "Antomnyme " + str(index)
+        if genre == "adj":
+            title = "Adjectifs " + str(index)
+        elif genre == "vrb":
+            title = "Verbes " + str(index)
         
         return title
 
     def get_words(self, genre, index):
         words = []
-        if genre == "syn":
+        if genre == "adj":
             for n in range(1, 13):
-                lvl_dict = dict(synonyms[index])
+                lvl_dict = dict(adjectives[index])
                 word_name = lvl_dict.get(str(n))[0]
-                word_syn = lvl_dict.get(str(n))[1]
+                word_match = lvl_dict.get(str(n))[1]
                 word_sound = lvl_dict.get(str(n))[2]
-                words.append(Word(word_name, word_syn, word_sound))
+                words.append(Word(word_name, word_match, word_sound))
             return words
-        elif genre == "ant":
+        elif genre == "vrb":
             for n in range(1, 13):
-                lvl_dict = dict(antonims[index])
+                lvl_dict = dict(verbes[index])
                 word_name = lvl_dict.get(str(n))[0]
-                word_ant = lvl_dict.get(str(n))[1]
-                words.append(Word(word_name, word_ant))
+                word_match = lvl_dict.get(str(n))[1]
+                words.append(Word(word_name, word_match))
             return words
 
 
