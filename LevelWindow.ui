@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1920</width>
-    <height>1080</height>
+    <width>1141</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,634 +15,795 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color:qlineargradient(spread:pad, x1:1, y1:0.352, x2:1, y2:1, stop:0.0187793 rgba(47, 203, 206, 255), stop:1 rgba(124, 254, 206, 255))</string>
    </property>
-   <widget class="QWidget" name="bg" native="true">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>1920</width>
-      <height>1080</height>
-     </rect>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <property name="leftMargin">
+     <number>0</number>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>8</pointsize>
-     </font>
+    <property name="topMargin">
+     <number>0</number>
     </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:qlineargradient(spread:pad, x1:1, y1:0.352, x2:1, y2:1, stop:0.0187793 rgba(47, 203, 206, 255), stop:1 rgba(124, 254, 206, 255))</string>
+    <property name="rightMargin">
+     <number>0</number>
     </property>
-    <widget class="QPushButton" name="btn_correct">
-     <property name="geometry">
-      <rect>
-       <x>1600</x>
-       <y>60</y>
-       <width>201</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(0, 154, 0);
-border-radius: 10px;
-color: rgb(252, 255, 234);
-font: 700 18pt &quot;Segoe UI Variable Text&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Corriger</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btn_return_home">
-     <property name="geometry">
-      <rect>
-       <x>110</x>
-       <y>70</y>
-       <width>151</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(180, 28, 30);
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="1" column="0">
+     <widget class="QFrame" name="content_frame">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(a255, 255, 255,0);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="leftMargin">
+        <number>9</number>
+       </property>
+       <property name="topMargin">
+        <number>21</number>
+       </property>
+       <property name="rightMargin">
+        <number>9</number>
+       </property>
+       <property name="bottomMargin">
+        <number>20</number>
+       </property>
+       <property name="horizontalSpacing">
+        <number>70</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>10</number>
+       </property>
+       <item row="5" column="0">
+        <widget class="QLineEdit" name="word9_guess">
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:10px;
+background-color: rgba(255, 239, 233, 250);
+font: 20pt &quot;Calisto MT&quot;;
+color: rgb(43, 43, 43);</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="btn_word7">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>290</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:20px;
+background-color:rgb(27, 89, 108);
+border-color: rgb(108, 108, 108);
+font: 700 24pt &quot;Book Antiqua&quot;;
+color:rgb(225, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>mot7</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="word6_guess">
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:10px;
+background-color: rgba(255, 239, 233, 250);
+font: 20pt &quot;Calisto MT&quot;;
+color: rgb(43, 43, 43);</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QPushButton" name="btn_word8">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:20px;
+background-color:rgb(27, 89, 108);
+border-color: rgb(108, 108, 108);
+font: 700 24pt &quot;Book Antiqua&quot;;
+color:rgb(225, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>mot8</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLineEdit" name="word7_guess">
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:10px;
+background-color: rgba(255, 239, 233, 250);
+font: 20pt &quot;Calisto MT&quot;;
+color: rgb(43, 43, 43);</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QPushButton" name="btn_word9">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:20px;
+background-color:rgb(27, 89, 108);
+border-color: rgb(108, 108, 108);
+font: 700 24pt &quot;Book Antiqua&quot;;
+color:rgb(225, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>mot9</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="btn_word5">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:20px;
+background-color:rgb(27, 89, 108);
+border-color: rgb(108, 108, 108);
+font: 700 24pt &quot;Book Antiqua&quot;;
+color:rgb(225, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>mot5</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="word1_guess">
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:10px;
+background-color: rgba(255, 239, 233, 250);
+font: 20pt &quot;Calisto MT&quot;;
+color: rgb(43, 43, 43);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignHCenter|Qt::AlignTop</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QPushButton" name="btn_word4">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:20px;
+background-color:rgb(27, 89, 108);
+border-color: rgb(108, 108, 108);
+font: 700 24pt &quot;Book Antiqua&quot;;
+color:rgb(225, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>mot4</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLineEdit" name="word3_guess">
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:10px;
+background-color: rgba(255, 239, 233, 250);
+font: 20pt &quot;Calisto MT&quot;;
+color: rgb(43, 43, 43);</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="word2_guess">
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:10px;
+background-color: rgba(255, 239, 233, 250);
+font: 20pt &quot;Calisto MT&quot;;
+color: rgb(43, 43, 43);</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="btn_word10">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:20px;
+background-color:rgb(27, 89, 108);
+border-color: rgb(108, 108, 108);
+font: 700 24pt &quot;Book Antiqua&quot;;
+color:rgb(225, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>mot10</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="btn_word1">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Book Antiqua</family>
+           <pointsize>24</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:20px;
+background-color:rgb(27, 89, 108);
+border-color: rgb(108, 108, 108);
+font: 700 24pt &quot;Book Antiqua&quot;;
+color:rgb(225, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>mot1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QPushButton" name="btn_word11">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:20px;
+background-color:rgb(27, 89, 108);
+border-color: rgb(108, 108, 108);
+font: 700 24pt &quot;Book Antiqua&quot;;
+color:rgb(225, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>mot11</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="word10_guess">
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:10px;
+background-color: rgba(255, 239, 233, 250);
+font: 20pt &quot;Calisto MT&quot;;
+color: rgb(43, 43, 43);</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLineEdit" name="word5_guess">
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:10px;
+background-color: rgba(255, 239, 233, 250);
+font: 20pt &quot;Calisto MT&quot;;
+color: rgb(43, 43, 43);</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QLineEdit" name="word11_guess">
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:10px;
+background-color: rgba(255, 239, 233, 250);
+font: 20pt &quot;Calisto MT&quot;;
+color: rgb(43, 43, 43);</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="3">
+        <widget class="QLineEdit" name="word12_guess">
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:10px;
+background-color: rgba(255, 239, 233, 250);
+font: 20pt &quot;Calisto MT&quot;;
+color: rgb(43, 43, 43);</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="btn_word6">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:20px;
+background-color:rgb(27, 89, 108);
+border-color: rgb(108, 108, 108);
+font: 700 24pt &quot;Book Antiqua&quot;;
+color:rgb(225, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>mot6</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3">
+        <widget class="QLineEdit" name="word8_guess">
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:10px;
+background-color: rgba(255, 239, 233, 250);
+font: 20pt &quot;Calisto MT&quot;;
+color: rgb(43, 43, 43);</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="btn_word3">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:20px;
+background-color:rgb(27, 89, 108);
+border-color: rgb(108, 108, 108);
+font: 700 24pt &quot;Book Antiqua&quot;;
+color:rgb(225, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>mot3</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="btn_word2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:20px;
+background-color:rgb(27, 89, 108);
+border-color: rgb(108, 108, 108);
+font: 700 24pt &quot;Book Antiqua&quot;;
+color:rgb(225, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>mot2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QLineEdit" name="word4_guess">
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:10px;
+background-color: rgba(255, 239, 233, 250);
+font: 20pt &quot;Calisto MT&quot;;
+color: rgb(43, 43, 43);</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="3">
+        <widget class="QPushButton" name="btn_word12">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:20px;
+background-color:rgb(27, 89, 108);
+border-color: rgb(108, 108, 108);
+font: 700 24pt &quot;Book Antiqua&quot;;
+color:rgb(225, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>mot12</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QFrame" name="title_frame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>200</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(a255, 255, 255,0);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="leftMargin">
+        <number>9</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>9</number>
+       </property>
+       <property name="bottomMargin">
+        <number>8</number>
+       </property>
+       <property name="horizontalSpacing">
+        <number>0</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>8</number>
+       </property>
+       <item row="0" column="2">
+        <widget class="QLabel" name="lvl_title">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>120</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Tw Cen MT</family>
+           <pointsize>64</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(214, 4, 82);
+font: 700 64pt &quot;Tw Cen MT&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Titre </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignHCenter|Qt::AlignTop</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QPushButton" name="btn_return_home">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>140</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>140</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(180, 28, 30);
 color: white;
 font: 600 16pt &quot;Segoe UI Semibold&quot;;
 border-radius: 10px;</string>
-     </property>
-     <property name="text">
-      <string>Au menu</string>
-     </property>
-    </widget>
-    <widget class="QFrame" name="content_frame">
-     <property name="geometry">
-      <rect>
-       <x>70</x>
-       <y>190</y>
-       <width>1761</width>
-       <height>811</height>
-      </rect>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <widget class="QPushButton" name="btn_word5">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>340</y>
-        <width>241</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:20px;
-background-color:rgb(27, 89, 108);
-border-color: rgb(108, 108, 108);
-font: 700 24pt &quot;Book Antiqua&quot;;
-color:rgb(225, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>mot5</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_word1">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>50</y>
-        <width>241</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Book Antiqua</family>
-        <pointsize>24</pointsize>
-        <italic>false</italic>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:20px;
-background-color:rgb(27, 89, 108);
-border-color: rgb(108, 108, 108);
-font: 700 24pt &quot;Book Antiqua&quot;;
-color:rgb(225, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>mot1</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="word5_guess">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>410</y>
-        <width>201</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:10px;
-background-color: rgba(255, 239, 233, 250);
-font: 20pt &quot;Calisto MT&quot;;
-color: rgb(43, 43, 43);</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_word9">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>630</y>
-        <width>251</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:20px;
-background-color:rgb(27, 89, 108);
-border-color: rgb(108, 108, 108);
-font: 700 24pt &quot;Book Antiqua&quot;;
-color:rgb(225, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>mot9</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="word9_guess">
-      <property name="geometry">
-       <rect>
-        <x>160</x>
-        <y>700</y>
-        <width>201</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:10px;
-background-color: rgba(255, 239, 233, 250);
-font: 20pt &quot;Calisto MT&quot;;
-color: rgb(43, 43, 43);</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="word1_guess">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>120</y>
-        <width>201</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LeftToRight</enum>
-      </property>
-      <property name="autoFillBackground">
-       <bool>false</bool>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:10px;
-background-color: rgba(255, 239, 233, 250);
-font: 20pt &quot;Calisto MT&quot;;
-color: rgb(43, 43, 43);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignHCenter|Qt::AlignTop</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="word2_guess">
-      <property name="geometry">
-       <rect>
-        <x>590</x>
-        <y>120</y>
-        <width>201</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:10px;
-background-color: rgba(255, 239, 233, 250);
-font: 20pt &quot;Calisto MT&quot;;
-color: rgb(43, 43, 43);</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="word10_guess">
-      <property name="geometry">
-       <rect>
-        <x>600</x>
-        <y>700</y>
-        <width>201</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:10px;
-background-color: rgba(255, 239, 233, 250);
-font: 20pt &quot;Calisto MT&quot;;
-color: rgb(43, 43, 43);</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_word2">
-      <property name="geometry">
-       <rect>
-        <x>570</x>
-        <y>50</y>
-        <width>241</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:20px;
-background-color:rgb(27, 89, 108);
-border-color: rgb(108, 108, 108);
-font: 700 24pt &quot;Book Antiqua&quot;;
-color:rgb(225, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>mot2</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_word6">
-      <property name="geometry">
-       <rect>
-        <x>570</x>
-        <y>340</y>
-        <width>241</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:20px;
-background-color:rgb(27, 89, 108);
-border-color: rgb(108, 108, 108);
-font: 700 24pt &quot;Book Antiqua&quot;;
-color:rgb(225, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>mot6</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_word10">
-      <property name="geometry">
-       <rect>
-        <x>570</x>
-        <y>630</y>
-        <width>251</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:20px;
-background-color:rgb(27, 89, 108);
-border-color: rgb(108, 108, 108);
-font: 700 24pt &quot;Book Antiqua&quot;;
-color:rgb(225, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>mot10</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="word6_guess">
-      <property name="geometry">
-       <rect>
-        <x>590</x>
-        <y>410</y>
-        <width>201</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:10px;
-background-color: rgba(255, 239, 233, 250);
-font: 20pt &quot;Calisto MT&quot;;
-color: rgb(43, 43, 43);</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="word4_guess">
-      <property name="geometry">
-       <rect>
-        <x>1470</x>
-        <y>120</y>
-        <width>201</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:10px;
-background-color: rgba(255, 239, 233, 250);
-font: 20pt &quot;Calisto MT&quot;;
-color: rgb(43, 43, 43);</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="word8_guess">
-      <property name="geometry">
-       <rect>
-        <x>1470</x>
-        <y>410</y>
-        <width>201</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:10px;
-background-color: rgba(255, 239, 233, 250);
-font: 20pt &quot;Calisto MT&quot;;
-color: rgb(43, 43, 43);</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_word12">
-      <property name="geometry">
-       <rect>
-        <x>1450</x>
-        <y>630</y>
-        <width>251</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:20px;
-background-color:rgb(27, 89, 108);
-border-color: rgb(108, 108, 108);
-font: 700 24pt &quot;Book Antiqua&quot;;
-color:rgb(225, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>mot12</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_word4">
-      <property name="geometry">
-       <rect>
-        <x>1450</x>
-        <y>50</y>
-        <width>241</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:20px;
-background-color:rgb(27, 89, 108);
-border-color: rgb(108, 108, 108);
-font: 700 24pt &quot;Book Antiqua&quot;;
-color:rgb(225, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>mot4</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="word12_guess">
-      <property name="geometry">
-       <rect>
-        <x>1480</x>
-        <y>700</y>
-        <width>201</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:10px;
-background-color: rgba(255, 239, 233, 250);
-font: 20pt &quot;Calisto MT&quot;;
-color: rgb(43, 43, 43);</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_word8">
-      <property name="geometry">
-       <rect>
-        <x>1450</x>
-        <y>340</y>
-        <width>241</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:20px;
-background-color:rgb(27, 89, 108);
-border-color: rgb(108, 108, 108);
-font: 700 24pt &quot;Book Antiqua&quot;;
-color:rgb(225, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>mot8</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_word7">
-      <property name="geometry">
-       <rect>
-        <x>1010</x>
-        <y>340</y>
-        <width>241</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:20px;
-background-color:rgb(27, 89, 108);
-border-color: rgb(108, 108, 108);
-font: 700 24pt &quot;Book Antiqua&quot;;
-color:rgb(225, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>mot7</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_word11">
-      <property name="geometry">
-       <rect>
-        <x>1010</x>
-        <y>630</y>
-        <width>251</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:20px;
-background-color:rgb(27, 89, 108);
-border-color: rgb(108, 108, 108);
-font: 700 24pt &quot;Book Antiqua&quot;;
-color:rgb(225, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>mot11</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="word11_guess">
-      <property name="geometry">
-       <rect>
-        <x>1040</x>
-        <y>700</y>
-        <width>201</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:10px;
-background-color: rgba(255, 239, 233, 250);
-font: 20pt &quot;Calisto MT&quot;;
-color: rgb(43, 43, 43);</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="word7_guess">
-      <property name="geometry">
-       <rect>
-        <x>1030</x>
-        <y>410</y>
-        <width>201</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:10px;
-background-color: rgba(255, 239, 233, 250);
-font: 20pt &quot;Calisto MT&quot;;
-color: rgb(43, 43, 43);</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_word3">
-      <property name="geometry">
-       <rect>
-        <x>1010</x>
-        <y>50</y>
-        <width>241</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:20px;
-background-color:rgb(27, 89, 108);
-border-color: rgb(108, 108, 108);
-font: 700 24pt &quot;Book Antiqua&quot;;
-color:rgb(225, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>mot3</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="word3_guess">
-      <property name="geometry">
-       <rect>
-        <x>1030</x>
-        <y>120</y>
-        <width>201</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius:10px;
-background-color: rgba(255, 239, 233, 250);
-font: 20pt &quot;Calisto MT&quot;;
-color: rgb(43, 43, 43);</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>350</x>
-       <y>150</y>
-       <width>1221</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Segoe UI Semibold</family>
-       <pointsize>20</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255,0);
+         </property>
+         <property name="text">
+          <string>Au menu</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="btn_correct">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>180</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>140</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(0, 154, 0);
+border-radius: 10px;
+color: rgb(252, 255, 234);
+font: 700 18pt &quot;Segoe UI Variable Text&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Corriger</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLabel" name="label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>16</width>
+           <height>2</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>1270</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255,0);
 color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="text">
-      <string>Travail demandé: Esaayer de trouver les synonymes des mots présentés en arabe.</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QFrame" name="title_frame">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>19</y>
-      <width>1021</width>
-      <height>111</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QLabel" name="lvl_title">
-     <property name="geometry">
-      <rect>
-       <x>350</x>
-       <y>-10</y>
-       <width>661</width>
-       <height>151</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Tw Cen MT</family>
-       <pointsize>64</pointsize>
-       <italic>false</italic>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color:rgb(214, 4, 82);
-font: 700 64pt &quot;Tw Cen MT&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Titre </string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignHCenter|Qt::AlignTop</set>
-     </property>
-    </widget>
-   </widget>
+         </property>
+         <property name="text">
+          <string>Trouver les synonymes des mots présentés en arabe.</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
