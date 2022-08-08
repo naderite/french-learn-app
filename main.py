@@ -6,6 +6,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QStackedWidget, QApplication, QWidget, QMainWindow, QDialog
 
 from dictionary import adjectives, verbes
+from mainwindow import Ui_MainWindow
 
 
 # screens
@@ -13,7 +14,9 @@ class HomeScreen(QMainWindow):
     def __init__(self, widget):
         super(HomeScreen, self).__init__()
         self.widget = widget
-        loadUi("mainwindow.ui", self)
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+
 
         self.btn_adj_lvl1.clicked.connect(lambda: self.goto_level("adj", 0))
         self.btn_adj_lvl2.clicked.connect(lambda: self.goto_level("adj", 1))
@@ -25,29 +28,33 @@ class HomeScreen(QMainWindow):
         self.btn_vrb_lvl3.clicked.connect(lambda: self.goto_level("vrb", 2))
         self.btn_vrb_lvl4.clicked.connect(lambda: self.goto_level("vrb", 3))
 
+        self.toolButton.clicked.connect(self.grampage)    
+
+    def grampage(self):
+        self.main_menu.setCurrentIndex(1)
+
     def goto_level(self, genre, diffculty):
 
-        level_ui = LevelScreen(self.widget,genre, diffculty)
+        level_ui = LevelScreen(self.widget, genre, diffculty)
         self.widget.addWidget(level_ui)
         self.widget.setCurrentIndex(widget.currentIndex()+1)
 
 
 class LevelScreen(QMainWindow):
-    def __init__(self,widget, genre, diffculty):
+    def __init__(self, widget, genre, diffculty):
         super(LevelScreen, self).__init__()
         loadUi("LevelWindow.ui", self)
 
         self.widget = widget
 
-        self.lvl=self.generate_level(genre, diffculty)
+        self.lvl = self.generate_level(genre, diffculty)
         self.btn_correct.clicked.connect(self.correct)
         self.btn_return_home.clicked.connect(goto_home)
-
 
     def generate_level(self, genre, diffculty):
         level = Level(genre, diffculty)
 
-        #write level title
+        # write level title
         self.lvl_title.setText(level.title)
 
         # setup LevelScreen buttons text
@@ -63,8 +70,8 @@ class LevelScreen(QMainWindow):
         self.btn_word10.setText(level.words[9].name)
         self.btn_word11.setText(level.words[10].name)
         self.btn_word12.setText(level.words[11].name)
-        
-        #connect LevelScreen buttons to the sound playing function
+
+        # connect LevelScreen buttons to the sound playing function
         self.btn_word1.clicked.connect(lambda: self.hear(level.words[0].sound))
         self.btn_word2.clicked.connect(lambda: self.hear(level.words[1].sound))
         self.btn_word3.clicked.connect(lambda: self.hear(level.words[2].sound))
@@ -74,32 +81,34 @@ class LevelScreen(QMainWindow):
         self.btn_word7.clicked.connect(lambda: self.hear(level.words[6].sound))
         self.btn_word8.clicked.connect(lambda: self.hear(level.words[7].sound))
         self.btn_word9.clicked.connect(lambda: self.hear(level.words[8].sound))
-        self.btn_word10.clicked.connect(lambda: self.hear(level.words[9].sound))
-        self.btn_word11.clicked.connect(lambda: self.hear(level.words[10].sound))
-        self.btn_word12.clicked.connect(lambda: self.hear(level.words[11].sound))
+        self.btn_word10.clicked.connect(
+            lambda: self.hear(level.words[9].sound))
+        self.btn_word11.clicked.connect(
+            lambda: self.hear(level.words[10].sound))
+        self.btn_word12.clicked.connect(
+            lambda: self.hear(level.words[11].sound))
 
         return level
 
     def correct(self):
         guesses = self.get_guesses()
         score = 0
-        for index in  range(12):
-            if guesses[index].strip() in self.lvl.words[index].match and  guesses[index].strip() != "":
-                score+=1
+        for index in range(12):
+            if guesses[index].strip() in self.lvl.words[index].match and guesses[index].strip() != "":
+                score += 1
 
-        #setup message box and show the solution
-        solution_box = MessageBox(self.lvl.words,score)
+        # setup message box and show the solution
+        solution_box = MessageBox(self.lvl.words, score)
 
         solution_box.show()
         solution_box.exec_()
 
-
     def get_guesses(self):
         guesses = []
-        
+
         guesses.append(self.word1_guess.text())
         guesses.append(self.word2_guess.text())
-        guesses.append(self.word3_guess.text())        
+        guesses.append(self.word3_guess.text())
         guesses.append(self.word4_guess.text())
         guesses.append(self.word5_guess.text())
         guesses.append(self.word6_guess.text())
@@ -112,24 +121,24 @@ class LevelScreen(QMainWindow):
 
         return guesses
 
+    def hear(self, sound):
+        winsound.PlaySound(r"WordsPronunciation\{}".format(
+            sound), winsound.SND_FILENAME)
 
-    def hear(self,sound):
-        winsound.PlaySound(r"WordsPronunciation\{}".format(sound), winsound.SND_FILENAME)
 
 class MessageBox(QDialog):
-    def __init__(self,words,score):
+    def __init__(self, words, score):
         super(MessageBox, self).__init__()
         loadUi("CorrectionMessageBox.ui", self)
         self.show_solution(words, score)
         self.btn_return_home.clicked.connect(goto_home)
 
-
     def show_solution(self, words, score):
-        solution_txt= f"Votre score est: {score}\ 12 \n\n"
+        solution_txt = f"Votre score est: {score}\ 12 \n\n"
         for word in words:
             solution_txt += f"{word.name} = {word.match} \n"
         self.msg_txt.setText(solution_txt)
-            
+
 
 # backend classes
 class Level():
@@ -144,7 +153,7 @@ class Level():
             title = "Adjectifs " + str(index)
         elif genre == "vrb":
             title = "Verbes " + str(index)
-        
+
         return title
 
     def get_words(self, genre, index):
@@ -173,7 +182,7 @@ class Word():
         self.sound = sound
 
 
-#scroling functions
+# scroling functions
 def goto_home():
     home = HomeScreen(widget)
     widget.addWidget(home)
@@ -185,8 +194,6 @@ app = QApplication(sys.argv)
 widget = QStackedWidget()
 home = HomeScreen(widget)
 widget.addWidget(home)
-widget.setMinimumHeight(990)
-widget.setMinimumWidth(1820)
 widget.show()
 
 sys.exit(app.exec())
