@@ -1,5 +1,5 @@
 import sys
-import winsound
+import playsound
 
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
@@ -114,7 +114,7 @@ class LevelScreen(QMainWindow):
 
 
     def hear(self,sound):
-        winsound.PlaySound(r"WordsPronunciation\{}".format(sound), winsound.SND_FILENAME)
+        playsound(r"WordsPronunciation\{}".format(sound))
 
 class MessageBox(QDialog):
     def __init__(self,words,score):
