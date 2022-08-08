@@ -6,7 +6,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QStackedWidget, QApplication, QWidget, QMainWindow, QDialog
 
 from dictionary import adjectives, verbes
-
+import database.json as database
 
 # screens
 class HomeScreen(QMainWindow):
@@ -134,6 +134,7 @@ class MessageBox(QDialog):
 # backend classes
 class Level():
     def __init__(self, genre, index):
+        self.driver = database.JSONDriver()
         self.genre = genre
         self.index = index
         self.words = self.get_words(self.genre, self.index)
@@ -148,22 +149,31 @@ class Level():
         return title
 
     def get_words(self, genre, index):
-        words = []
-        if genre == "adj":
-            for n in range(1, 13):
-                lvl_dict = dict(adjectives[index])
-                word_name = lvl_dict.get(str(n))[0]
-                word_match = lvl_dict.get(str(n))[1]
-                word_sound = lvl_dict.get(str(n))[2]
-                words.append(Word(word_name, word_match, word_sound))
-            return words
-        elif genre == "vrb":
-            for n in range(1, 13):
-                lvl_dict = dict(verbes[index])
-                word_name = lvl_dict.get(str(n))[0]
-                word_match = lvl_dict.get(str(n))[1]
-                words.append(Word(word_name, word_match))
-            return words
+        words = self.driver.getWords(index, genre)
+        if not words:
+            sys.exit("Invalid genre")
+        res = []
+        for word in words:
+            res.append(Word(word["fr"], word["ar"], word["audio"]))
+        
+        return res
+
+        # words = []
+        # if genre == "adj":
+        #     for n in range(1, 13):
+        #         lvl_dict = dict(adjectives[index])
+        #         word_name = lvl_dict.get(str(n))[0]
+        #         word_match = lvl_dict.get(str(n))[1]
+        #         word_sound = lvl_dict.get(str(n))[2]
+        #         words.append(Word(word_name, word_match, word_sound))
+        #     return words
+        # elif genre == "vrb":
+        #     for n in range(1, 13):
+        #         lvl_dict = dict(verbes[index])
+        #         word_name = lvl_dict.get(str(n))[0]
+        #         word_match = lvl_dict.get(str(n))[1]
+        #         words.append(Word(word_name, word_match))
+        #     return words
 
 
 class Word():
