@@ -3,7 +3,7 @@ import winsound
 
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QStackedWidget, QApplication, QWidget, QMainWindow, QDialog
+from PyQt5.QtWidgets import QStackedWidget, QApplication, QWidget, QMainWindow, QDialog, QStackedLayout
 
 from dictionary import adjectives, verbes
 from mainwindow import Ui_MainWindow
@@ -14,6 +14,9 @@ class HomeScreen(QMainWindow):
     def __init__(self, widget):
         super(HomeScreen, self).__init__()
         self.widget = widget
+        loadUi("mainwindow.ui",self)
+
+        #self.stacklayout = QStackedLayout
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
