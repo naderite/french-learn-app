@@ -158,23 +158,6 @@ class Level():
         
         return res
 
-        # words = []
-        # if genre == "adj":
-        #     for n in range(1, 13):
-        #         lvl_dict = dict(adjectives[index])
-        #         word_name = lvl_dict.get(str(n))[0]
-        #         word_match = lvl_dict.get(str(n))[1]
-        #         word_sound = lvl_dict.get(str(n))[2]
-        #         words.append(Word(word_name, word_match, word_sound))
-        #     return words
-        # elif genre == "vrb":
-        #     for n in range(1, 13):
-        #         lvl_dict = dict(verbes[index])
-        #         word_name = lvl_dict.get(str(n))[0]
-        #         word_match = lvl_dict.get(str(n))[1]
-        #         words.append(Word(word_name, word_match))
-        #     return words
-
 
 class Word():
     def __init__(self, name, match, sound):
