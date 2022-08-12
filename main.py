@@ -1,5 +1,4 @@
 import sys
-import playsound
 
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
@@ -7,6 +6,7 @@ from PyQt5.QtWidgets import QStackedWidget, QApplication, QWidget, QMainWindow, 
 
 from dictionary import adjectives, verbes
 import database.json as database
+import modules.vocabulary as vocabulary
 
 # screens
 class HomeScreen(QMainWindow):
@@ -65,18 +65,18 @@ class LevelScreen(QMainWindow):
         self.btn_word12.setText(level.words[11].name)
         
         #connect LevelScreen buttons to the sound playing function
-        self.btn_word1.clicked.connect(lambda: self.hear(level.words[0].sound))
-        self.btn_word2.clicked.connect(lambda: self.hear(level.words[1].sound))
-        self.btn_word3.clicked.connect(lambda: self.hear(level.words[2].sound))
-        self.btn_word4.clicked.connect(lambda: self.hear(level.words[3].sound))
-        self.btn_word5.clicked.connect(lambda: self.hear(level.words[4].sound))
-        self.btn_word6.clicked.connect(lambda: self.hear(level.words[5].sound))
-        self.btn_word7.clicked.connect(lambda: self.hear(level.words[6].sound))
-        self.btn_word8.clicked.connect(lambda: self.hear(level.words[7].sound))
-        self.btn_word9.clicked.connect(lambda: self.hear(level.words[8].sound))
-        self.btn_word10.clicked.connect(lambda: self.hear(level.words[9].sound))
-        self.btn_word11.clicked.connect(lambda: self.hear(level.words[10].sound))
-        self.btn_word12.clicked.connect(lambda: self.hear(level.words[11].sound))
+        self.btn_word1.clicked.connect(lambda: self.hear(level.words[0]))
+        self.btn_word2.clicked.connect(lambda: self.hear(level.words[1]))
+        self.btn_word3.clicked.connect(lambda: self.hear(level.words[2]))
+        self.btn_word4.clicked.connect(lambda: self.hear(level.words[3]))
+        self.btn_word5.clicked.connect(lambda: self.hear(level.words[4]))
+        self.btn_word6.clicked.connect(lambda: self.hear(level.words[5]))
+        self.btn_word7.clicked.connect(lambda: self.hear(level.words[6]))
+        self.btn_word8.clicked.connect(lambda: self.hear(level.words[7]))
+        self.btn_word9.clicked.connect(lambda: self.hear(level.words[8]))
+        self.btn_word10.clicked.connect(lambda: self.hear(level.words[9]))
+        self.btn_word11.clicked.connect(lambda: self.hear(level.words[10]))
+        self.btn_word12.clicked.connect(lambda: self.hear(level.words[11]))
 
         return level
 
@@ -113,8 +113,8 @@ class LevelScreen(QMainWindow):
         return guesses
 
 
-    def hear(self,sound):
-        playsound(r"WordsPronunciation\{}".format(sound))
+    def hear(self, word):
+        word.playSound()
 
 class MessageBox(QDialog):
     def __init__(self,words,score):
@@ -154,17 +154,9 @@ class Level():
             sys.exit("Invalid genre")
         res = []
         for word in words:
-            res.append(Word(word["fr"], word["ar"], word["audio"]))
+            res.append(vocabulary.Word(word["fr"], genre, word["ar"], word["audio"]))
         
         return res
-
-
-class Word():
-    def __init__(self, name, match, sound):
-        self.name = name
-        self.match = match
-        self.sound = sound
-
 
 #scroling functions
 def goto_home():
