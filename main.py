@@ -4,10 +4,10 @@ from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QStackedWidget, QApplication, QButtonGroup, QMainWindow, QDialog
 from dictionary import adjectives, verbes
-from Screens.Vocabulair.VocabularyMenu import VocabularyMenuScreen
-from Screens.Grammaire.GrammairMenu import GrammaireMenuScreen
-from Screens.Conjugaison.ConjugaisonMenu import ConjugaisonMenuScreen
-from Screens.Evaluation.EvaluationMenu import EvaluationMenuScreen
+from Screens.Vocabulair.VocabularyScreens import VocabularyMenuScreen, VocabularyLevelScreen
+from Screens.Grammaire.GrammaireScreens import GrammaireMenuScreen, GrammaireLevelScreen
+from Screens.Conjugaison.ConjugaisonScreens import ConjugaisonMenuScreen, ConjugaisonLevelScreen
+from Screens.Evaluation.EvaluationScreens import EvaluationMenuScreen, EvaluationLevelScreen
 
 
 class MainScreen(QStackedWidget):
@@ -15,18 +15,33 @@ class MainScreen(QStackedWidget):
         super(MainScreen, self).__init__()
 
         # creating menu screens
-        vocab_menu = VocabularyMenuScreen()
-        self.addWidget(vocab_menu)
+        self.vocab_menu = VocabularyMenuScreen()
+        self.gram_menu = GrammaireMenuScreen()
+        self.conj_menu = ConjugaisonMenuScreen()
+        self.eval_menu = EvaluationMenuScreen()
 
-        gram_menu = GrammaireMenuScreen()
-        self.addWidget(gram_menu)
+        # adding menus
+        self.addWidget(self.vocab_menu)#index 0
+        self.addWidget(self.gram_menu)# index 1
+        self.addWidget(self.conj_menu)# index 2
+        self.addWidget(self.eval_menu)# index 3
 
-        conj_menu = ConjugaisonMenuScreen()
-        self.addWidget(conj_menu)
+        #creating level screens
+        self.vocab_level = VocabularyLevelScreen()
+        self.gram_level = GrammaireLevelScreen()
+        self.conj_level = ConjugaisonLevelScreen()
+        self.eval_level = EvaluationLevelScreen()
 
-        eval_menu = EvaluationMenuScreen()
-        self.addWidget(eval_menu)
+        #adding levels
+        self.addWidget(self.vocab_level)#index 4
+        self.addWidget(self.gram_level)# index 5
+        self.addWidget(self.conj_level)# index 6 
+        self.addWidget(self.eval_level)# index 7
 
+        self.setup_button_groups()
+
+
+    def setup_button_groups(self):
         # creating buttons groups
         self.goto_vocab_buttons = QButtonGroup()
         self.goto_gram_buttons = QButtonGroup()
@@ -34,42 +49,71 @@ class MainScreen(QStackedWidget):
         self.goto_eval_buttons = QButtonGroup()
 
         # adding buttons to groups
-        self.goto_vocab_buttons.addButton(gram_menu.btn_to_vocab, 0)
-        self.goto_vocab_buttons.addButton(conj_menu.btn_to_vocab, 1)
-        self.goto_vocab_buttons.addButton(eval_menu.btn_to_vocab, 2)
+        self.goto_vocab_buttons.addButton(self.gram_menu.btn_to_vocab, 0)
+        self.goto_vocab_buttons.addButton(self.conj_menu.btn_to_vocab, 1)
+        self.goto_vocab_buttons.addButton(self.eval_menu.btn_to_vocab, 2)
 
-        self.goto_gram_buttons.addButton(vocab_menu.btn_to_gram, 0)
-        self.goto_gram_buttons.addButton(conj_menu.btn_to_gram, 1)
-        self.goto_gram_buttons.addButton(eval_menu.btn_to_gram, 2)
+        self.goto_gram_buttons.addButton(self.vocab_menu.btn_to_gram, 0)
+        self.goto_gram_buttons.addButton(self.conj_menu.btn_to_gram, 1)
+        self.goto_gram_buttons.addButton(self.eval_menu.btn_to_gram, 2)
 
-        self.goto_conj_buttons.addButton(gram_menu.btn_to_conj, 0)
-        self.goto_conj_buttons.addButton(vocab_menu.btn_to_conj, 1)
-        self.goto_conj_buttons.addButton(eval_menu.btn_to_conj, 2)
+        self.goto_conj_buttons.addButton(self.gram_menu.btn_to_conj, 0)
+        self.goto_conj_buttons.addButton(self.vocab_menu.btn_to_conj, 1)
+        self.goto_conj_buttons.addButton(self.eval_menu.btn_to_conj, 2)
 
-        self.goto_eval_buttons.addButton(gram_menu.btn_to_eval, 0)
-        self.goto_eval_buttons.addButton(conj_menu.btn_to_eval, 1)
-        self.goto_eval_buttons.addButton(vocab_menu.btn_to_eval, 2)
+        self.goto_eval_buttons.addButton(self.gram_menu.btn_to_eval, 0)
+        self.goto_eval_buttons.addButton(self.conj_menu.btn_to_eval, 1)
+        self.goto_eval_buttons.addButton(self.vocab_menu.btn_to_eval, 2)
 
-        # connecting groups to functions
-        self.goto_vocab_buttons.buttonClicked.connect(self.goto_vocab)
-        self.goto_gram_buttons.buttonClicked.connect(self.goto_gram)
-        self.goto_conj_buttons.buttonClicked.connect(self.goto_conj)
-        self.goto_eval_buttons.buttonClicked.connect(self.goto_eval)
+        # connecting side menu groups to functions
+        self.goto_vocab_buttons.buttonClicked.connect(lambda: Scroll.vocab_menu(self))
+        self.goto_gram_buttons.buttonClicked.connect(lambda: Scroll.gram_menu(self))
+        self.goto_conj_buttons.buttonClicked.connect(lambda: Scroll.conj_menu(self))
+        self.goto_eval_buttons.buttonClicked.connect(lambda: Scroll.eval_menu(self))
 
-    # scrolling functions
+        #connceting main menu group to functions
+        self.vocab_menu.adj_buttons.buttonClicked.connect(lambda: Scroll.vocab_lvl(self))
+        self.vocab_menu.vrb_buttons.buttonClicked.connect(lambda: Scroll.vocab_lvl(self))
 
-    def goto_vocab(self):
-        self.setCurrentIndex(0)
+        self.gram_menu.acc_buttons.buttonClicked.connect(lambda: Scroll.gram_lvl(self))
+        self.gram_menu.nom_buttons.buttonClicked.connect(lambda: Scroll.gram_lvl(self))
 
-    def goto_gram(self):
-        self.setCurrentIndex(1)
+        self.conj_menu.gr1_buttons.buttonClicked.connect(lambda: Scroll.conj_lvl(self))
+        self.conj_menu.gr2_buttons.buttonClicked.connect(lambda: Scroll.conj_lvl(self))
+        self.conj_menu.gr3_buttons.buttonClicked.connect(lambda: Scroll.conj_lvl(self))
 
-    def goto_conj(self):
-        self.setCurrentIndex(2)
+        self.eval_menu.conj_buttons.buttonClicked.connect(lambda: Scroll.eval_lvl(self))
+        self.eval_menu.gram_buttons.buttonClicked.connect(lambda: Scroll.eval_lvl(self))
+        self.eval_menu.vocab_buttons.buttonClicked.connect(lambda: Scroll.eval_lvl(self))
 
-    def goto_eval(self):
-        self.setCurrentIndex(3)
+class Scroll:
+    #menus
+    @staticmethod
+    def vocab_menu(widget):
+        widget.setCurrentIndex(0)
+    @staticmethod
+    def gram_menu(widget):
+        widget.setCurrentIndex(1)
+    @staticmethod
+    def conj_menu(widget):
+        widget.setCurrentIndex(2)
+    @staticmethod
+    def eval_menu(widget):
+        widget.setCurrentIndex(3)
 
+    #levels
+    @staticmethod
+    def vocab_lvl(widget):
+        widget.setCurrentIndex(4)
+    @staticmethod
+    def gram_lvl(widget):
+        widget.setCurrentIndex(5)
+    @staticmethod
+    def conj_lvl(widget):
+        widget.setCurrentIndex(6)
+    @staticmethod
+    def eval_lvl(widget):
+        widget.setCurrentIndex(7)
 
 """class LevelScreen(QMainWindow):
     def __init__(self, widget, genre, diffculty):

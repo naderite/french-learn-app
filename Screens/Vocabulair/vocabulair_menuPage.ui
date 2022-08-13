@@ -296,7 +296,7 @@ background-color: rgba(255, 255, 255,0);</string>
            <number>10</number>
           </property>
           <item row="2" column="3">
-           <widget class="QPushButton" name="btn_vrb_lvl1">
+           <widget class="QPushButton" name="btn_vrb_lvl0">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -328,7 +328,7 @@ color: rgb(255, 255, 255);
            </widget>
           </item>
           <item row="3" column="3">
-           <widget class="QPushButton" name="btn_vrb_lvl3">
+           <widget class="QPushButton" name="btn_vrb_lvl2">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -396,7 +396,7 @@ font: 700 40pt &quot;Verdana&quot;;</string>
            </widget>
           </item>
           <item row="2" column="0">
-           <widget class="QPushButton" name="btn_adj_lvl1">
+           <widget class="QPushButton" name="btn_adj_lvl0">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -437,7 +437,7 @@ color: rgb(255, 255, 255);
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QPushButton" name="btn_adj_lvl2">
+           <widget class="QPushButton" name="btn_adj_lvl1">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -469,7 +469,7 @@ color: rgb(255, 255, 255);
            </widget>
           </item>
           <item row="3" column="4">
-           <widget class="QPushButton" name="btn_vrb_lvl4">
+           <widget class="QPushButton" name="btn_vrb_lvl3">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -501,7 +501,7 @@ color: rgb(255, 255, 255);
            </widget>
           </item>
           <item row="3" column="0">
-           <widget class="QPushButton" name="btn_adj_lvl3">
+           <widget class="QPushButton" name="btn_adj_lvl2">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -578,7 +578,7 @@ font: 700 40pt &quot;Verdana&quot;;</string>
            </widget>
           </item>
           <item row="2" column="4">
-           <widget class="QPushButton" name="btn_vrb_lvl2">
+           <widget class="QPushButton" name="btn_vrb_lvl1">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -626,7 +626,7 @@ color: rgb(255, 255, 255);
            </spacer>
           </item>
           <item row="3" column="1">
-           <widget class="QPushButton" name="btn_adj_lvl4">
+           <widget class="QPushButton" name="btn_adj_lvl3">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -669,7 +669,7 @@ color: rgb(255, 255, 255);
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="buttonGroup"/>
   <buttongroup name="buttonGroup_2"/>
+  <buttongroup name="buttonGroup"/>
  </buttongroups>
 </ui>
