@@ -2,12 +2,13 @@ from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import  QMainWindow, QDialog, QButtonGroup
 import playsound
+import os
 
 
 class ConjugaisonMenuScreen(QMainWindow):
     def __init__(self):
         super(ConjugaisonMenuScreen, self).__init__()
-        loadUi(r"Screens\Conjugaison\conjugaison_menuPage.ui", self)
+        loadUi(os.path.abspath("Screens/Conjugaison/conjugaison_menuPage.ui"), self)
 
 
         #creating button groups
@@ -38,4 +39,4 @@ class ConjugaisonMenuScreen(QMainWindow):
 class ConjugaisonLevelScreen(QMainWindow):
     def __init__(self):
         super(ConjugaisonLevelScreen, self).__init__()
-        loadUi(r"Screens\Conjugaison\conjugaison_levelPage.ui", self)    
+        loadUi(os.path.abspath("Screens/Conjugaison/conjugaison_levelPage.ui"), self)    

@@ -2,12 +2,13 @@ from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMainWindow, QButtonGroup
 import playsound
+import os
 
 
 class GrammaireMenuScreen(QMainWindow):
     def __init__(self):
         super(GrammaireMenuScreen, self).__init__()
-        loadUi(r"Screens\Grammaire\grammaire_menuPage.ui", self)
+        loadUi(os.path.abspath("Screens/Grammaire/grammaire_menuPage.ui"), self)
 
         #creating button groups
         self.acc_buttons = QButtonGroup()
@@ -27,5 +28,5 @@ class GrammaireMenuScreen(QMainWindow):
 class GrammaireLevelScreen(QMainWindow):
     def __init__(self):
         super(GrammaireLevelScreen, self).__init__()
-        loadUi(r"Screens\Grammaire\grammaire_levelPage.ui", self)
+        loadUi(os.path.abspath("Screens/Grammaire/grammaire_levelPage.ui"), self)
     

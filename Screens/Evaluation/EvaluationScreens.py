@@ -2,12 +2,13 @@ from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import  QMainWindow, QButtonGroup
 import playsound
+import os
 
 
 class EvaluationMenuScreen(QMainWindow):
     def __init__(self):
         super(EvaluationMenuScreen, self).__init__()
-        loadUi(r"Screens\Evaluation\evaluation_menuPage.ui", self)
+        loadUi(os.path.abspath("Screens/Evaluation/evaluation_menuPage.ui"), self)
 
         #creat button groups
         self.vocab_buttons = QButtonGroup()
@@ -31,4 +32,4 @@ class EvaluationMenuScreen(QMainWindow):
 class EvaluationLevelScreen(QMainWindow):
     def __init__(self):
         super(EvaluationLevelScreen, self).__init__()
-        loadUi(r"Screens\Evaluation\evaluation_levelPage.ui", self)
+        loadUi(os.path.abspath("Screens/Evaluation/evaluation_levelPage.ui"), self)

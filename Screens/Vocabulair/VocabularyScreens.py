@@ -2,12 +2,13 @@ from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMainWindow, QButtonGroup
 import playsound
+import os
 
 
 class VocabularyMenuScreen(QMainWindow):
     def __init__(self):
         super(VocabularyMenuScreen, self).__init__()
-        loadUi(r"Screens\Vocabulair\vocabulair_menuPage.ui", self)
+        loadUi(os.path.abspath("Screens/Vocabulair/vocabulair_menuPage.ui"), self)
 
         #creating button groups
         self.adj_buttons = QButtonGroup()
@@ -28,7 +29,7 @@ class VocabularyMenuScreen(QMainWindow):
 class VocabularyLevelScreen(QMainWindow):
     def __init__(self):
         super(VocabularyLevelScreen, self).__init__()
-        loadUi(r"Screens\Vocabulair\vocabulair_levelPage.ui", self)
+        loadUi(os.path.abspath("Screens/Vocabulair/vocabulair_levelPage.ui"), self)
 
         #setup words buttons 
         self.words_buttons = QButtonGroup()
