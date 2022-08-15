@@ -29,3 +29,21 @@ class VocabularyLevelScreen(QMainWindow):
     def __init__(self):
         super(VocabularyLevelScreen, self).__init__()
         loadUi(r"Screens\Vocabulair\vocabulair_levelPage.ui", self)
+
+        #setup words buttons 
+        self.words_buttons = QButtonGroup()
+
+        self.words_buttons.addButton(self.btn_word0,0)
+        self.words_buttons.addButton(self.btn_word1,1)
+        self.words_buttons.addButton(self.btn_word2,2)
+        self.words_buttons.addButton(self.btn_word3,3)
+        self.words_buttons.addButton(self.btn_word4,4)
+        self.words_buttons.addButton(self.btn_word5,5)
+        self.words_buttons.addButton(self.btn_word6,6)
+        self.words_buttons.addButton(self.btn_word7,7)
+        self.words_buttons.addButton(self.btn_word8,8)
+        self.words_buttons.addButton(self.btn_word9,9)
+        self.words_buttons.addButton(self.btn_word10,10)
+        self.words_buttons.addButton(self.btn_word11,11)
+
+

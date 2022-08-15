@@ -21,8 +21,8 @@ class MainScreen(QStackedWidget):
         self.conj_menu = ConjugaisonMenuScreen()
         self.eval_menu = EvaluationMenuScreen()
 
-        # adding menus
-        self.addWidget(self.vocab_menu)  # index 0
+        # adding menu screens to main window
+        self.addWidget(self.vocab_menu) # index 0
         self.addWidget(self.gram_menu)  # index 1
         self.addWidget(self.conj_menu)  # index 2
         self.addWidget(self.eval_menu)  # index 3
@@ -33,15 +33,16 @@ class MainScreen(QStackedWidget):
         self.conj_level = ConjugaisonLevelScreen()
         self.eval_level = EvaluationLevelScreen()
 
-        # adding levels
-        self.addWidget(self.vocab_level)  # index 4
+        # adding level screens to main window
+        self.addWidget(self.vocab_level) # index 4
         self.addWidget(self.gram_level)  # index 5
         self.addWidget(self.conj_level)  # index 6
         self.addWidget(self.eval_level)  # index 7
 
-        self.setup_button_groups()
+        self.create_button_groups()
+        self.connect_button_groups()
 
-    def setup_button_groups(self):
+    def create_button_groups(self):
         # creating buttons groups
         self.goto_vocab_buttons = QButtonGroup()
         self.goto_gram_buttons = QButtonGroup()
@@ -49,7 +50,7 @@ class MainScreen(QStackedWidget):
         self.goto_eval_buttons = QButtonGroup()
         self.return_to_menu_buttons = QButtonGroup()
 
-        # ================== adding buttons to groups ===================
+        # =============== ***adding buttons to groups*** =================
         # buttons that take to the vocabulair menu
         self.goto_vocab_buttons.addButton(self.gram_menu.btn_to_vocab, 0)
         self.goto_vocab_buttons.addButton(self.conj_menu.btn_to_vocab, 1)
@@ -71,12 +72,13 @@ class MainScreen(QStackedWidget):
         self.goto_eval_buttons.addButton(self.vocab_menu.btn_to_eval, 2)
 
         # buttons that return to the main menu
-        self.return_to_menu_buttons.addButton(self.vocab_level.btn_goto_menu)
-        self.return_to_menu_buttons.addButton(self.gram_level.btn_goto_menu)
-        self.return_to_menu_buttons.addButton(self.conj_level.btn_goto_menu)
-        self.return_to_menu_buttons.addButton(self.eval_level.btn_goto_menu)
+        self.return_to_menu_buttons.addButton(self.vocab_level.btn_goto_menu,0)
+        self.return_to_menu_buttons.addButton(self.gram_level.btn_goto_menu,1)
+        self.return_to_menu_buttons.addButton(self.conj_level.btn_goto_menu,2)
+        self.return_to_menu_buttons.addButton(self.eval_level.btn_goto_menu,3)
 
-        # =========== connecting buttons groups to functions ===========
+    def connect_button_groups(self):
+        # =========== *** connecting buttons groups to functions *** ============
         # side menu scrolling functions
         self.goto_vocab_buttons.buttonClicked.connect(
             lambda: Scroll.vocab_menu(self))
@@ -90,7 +92,7 @@ class MainScreen(QStackedWidget):
         # main menu scrolling functions
         # scorll to vocabulair level
         self.vocab_menu.adj_buttons.buttonClicked.connect(
-            lambda: Scroll.vocab_lvl(self))
+            lambda: Scroll.vocab_lvl(self,self.vocab_level,"adj",0))
         self.vocab_menu.vrb_buttons.buttonClicked.connect(
             lambda: Scroll.vocab_lvl(self))
 
@@ -118,11 +120,14 @@ class MainScreen(QStackedWidget):
 
         # scroll to the main menu
         self.return_to_menu_buttons.buttonClicked.connect(
-            lambda: Scroll.vocab_menu(self))
+            lambda: Scroll.main_menu(self,self.currentIndex() - 4))
 
 
 class Scroll:
     # menus scrolling function
+    @staticmethod
+    def main_menu(widget,index):
+        widget.setCurrentIndex(index)
     @staticmethod
     def vocab_menu(widget):
         widget.setCurrentIndex(0)
@@ -141,8 +146,9 @@ class Scroll:
 
     # levels scrolling functions
     @staticmethod
-    def vocab_lvl(widget):
-        widget.setCurrentIndex(4)
+    def vocab_lvl(main_widget,level_widget,genre,difficulty):
+        generate_vocabulary_level(level_widget, genre, difficulty)
+        main_widget.setCurrentIndex(4)
 
     @staticmethod
     def gram_lvl(widget):
@@ -155,6 +161,21 @@ class Scroll:
     @staticmethod
     def eval_lvl(widget):
         widget.setCurrentIndex(7)
+
+
+def generate_vocabulary_level(widget, genre, difficulty):
+    level = vocabulary.Level(genre, difficulty)
+    # write level title
+    widget.lvl_title.setText(level.title)
+    # setup LevelScreen buttons text
+    for button in widget.words_buttons.buttons():
+        button.setText(level.words[widget.words_buttons.id(button)].name)
+
+    # connect LevelScreen buttons to the sound playing function
+    for button in widget.words_buttons.buttons():
+        print(widget.words_buttons.id(button))
+        button.clicked.connect(level.words[widget.words_buttons.id(button)].playSound())
+
 
 
 """class LevelScreen(QMainWindow):
@@ -241,13 +262,13 @@ class Scroll:
 
     def hear(self, word):
         word.playSound()
-
-class MessageBox(QDialog):
+"""
+"""class MessageBox(QDialog):
     def __init__(self,words,score):
         super(MessageBox, self).__init__()
         loadUi("CorrectionMessageBox.ui", self)
         self.show_solution(words, score)
-        self.btn_return_home.clicked.connect(goto_home)
+        #self.btn_return_home.clicked.connect(goto_home)
 
 
     def show_solution(self, words, score):
@@ -282,7 +303,7 @@ class Level():
         for word in words:
             res.append(vocabulary.Word(word["fr"], genre, word["ar"], word["audio"]))
         
-        return res
+        return res"""
 
 # main
 app = QApplication(sys.argv)

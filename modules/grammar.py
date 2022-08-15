@@ -2,7 +2,7 @@ import os
 import playsound
 
 class Word:
-    def __init__(self, name, genre, corresponding, audio)
+    def __init__(self, name, genre, corresponding, audio):
         self.name = name
         self.genre = genre
         self.corresponding = corresponding # if verb its the noun, if an adjective its the female accord
