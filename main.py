@@ -1,4 +1,3 @@
-from ast import Lambda
 import sys
 
 from PyQt5.uic import loadUi
@@ -9,7 +8,8 @@ from Screens.Vocabulair.VocabularyScreens import VocabularyMenuScreen, Vocabular
 from Screens.Grammaire.GrammaireScreens import GrammaireMenuScreen, GrammaireLevelScreen
 from Screens.Conjugaison.ConjugaisonScreens import ConjugaisonMenuScreen, ConjugaisonLevelScreen
 from Screens.Evaluation.EvaluationScreens import EvaluationMenuScreen, EvaluationLevelScreen
-
+import database.json as database
+import modules.vocabulary as vocabulary
 
 class MainScreen(QStackedWidget):
     def __init__(self):
@@ -238,17 +238,51 @@ class Scroll:
 
         return guesses
 
-    def hear(self, sound):
-        playsound(r"WordsPronunciation\{}".format(sound))
-"""
+
+    def hear(self, word):
+        word.playSound()
+
+class MessageBox(QDialog):
+    def __init__(self,words,score):
+        super(MessageBox, self).__init__()
+        loadUi("CorrectionMessageBox.ui", self)
+        self.show_solution(words, score)
+        self.btn_return_home.clicked.connect(goto_home)
 
 
-class Word():
-    def __init__(self, name, match, sound):
-        self.name = name
-        self.match = match
-        self.sound = sound
+    def show_solution(self, words, score):
+        solution_txt= f"Votre score est: {score}\ 12 \n\n"
+        for word in words:
+            solution_txt += f"{word.name} = {word.match} \n"
+        self.msg_txt.setText(solution_txt)
+            
 
+# backend classes
+class Level():
+    def __init__(self, genre, index):
+        self.driver = database.JSONDriver()
+        self.genre = genre
+        self.index = index
+        self.words = self.get_words(self.genre, self.index)
+        self.title = self.get_title(self.genre, self.index)
+
+    def get_title(self, genre, index):
+        if genre == "adj":
+            title = "Adjectifs " + str(index)
+        elif genre == "vrb":
+            title = "Verbes " + str(index)
+        
+        return title
+
+    def get_words(self, genre, index):
+        words = self.driver.getWords(index, genre)
+        if not words:
+            sys.exit("Invalid genre")
+        res = []
+        for word in words:
+            res.append(vocabulary.Word(word["fr"], genre, word["ar"], word["audio"]))
+        
+        return res
 
 # main
 app = QApplication(sys.argv)
