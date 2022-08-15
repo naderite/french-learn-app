@@ -173,8 +173,8 @@ def generate_vocabulary_level(widget, genre, difficulty):
 
     # connect LevelScreen buttons to the sound playing function
     for button in widget.words_buttons.buttons():
-        print(widget.words_buttons.id(button))
-        button.clicked.connect(level.words[widget.words_buttons.id(button)].playSound())
+        id = widget.words_buttons.id(button)
+        button.clicked.connect(level.words[id].playSound)
 
 
 
