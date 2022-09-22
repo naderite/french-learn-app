@@ -92,7 +92,7 @@ class MainScreen(QStackedWidget):
         # main menu scrolling functions
         # scorll to vocabulair level
         self.vocab_menu.adj_buttons.buttonClicked.connect(
-            lambda: Scroll.vocab_lvl(self,self.vocab_level,"adj",0))
+            lambda: Scroll.vocab_lvl(self,self.vocab_level,"adj",self.vocab_menu.adj_buttons))
         self.vocab_menu.vrb_buttons.buttonClicked.connect(
             lambda: Scroll.vocab_lvl(self))
 
@@ -145,8 +145,10 @@ class Scroll:
         widget.setCurrentIndex(3)
 
     # levels scrolling functions
-    @staticmethod
-    def vocab_lvl(main_widget,level_widget,genre,difficulty):
+    
+    def vocab_lvl(main_widget,level_widget,genre,buttons_group):
+        trigger = get_pressed_button(buttons_group)
+        difficulty = buttons_group.id(trigger)
         generate_vocabulary_level(level_widget, genre, difficulty)
         main_widget.setCurrentIndex(4)
 
@@ -178,6 +180,12 @@ def generate_vocabulary_level(widget, genre, difficulty):
 
 
 
+def get_pressed_button(buttons_group):
+    for button in buttons_group.buttons():
+        if button.isDown():
+            return button
+            break
+    
 """class LevelScreen(QMainWindow):
     def __init__(self, widget, genre, diffculty):
         super(LevelScreen, self).__init__()
@@ -190,26 +198,7 @@ def generate_vocabulary_level(widget, genre, difficulty):
         self.btn_return_home.clicked.connect(goto_home)
 
     def generate_level(self, genre, diffculty):
-        level = Level(genre, diffculty)
-
-        # write level title
-        self.lvl_title.setText(level.title)
-
-        # setup LevelScreen buttons text
-        self.btn_word1.setText(level.words[0].name)
-        self.btn_word2.setText(level.words[1].name)
-        self.btn_word3.setText(level.words[2].name)
-        self.btn_word4.setText(level.words[3].name)
-        self.btn_word5.setText(level.words[4].name)
-        self.btn_word6.setText(level.words[5].name)
-        self.btn_word7.setText(level.words[6].name)
-        self.btn_word8.setText(level.words[7].name)
-        self.btn_word9.setText(level.words[8].name)
-        self.btn_word10.setText(level.words[9].name)
-        self.btn_word11.setText(level.words[10].name)
-        self.btn_word12.setText(level.words[11].name)
-
-        # connect LevelScreen buttons to the sound playing function
+      # connect LevelScreen buttons to the sound playing function
         self.btn_word1.clicked.connect(lambda: self.hear(level.words[0].sound))
         self.btn_word2.clicked.connect(lambda: self.hear(level.words[1].sound))
         self.btn_word3.clicked.connect(lambda: self.hear(level.words[2].sound))
@@ -276,34 +265,7 @@ def generate_vocabulary_level(widget, genre, difficulty):
         for word in words:
             solution_txt += f"{word.name} = {word.match} \n"
         self.msg_txt.setText(solution_txt)
-            
-
-# backend classes
-class Level():
-    def __init__(self, genre, index):
-        self.driver = database.JSONDriver()
-        self.genre = genre
-        self.index = index
-        self.words = self.get_words(self.genre, self.index)
-        self.title = self.get_title(self.genre, self.index)
-
-    def get_title(self, genre, index):
-        if genre == "adj":
-            title = "Adjectifs " + str(index)
-        elif genre == "vrb":
-            title = "Verbes " + str(index)
-        
-        return title
-
-    def get_words(self, genre, index):
-        words = self.driver.getWords(index, genre)
-        if not words:
-            sys.exit("Invalid genre")
-        res = []
-        for word in words:
-            res.append(vocabulary.Word(word["fr"], genre, word["ar"], word["audio"]))
-        
-        return res"""
+"""
 
 # main
 app = QApplication(sys.argv)

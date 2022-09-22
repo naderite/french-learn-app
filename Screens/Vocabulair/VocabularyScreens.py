@@ -26,6 +26,7 @@ class VocabularyMenuScreen(QMainWindow):
         self.vrb_buttons.addButton(self.btn_vrb_lvl3,3)
 
 
+
 class VocabularyLevelScreen(QMainWindow):
     def __init__(self):
         super(VocabularyLevelScreen, self).__init__()
