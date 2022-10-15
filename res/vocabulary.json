@@ -1,0 +1,511 @@
+{
+    "adj": [
+        [
+        {
+            "fr": "Grand",
+            "ar": "كبير",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Pauvre",
+            "ar": "فقير",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Heureux",
+            "ar": "سعيد / فرحان",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Triste",
+            "ar": "حزين",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Faché",
+            "ar": "غاضب",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Jeune",
+            "ar": "شاب",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Bas",
+            "ar": "أسفل / الأسفل",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Beau",
+            "ar": "جميل",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Nouveau",
+            "ar": "جديد",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Noir",
+            "ar": "أسود",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Blanc",
+            "ar": "أبيض",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Haut",
+            "ar": "عال / أعلى",
+            "audio": "word1.wav"
+        }
+        ],
+        [
+            {
+                "fr": "Seul",
+                "ar": "وحيد",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Cher",
+                "ar": "غالي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Ancien",
+                "ar": "قديم",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Rouge",
+                "ar": "أحمر",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Simple",
+                "ar": "بسيط",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Possible",
+                "ar": "ممكن",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Grâve",
+                "ar": "خطير",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Prêt",
+                "ar": "جاهز",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Meilleur",
+                "ar": "الأفضل",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Ouvert",
+                "ar": "مفتوح",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "étranger",
+                "ar": "غريب",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Court",
+                "ar": "قصير",
+                "audio": "word1.wav"
+            }
+            ],
+            
+        [
+            {
+                "fr": "Puissant",
+                "ar": "قوي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Clair",
+                "ar": "واضح",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Secret",
+                "ar": "سري",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Fier",
+                "ar": "فخور",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Immobile",
+                "ar": "ثابت / غير متحرك",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Fidèle",
+                "ar": "وفي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Précis",
+                "ar": "دقيق",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Nerveux",
+                "ar": "عصبي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Curieux",
+                "ar": "فضولي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Cruel",
+                "ar": "قاس",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Blond",
+                "ar": "أشقر",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Drôle",
+                "ar": "غريب / مضحك",
+                "audio": "word1.wav"
+            }
+            ],
+            
+            
+        [
+            {
+                "fr": "Mince",
+                "ar": "رقيق / نحيف",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Humide",
+                "ar": "رطب",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Divers",
+                "ar": "مختلف / منوع / متنوع",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Absolu",
+                "ar": "مطلق",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Vague",
+                "ar": "مبهم / غامض / غير واضح",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "épais",
+                "ar": "سميك / كثيف",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Dûr",
+                "ar": "صعب / قاس / صلب",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Tendre",
+                "ar": "لطيف",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Sauvage",
+                "ar": "متوحش/بري/همجي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Inutile",
+                "ar": "غير ضروري/غير قابل للإستعمال",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Sourd",
+                "ar": "أصم",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Commun",
+                "ar": "مشترك/عادي",
+                "audio": "word1.wav"
+            }
+            ]
+            
+    ],
+
+    "vrb": [
+        [
+        {
+            "fr": "Voir",
+            "ar": "يرى/ينظر",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Rester",
+            "ar": "يبقى",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Aller",
+            "ar": "يذهب",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Savoir",
+            "ar": "يعلم",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Parler",
+            "ar": "يتكلم",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Arriver",
+            "ar": "يأتي",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Aimer",
+            "ar": "يحب",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Donner",
+            "ar": "يعطي",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Trouver",
+            "ar": "يجد",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Chercher",
+            "ar": "يبحث",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Monter",
+            "ar": "يصعط",
+            "audio": "word1.wav"
+        },
+        {
+            "fr": "Ouvrir",
+            "ar": "يفتح",
+            "audio": "word1.wav"
+        }
+        ],
+        [
+            {
+                "fr": "Entendre",
+                "ar": "يسمع",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Demander",
+                "ar": "يطلب/يسأل",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Permettre",
+                "ar": "يأذن/يسمح",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Finir",
+                "ar": "يكمل",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Rire",
+                "ar": "يضحك",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Crier",
+                "ar": "يصرخ",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Marcher",
+                "ar": "يمشي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Porter",
+                "ar": "يحمل",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Jeter",
+                "ar": "يرمي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Tomber",
+                "ar": "يسقط",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Commencer",
+                "ar": "يبدأ",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Perdre",
+                "ar": "يضيع",
+                "audio": "word1.wav"
+            }
+            ],
+            
+        [
+            {
+                "fr": "Sentir",
+                "ar": "يحس",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Suivre",
+                "ar": "يتبع/يتتبع",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Asseoir",
+                "ar": "يجلس",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Décider",
+                "ar": "يقرر",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Tourner",
+                "ar": "يدور",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Oublier",
+                "ar": "ينسى",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Courir",
+                "ar": "يجري",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Exisiter",
+                "ar": "يوجد/يتواجد",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Produire",
+                "ar": "ينتج",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Expliquer",
+                "ar": "يفسر",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Exprimer",
+                "ar": "يعبر",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Craindre",
+                "ar": "يقلق/يخاف",
+                "audio": "word1.wav"
+            }
+            ],
+            
+            
+        [
+            {
+                "fr": "Mener",
+                "ar": "يصطحب/يؤدي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Juger",
+                "ar": "يحكم/يعطي رأيه",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Brûler",
+                "ar": "يحرق",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Exiger",
+                "ar": "يطالب/يتطلب",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Achever",
+                "ar": "ينهي/ينتهي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Soutenir",
+                "ar": "يساعد/يدعم",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Servir",
+                "ar": "يقدم/يتعمل/يستخدم",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Oser",
+                "ar": "يتجرأ",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Empêcher",
+                "ar": "يمنع",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Souffrir",
+                "ar": "يتألم",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "suffir",
+                "ar": "يكفي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Mêler",
+                "ar": "يمزج/يضيف",
+                "audio": "word1.wav"
+            }
+            ]
+            
+    ]
+}
