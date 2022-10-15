@@ -19,7 +19,7 @@ class VocabularyMenuScreen(QMainWindow):
         self.adj_buttons.addButton(self.btn_adj_lvl1,1)
         self.adj_buttons.addButton(self.btn_adj_lvl2,2)
         self.adj_buttons.addButton(self.btn_adj_lvl3,3)
-
+        #**********************************************
         self.vrb_buttons.addButton(self.btn_vrb_lvl0,0)
         self.vrb_buttons.addButton(self.btn_vrb_lvl1,1)
         self.vrb_buttons.addButton(self.btn_vrb_lvl2,2)

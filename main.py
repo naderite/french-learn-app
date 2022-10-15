@@ -91,10 +91,23 @@ class MainScreen(QStackedWidget):
 
         # main menu scrolling functions
         # scorll to vocabulair level
-        self.vocab_menu.adj_buttons.buttonClicked.connect(
-            lambda: Scroll.vocab_lvl(self,self.vocab_level,"adj",self.vocab_menu.adj_buttons))
-        self.vocab_menu.vrb_buttons.buttonClicked.connect(
-            lambda: Scroll.vocab_lvl(self))
+        self.vocab_menu.btn_adj_lvl0.clicked.connect(
+            lambda: Scroll.vocab_lvl(self,self.vocab_level,"adj",0))
+        self.vocab_menu.btn_adj_lvl1.clicked.connect(
+            lambda: Scroll.vocab_lvl(self,self.vocab_level,"adj",1))
+        self.vocab_menu.btn_adj_lvl2.clicked.connect(
+            lambda: Scroll.vocab_lvl(self,self.vocab_level,"adj",2))
+        self.vocab_menu.btn_adj_lvl3.clicked.connect(
+            lambda: Scroll.vocab_lvl(self,self.vocab_level,"adj",3))
+
+        self.vocab_menu.btn_vrb_lvl0.clicked.connect(
+            lambda: Scroll.vocab_lvl(self,self.vocab_level,"vrb",0))
+        self.vocab_menu.btn_vrb_lvl1.clicked.connect(
+            lambda: Scroll.vocab_lvl(self,self.vocab_level,"vrb",1))
+        self.vocab_menu.btn_vrb_lvl2.clicked.connect(
+            lambda: Scroll.vocab_lvl(self,self.vocab_level,"vrb",2))
+        self.vocab_menu.btn_vrb_lvl3.clicked.connect(
+            lambda: Scroll.vocab_lvl(self,self.vocab_level,"vrb",3))
 
         # scroll to grammaire level
         self.gram_menu.acc_buttons.buttonClicked.connect(
@@ -146,9 +159,9 @@ class Scroll:
 
     # levels scrolling functions
     
-    def vocab_lvl(main_widget,level_widget,genre,buttons_group):
-        trigger = get_pressed_button(buttons_group)
-        difficulty = buttons_group.id(trigger)
+    def vocab_lvl(main_widget,level_widget,genre,difficulty):
+        #trigger = get_pressed_button(buttons_group)
+        #difficulty = buttons_group.id(trigger)
         generate_vocabulary_level(level_widget, genre, difficulty)
         main_widget.setCurrentIndex(4)
 
@@ -166,6 +179,7 @@ class Scroll:
 
 
 def generate_vocabulary_level(widget, genre, difficulty):
+    
     level = vocabulary.Level(genre, difficulty)
     # write level title
     widget.lvl_title.setText(level.title)
@@ -184,7 +198,7 @@ def get_pressed_button(buttons_group):
     for button in buttons_group.buttons():
         if button.isDown():
             return button
-            break
+            
     
 """class LevelScreen(QMainWindow):
     def __init__(self, widget, genre, diffculty):
@@ -197,25 +211,7 @@ def get_pressed_button(buttons_group):
         self.btn_correct.clicked.connect(self.correct)
         self.btn_return_home.clicked.connect(goto_home)
 
-    def generate_level(self, genre, diffculty):
-      # connect LevelScreen buttons to the sound playing function
-        self.btn_word1.clicked.connect(lambda: self.hear(level.words[0].sound))
-        self.btn_word2.clicked.connect(lambda: self.hear(level.words[1].sound))
-        self.btn_word3.clicked.connect(lambda: self.hear(level.words[2].sound))
-        self.btn_word4.clicked.connect(lambda: self.hear(level.words[3].sound))
-        self.btn_word5.clicked.connect(lambda: self.hear(level.words[4].sound))
-        self.btn_word6.clicked.connect(lambda: self.hear(level.words[5].sound))
-        self.btn_word7.clicked.connect(lambda: self.hear(level.words[6].sound))
-        self.btn_word8.clicked.connect(lambda: self.hear(level.words[7].sound))
-        self.btn_word9.clicked.connect(lambda: self.hear(level.words[8].sound))
-        self.btn_word10.clicked.connect(
-            lambda: self.hear(level.words[9].sound))
-        self.btn_word11.clicked.connect(
-            lambda: self.hear(level.words[10].sound))
-        self.btn_word12.clicked.connect(
-            lambda: self.hear(level.words[11].sound))
 
-        return level
 
     def correct(self):
         guesses = self.get_guesses()
