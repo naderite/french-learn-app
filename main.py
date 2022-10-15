@@ -14,7 +14,12 @@ import modules.vocabulary as vocabulary
 class MainScreen(QStackedWidget):
     def __init__(self):
         super(MainScreen, self).__init__()
+        self.setup_screens()
+        self.create_button_groups()
+        self.connect_buttons()
 
+
+    def setup_screens(self):
         # creating menu screens
         self.vocab_menu = VocabularyMenuScreen()
         self.gram_menu = GrammaireMenuScreen()
@@ -39,8 +44,7 @@ class MainScreen(QStackedWidget):
         self.addWidget(self.conj_level)  # index 6
         self.addWidget(self.eval_level)  # index 7
 
-        self.create_button_groups()
-        self.connect_button_groups()
+
 
     def create_button_groups(self):
         # creating buttons groups
@@ -77,7 +81,7 @@ class MainScreen(QStackedWidget):
         self.return_to_menu_buttons.addButton(self.conj_level.btn_goto_menu,2)
         self.return_to_menu_buttons.addButton(self.eval_level.btn_goto_menu,3)
 
-    def connect_button_groups(self):
+    def connect_buttons(self):
         # =========== *** connecting buttons groups to functions *** ============
         # side menu scrolling functions
         self.goto_vocab_buttons.buttonClicked.connect(
@@ -136,6 +140,23 @@ class MainScreen(QStackedWidget):
             lambda: Scroll.main_menu(self,self.currentIndex() - 4))
 
 
+
+
+class MessageBox(QDialog):
+    def __init__(self,words,score):
+        super(MessageBox, self).__init__()
+        loadUi("CorrectionMessageBox.ui", self)
+        self.show_solution(words, score)
+        #self.btn_return_home.clicked.connect(goto_home)
+
+
+    def show_solution(self, words, score):
+        solution_txt= f"Votre score est: {score}\ 12 \n\n"
+        for word in words:
+            solution_txt += f"{word.name} = {word.answer} \n"
+        self.msg_txt.setText(solution_txt)
+
+
 class Scroll:
     # menus scrolling function
     @staticmethod
@@ -192,13 +213,62 @@ def generate_vocabulary_level(widget, genre, difficulty):
         id = widget.words_buttons.id(button)
         button.clicked.connect(level.words[id].playSound)
 
+    # correct button
+    
+    widget.btn_correct.clicked.connect(lambda: correct(level,widget,level.words))
+
+def correct(level,widget,orignal_words):
+    guesses = get_guesses(widget,"vocab")
+    score=0
+    for guess in guesses:
+        answer = orignal_words[guesses.index(guess)].answer
+        guess = (guess.strip()).replace("/","")
+        if guess in answer and guess != "":
+            score += 1
+    
+    # setup message box and show the solution
+    solution_box = MessageBox(level.words, score)
+    solution_box.show()
+    solution_box.exec_()
+
+def get_guesses(widget,level_type):
+
+    guesses = []
+    if level_type in "vocab gram":
+        guesses.append(widget.word1_guess.text())
+        guesses.append(widget.word2_guess.text())
+        guesses.append(widget.word3_guess.text())
+        guesses.append(widget.word4_guess.text())
+        guesses.append(widget.word5_guess.text())
+        guesses.append(widget.word6_guess.text())
+        guesses.append(widget.word7_guess.text())
+        guesses.append(widget.word8_guess.text())
+        guesses.append(widget.word9_guess.text())
+        guesses.append(widget.word10_guess.text())
+        guesses.append(widget.word11_guess.text())
+        guesses.append(widget.word12_guess.text())
+
+    elif level_type == "conj":
+        guesses.append(widget.word1_guess.text())
+        guesses.append(widget.word2_guess.text())
+        guesses.append(widget.word3_guess.text())
+        guesses.append(widget.word4_guess.text())
+        guesses.append(widget.word5_guess.text())
+        guesses.append(widget.word6_guess.text())
+
+    return guesses
 
 
+
+
+"""ERRORED
 def get_pressed_button(buttons_group):
     for button in buttons_group.buttons():
         if button.isDown():
-            return button
-            
+            return button"""
+
+
+
     
 """class LevelScreen(QMainWindow):
     def __init__(self, widget, genre, diffculty):
@@ -248,20 +318,7 @@ def get_pressed_button(buttons_group):
     def hear(self, word):
         word.playSound()
 """
-"""class MessageBox(QDialog):
-    def __init__(self,words,score):
-        super(MessageBox, self).__init__()
-        loadUi("CorrectionMessageBox.ui", self)
-        self.show_solution(words, score)
-        #self.btn_return_home.clicked.connect(goto_home)
 
-
-    def show_solution(self, words, score):
-        solution_txt= f"Votre score est: {score}\ 12 \n\n"
-        for word in words:
-            solution_txt += f"{word.name} = {word.match} \n"
-        self.msg_txt.setText(solution_txt)
-"""
 
 # main
 app = QApplication(sys.argv)

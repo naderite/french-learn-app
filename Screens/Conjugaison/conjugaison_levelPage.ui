@@ -64,7 +64,7 @@
         <number>10</number>
        </property>
        <item row="6" column="1">
-        <widget class="QLineEdit" name="word6_guess">
+        <widget class="QLineEdit" name="word3_guess">
          <property name="maximumSize">
           <size>
            <width>260</width>
@@ -83,7 +83,7 @@ color: rgb(43, 43, 43);</string>
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QLineEdit" name="word1_guess">
+        <widget class="QLineEdit" name="word2_guess">
          <property name="maximumSize">
           <size>
            <width>260</width>
@@ -111,7 +111,7 @@ color: rgb(43, 43, 43);</string>
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QLineEdit" name="word2_guess">
+        <widget class="QLineEdit" name="word1_guess">
          <property name="maximumSize">
           <size>
            <width>260</width>
@@ -130,7 +130,7 @@ color: rgb(43, 43, 43);</string>
         </widget>
        </item>
        <item row="7" column="1">
-        <widget class="QLineEdit" name="word10_guess">
+        <widget class="QLineEdit" name="word4_guess">
          <property name="maximumSize">
           <size>
            <width>260</width>
@@ -189,7 +189,7 @@ color:rgb(225, 255, 255);</string>
         </widget>
        </item>
        <item row="8" column="1">
-        <widget class="QLineEdit" name="word3_guess">
+        <widget class="QLineEdit" name="word5_guess">
          <property name="maximumSize">
           <size>
            <width>260</width>
@@ -208,7 +208,7 @@ color: rgb(43, 43, 43);</string>
         </widget>
        </item>
        <item row="9" column="1">
-        <widget class="QLineEdit" name="word7_guess">
+        <widget class="QLineEdit" name="word6_guess">
          <property name="maximumSize">
           <size>
            <width>260</width>

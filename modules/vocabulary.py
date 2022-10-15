@@ -4,10 +4,10 @@ import playsound
 import database.json as database
 
 class Word:
-    def __init__(self, name, genre, synonym, audio):
+    def __init__(self, name, genre, answer, audio):
         self.name = name
         self.genre = genre
-        self.synonym = synonym
+        self.answer = answer
         self.audio = audio
     
     def playSound(self):
