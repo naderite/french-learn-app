@@ -43,8 +43,7 @@ class MainScreen(QStackedWidget):
         self.addWidget(self.gram_level)  # index 5
         self.addWidget(self.conj_level)  # index 6
         self.addWidget(self.eval_level)  # index 7
-
-
+       
 
     def create_button_groups(self):
         # creating buttons groups
@@ -143,14 +142,14 @@ class MainScreen(QStackedWidget):
 
 
 class MessageBox(QDialog):
-    def __init__(self,words,score):
+    def __init__(self):
         super(MessageBox, self).__init__()
         loadUi("CorrectionMessageBox.ui", self)
-        self.show_solution(words, score)
+        
         #self.btn_return_home.clicked.connect(goto_home)
 
 
-    def show_solution(self, words, score):
+    def solve(self, words, score):
         solution_txt= f"Votre score est: {score}\ 12 \n\n"
         for word in words:
             solution_txt += f"{word.name} = {word.answer} \n"
@@ -197,28 +196,29 @@ class Scroll:
     @staticmethod
     def eval_lvl(widget):
         widget.setCurrentIndex(7)
-
-
-def generate_vocabulary_level(widget, genre, difficulty):
+    
+ 
+def generate_vocabulary_level(level_widget, genre, difficulty,):
     
     level = vocabulary.Level(genre, difficulty)
     # write level title
-    widget.lvl_title.setText(level.title)
+    level_widget.lvl_title.setText(level.title)
     # setup LevelScreen buttons text
-    for button in widget.words_buttons.buttons():
-        button.setText(level.words[widget.words_buttons.id(button)].name)
+    for button in level_widget.words_buttons.buttons():
+        button.setText(level.words[level_widget.words_buttons.id(button)].name)
 
     # connect LevelScreen buttons to the sound playing function
-    for button in widget.words_buttons.buttons():
-        id = widget.words_buttons.id(button)
-        button.clicked.connect(level.words[id].playSound)
+    #************BUGGED BUGGED BUGGED BUGGED BUGGED **************
+    #for button in level_widget.words_buttons.buttons():
+    #   id = level_widget.words_buttons.id(button)
+    #   button.clicked.connect(level.words[id].playSound)
 
     # correct button
     
-    widget.btn_correct.clicked.connect(lambda: correct(level,widget,level.words))
+    level_widget.btn_correct.clicked.connect(lambda: correct(level,level_widget,level.words))
 
-def correct(level,widget,orignal_words):
-    guesses = get_guesses(widget,"vocab")
+def correct(level,level_widget,orignal_words):
+    guesses = get_guesses(level_widget,"vocab")
     score=0
     for guess in guesses:
         answer = orignal_words[guesses.index(guess)].answer
@@ -227,7 +227,8 @@ def correct(level,widget,orignal_words):
             score += 1
     
     # setup message box and show the solution
-    solution_box = MessageBox(level.words, score)
+    solution_box = MessageBox()
+    solution_box.solve(level.words, score)
     solution_box.show()
     solution_box.exec_()
 
