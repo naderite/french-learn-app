@@ -54,7 +54,7 @@ class MainScreen(QStackedWidget):
 
         # =============== ***adding buttons to groups*** =================
 
-    def gourp_buttons(self):
+    def group_buttons(self):
         self.group_goto_vocab_buttons()
         self.group_goto_gram_buttons()
         self.group_goto_conj_buttons()
