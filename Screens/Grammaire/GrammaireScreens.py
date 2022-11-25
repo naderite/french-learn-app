@@ -29,4 +29,22 @@ class GrammaireLevelScreen(QMainWindow):
     def __init__(self):
         super(GrammaireLevelScreen, self).__init__()
         loadUi(os.path.abspath("Screens/Grammaire/grammaire_levelPage.ui"), self)
-    
+        self.words_buttons = QButtonGroup()
+        self.add_buttons_first_half()
+        self.add_buttons_second_half()
+
+    def add_buttons_first_half(self):
+        self.words_buttons.addButton(self.btn_word0, 0)
+        self.words_buttons.addButton(self.btn_word1, 1)
+        self.words_buttons.addButton(self.btn_word2, 2)
+        self.words_buttons.addButton(self.btn_word3, 3)
+        self.words_buttons.addButton(self.btn_word4, 4)
+        self.words_buttons.addButton(self.btn_word5, 5)
+
+    def add_buttons_second_half(self):
+        self.words_buttons.addButton(self.btn_word6, 6)
+        self.words_buttons.addButton(self.btn_word7, 7)
+        self.words_buttons.addButton(self.btn_word8, 8)
+        self.words_buttons.addButton(self.btn_word9, 9)
+        self.words_buttons.addButton(self.btn_word10, 10)
+        self.words_buttons.addButton(self.btn_word11, 11)

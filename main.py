@@ -8,9 +8,9 @@ from Screens.Grammaire.GrammaireScreens import GrammaireMenuScreen, GrammaireLev
 from Screens.Conjugaison.ConjugaisonScreens import ConjugaisonMenuScreen, ConjugaisonLevelScreen
 from Screens.Evaluation.EvaluationScreens import EvaluationMenuScreen, EvaluationLevelScreen
 
-import database.json as database
-import modules.vocabulary as vocabulary
-
+import database.dbDriver as database
+import modules.vocabulary as Vocabulary
+import modules.grammar as Grammar
 
 class MainScreen(QStackedWidget):
     def __init__(self):
@@ -21,10 +21,11 @@ class MainScreen(QStackedWidget):
         self.connect_side_menu_buttons()
         self.connect_vocabulary_menu_adj_buttons()
         self.connect_vocabulary_menu_vrb_buttons()
-        self.connect_garmmair_menu_buttons()
+        self.connect_garmmair_menu_acc_buttons()
         self.connect_conjugaison_menu_buttons()
         self.connect_evaluation_menu_buttons()
         self.connect_return_buttons()
+        self.connect_garmmair_menu_nom_buttons()
 
     def create_screens(self):
         # creating menu screens
@@ -123,11 +124,26 @@ class MainScreen(QStackedWidget):
         self.vocab_menu.btn_vrb_lvl3.clicked.connect(
             lambda: Scroll.vocab_lvl(self, self.vocab_level, "vrb", 3))
 
-    def connect_garmmair_menu_buttons(self):
-        self.gram_menu.acc_buttons.buttonClicked.connect(
-            lambda: Scroll.gram_lvl(self))
-        self.gram_menu.nom_buttons.buttonClicked.connect(
-            lambda: Scroll.gram_lvl(self))
+    def connect_garmmair_menu_acc_buttons(self):
+        self.gram_menu.btn_acc_lvl0.clicked.connect(
+            lambda: Scroll.gram_lvl(self, self.gram_level, "acc", 0))
+        self.gram_menu.btn_acc_lvl1.clicked.connect(
+            lambda: Scroll.gram_lvl(self, self.gram_level, "acc", 1))
+        self.gram_menu.btn_acc_lvl2.clicked.connect(
+            lambda: Scroll.gram_lvl(self, self.gram_level, "acc", 2))
+        self.gram_menu.btn_acc_lvl3.clicked.connect(
+            lambda: Scroll.gram_lvl(self, self.gram_level, "acc", 3))
+
+
+    def connect_garmmair_menu_nom_buttons(self):
+      self.gram_menu.btn_nom_lvl0.clicked.connect(
+          lambda: Scroll.gram_lvl(self, self.gram_level, "nom", 0))
+      self.gram_menu.btn_nom_lvl1.clicked.connect(
+          lambda: Scroll.gram_lvl(self, self.gram_level, "nom", 1))
+      self.gram_menu.btn_nom_lvl2.clicked.connect(
+          lambda: Scroll.gram_lvl(self, self.gram_level, "nom", 2))
+      self.gram_menu.btn_nom_lvl3.clicked.connect(
+          lambda: Scroll.gram_lvl(self, self.gram_level, "nom", 3))
 
     def connect_conjugaison_menu_buttons(self):
         self.conj_menu.gr1_buttons.buttonClicked.connect(
@@ -193,7 +209,8 @@ class Scroll:
         self.setCurrentIndex(4)
 
     @staticmethod
-    def gram_lvl(widget):
+    def gram_lvl(widget,level_widget, genre, difficulty):
+        generate_grammar_level(level_widget,genre,difficulty)
         widget.setCurrentIndex(5)
 
     @staticmethod
@@ -204,10 +221,21 @@ class Scroll:
     def eval_lvl(widget):
         widget.setCurrentIndex(7)
 
+def generate_grammar_level(level_widget,genre,difficulty):
+    level = Grammar.Level(genre, difficulty)
+    # write level title
+    level_widget.lvl_title.setText(level.title)
+    # setup LevelScreen buttons text
+    for button in level_widget.words_buttons.buttons():
+        button.setText(level.words[level_widget.words_buttons.id(button)].name)
 
+    # correct button
+
+    level_widget.btn_correct.clicked.connect(
+        lambda: correct(level, level_widget, level.words))
 def generate_vocabulary_level(level_widget, genre, difficulty,):
 
-    level = vocabulary.Level(genre, difficulty)
+    level = Vocabulary.Level(genre, difficulty)
     # write level title
     level_widget.lvl_title.setText(level.title)
     # setup LevelScreen buttons text

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>654</width>
-    <height>503</height>
+    <height>531</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -64,7 +64,7 @@
         <number>10</number>
        </property>
        <item row="4" column="2">
-        <widget class="QPushButton" name="btn_word11">
+        <widget class="QPushButton" name="btn_word10">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -109,7 +109,7 @@ color: rgb(43, 43, 43);</string>
         </widget>
        </item>
        <item row="2" column="0">
-        <widget class="QPushButton" name="btn_word5">
+        <widget class="QPushButton" name="btn_word4">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -135,7 +135,7 @@ color:rgb(225, 255, 255);</string>
         </widget>
        </item>
        <item row="0" column="2">
-        <widget class="QPushButton" name="btn_word3">
+        <widget class="QPushButton" name="btn_word2">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -237,7 +237,7 @@ color: rgb(43, 43, 43);</string>
         </widget>
        </item>
        <item row="4" column="0">
-        <widget class="QPushButton" name="btn_word9">
+        <widget class="QPushButton" name="btn_word8">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -282,7 +282,7 @@ color: rgb(43, 43, 43);</string>
         </widget>
        </item>
        <item row="0" column="0">
-        <widget class="QPushButton" name="btn_word1">
+        <widget class="QPushButton" name="btn_word0">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -373,7 +373,7 @@ color: rgb(43, 43, 43);</string>
         </widget>
        </item>
        <item row="0" column="3">
-        <widget class="QPushButton" name="btn_word4">
+        <widget class="QPushButton" name="btn_word3">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -399,7 +399,7 @@ color:rgb(225, 255, 255);</string>
         </widget>
        </item>
        <item row="2" column="3">
-        <widget class="QPushButton" name="btn_word8">
+        <widget class="QPushButton" name="btn_word7">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -463,7 +463,7 @@ color: rgb(43, 43, 43);</string>
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QPushButton" name="btn_word2">
+        <widget class="QPushButton" name="btn_word1">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -489,7 +489,7 @@ color:rgb(225, 255, 255);</string>
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QPushButton" name="btn_word10">
+        <widget class="QPushButton" name="btn_word9">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -515,7 +515,7 @@ color:rgb(225, 255, 255);</string>
         </widget>
        </item>
        <item row="2" column="2">
-        <widget class="QPushButton" name="btn_word7">
+        <widget class="QPushButton" name="btn_word6">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -541,7 +541,7 @@ color:rgb(225, 255, 255);</string>
         </widget>
        </item>
        <item row="4" column="3">
-        <widget class="QPushButton" name="btn_word12">
+        <widget class="QPushButton" name="btn_word11">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -567,7 +567,7 @@ color:rgb(225, 255, 255);</string>
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QPushButton" name="btn_word6">
+        <widget class="QPushButton" name="btn_word5">
          <property name="minimumSize">
           <size>
            <width>0</width>

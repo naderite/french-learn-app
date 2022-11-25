@@ -252,7 +252,7 @@ font: 700 22pt &quot;Segoe UI Variable Display&quot;;</string>
 background-color: rgba(255, 255, 255,0);</string>
             </property>
             <property name="text">
-             <string>Révision de vocabulaire</string>
+             <string>Révision de grammaire</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>

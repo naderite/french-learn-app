@@ -1,7 +1,5 @@
-import os
 import sys
-import playsound
-import database.json as database
+import database.dbDriver as database
 
 
 class Word:
@@ -28,7 +26,7 @@ class Level:
         return title
 
     def get_words(self, genre, index):
-        words = self.driver.getWords(index, genre)
+        words = self.driver.getVocabWords(index, genre)
         if not words:
             sys.exit("Invalid genre")
-        return [Word(word["fr"], genre, word["ar"]) for word in words]
+        return [Word(word["fr"], genre, word["ar"]) for word in words] 
