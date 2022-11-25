@@ -904,5 +904,135 @@
                 "nom":"dérivation"
             }
         ]
+    ],
+    "present":[
+        {
+            "je":"achete",
+            "tu":"achetes",
+            "il":"achete",
+            "nous":"achetons",
+            "vous":"achetez",
+            "ils":"achetent"
+        },
+        {
+            "je":"finis",
+            "tu":"finis",
+            "il":"finit",
+            "nous":"finissons",
+            "vous":"finissez",
+            "ils":"finissent"
+        },
+        {
+            "je":"peux",
+            "tu":"peux",
+            "il":"peut",
+            "nous":"pouvons",
+            "vous":"pouvez",
+            "ils":"peuvent"
+        }
+    ],
+    "passe compose":[
+        {
+            "je":"ai acheté",
+            "tu":"as acheté",
+            "il":"a acheté",
+            "nous":"avons acheté",
+            "vous":"avez acheté",
+            "ils":"ont acheté"
+        },
+        {
+            "je":"ai fini",
+            "tu":"as fini",
+            "il":"a fini",
+            "nous":"avons fini",
+            "vous":"avez fini",
+            "ils":"ont fini"
+        },
+        {
+            "je":"ai pu",
+            "tu":"as pu",
+            "il":"a pu",
+            "nous":"avons pu",
+            "vous":"avez pu",
+            "ils":"ont pu"
+        }
+    ],
+    "future":[
+        {
+            "je":"acheterai",
+            "tu":"acheteras",
+            "il":"achetera",
+            "nous":"acheterons",
+            "vous":"acheterez",
+            "ils":"acheteront"
+        },
+        {
+            "je":"finirai",
+            "tu":"finiras",
+            "il":"finira",
+            "nous":"finirons",
+            "vous":"finirez",
+            "ils":"finiront"
+        },
+        {
+            "je":"pourrai",
+            "tu":"pourras",
+            "il":"pourra",
+            "nous":"pourrons",
+            "vous":"pourrez",
+            "ils":"pourront"
+        }
+    ],
+    "passe simple":[
+        {
+            "je":"achetai",
+            "tu":"achetas",
+            "il":"acheta",
+            "nous":"achetâmes",
+            "vous":"achetâtes",
+            "ils":"achetèrent"
+        },
+        {
+            "je":"finis",
+            "tu":"finis",
+            "il":"finit",
+            "nous":"finîmes",
+            "vous":"finîtes",
+            "ils":"finirent"
+        },
+        {
+            "je":"pus",
+            "tu":"pus",
+            "il":"put",
+            "nous":"pûmes",
+            "vous":"pûtes",
+            "ils":"purent"
+        }
+    ],
+    "imparfait":[
+        {
+            "je":"achetais",
+            "tu":"achetais",
+            "il":"achetait",
+            "nous":"achetions",
+            "vous":"achetiez",
+            "ils":"achetaient"
+        },
+        {
+            "je":"finissais",
+            "tu":"finissais",
+            "il":"finissait",
+            "nous":"finissions",
+            "vous":"finissiez",
+            "ils":"finissaient"
+        },
+        {
+            "je":"pouvais",
+            "tu":"pouvais",
+            "il":"pouvait",
+            "nous":"pouvions",
+            "vous":"pouviez",
+            "ils":"pouvaient"
+        }
     ]
 }

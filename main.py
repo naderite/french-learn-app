@@ -11,6 +11,7 @@ from Screens.Evaluation.EvaluationScreens import EvaluationMenuScreen, Evaluatio
 import database.dbDriver as database
 import modules.vocabulary as Vocabulary
 import modules.grammar as Grammar
+import modules.conjugation as Conjugaison
 
 class MainScreen(QStackedWidget):
     def __init__(self):
@@ -22,7 +23,9 @@ class MainScreen(QStackedWidget):
         self.connect_vocabulary_menu_adj_buttons()
         self.connect_vocabulary_menu_vrb_buttons()
         self.connect_garmmair_menu_acc_buttons()
-        self.connect_conjugaison_menu_buttons()
+        self.connect_conjugaison_grp1_menu_buttons()
+        self.connect_conjugaison_grp2_menu_buttons()
+        self.connect_conjugaison_grp3_menu_buttons()
         self.connect_evaluation_menu_buttons()
         self.connect_return_buttons()
         self.connect_garmmair_menu_nom_buttons()
@@ -145,13 +148,46 @@ class MainScreen(QStackedWidget):
       self.gram_menu.btn_nom_lvl3.clicked.connect(
           lambda: Scroll.gram_lvl(self, self.gram_level, "nom", 3))
 
-    def connect_conjugaison_menu_buttons(self):
-        self.conj_menu.gr1_buttons.buttonClicked.connect(
-            lambda: Scroll.conj_lvl(self))
-        self.conj_menu.gr2_buttons.buttonClicked.connect(
-            lambda: Scroll.conj_lvl(self))
-        self.conj_menu.gr3_buttons.buttonClicked.connect(
-            lambda: Scroll.conj_lvl(self))
+    def connect_conjugaison_grp1_menu_buttons(self):
+
+        self.conj_menu.btn_gr1_pr.clicked.connect(
+    lambda: Scroll.conj_lvl(self,self.conj_level,"present",0))
+        self.conj_menu.btn_gr1_fu.clicked.connect(
+    lambda: Scroll.conj_lvl(self,self.conj_level,"future",0))
+        self.conj_menu.btn_gr1_im.clicked.connect(
+    lambda: Scroll.conj_lvl(self,self.conj_level,"imparfait",0))
+        self.conj_menu.btn_gr1_ps.clicked.connect(
+    lambda: Scroll.conj_lvl(self,self.conj_level,"passe simple",0))
+        self.conj_menu.btn_gr1_pc.clicked.connect(
+    lambda: Scroll.conj_lvl(self,self.conj_level,"passe compose",0))
+
+    def connect_conjugaison_grp2_menu_buttons(self):    
+
+        self.conj_menu.btn_gr2_pr.clicked.connect(
+    lambda: Scroll.conj_lvl(self,self.conj_level,"present",1))
+        self.conj_menu.btn_gr2_fu.clicked.connect(
+    lambda: Scroll.conj_lvl(self,self.conj_level,"future",1))
+        self.conj_menu.btn_gr2_im.clicked.connect(
+    lambda: Scroll.conj_lvl(self,self.conj_level,"imparfait",1))
+        self.conj_menu.btn_gr2_ps.clicked.connect(
+    lambda: Scroll.conj_lvl(self,self.conj_level,"passe simple",1))
+        self.conj_menu.btn_gr2_pc.clicked.connect(
+    lambda: Scroll.conj_lvl(self,self.conj_level,"passe compose",1))
+
+    def connect_conjugaison_grp3_menu_buttons(self):    
+
+        self.conj_menu.btn_gr3_pr.clicked.connect(
+    lambda: Scroll.conj_lvl(self,self.conj_level,"present",2))
+        self.conj_menu.btn_gr3_fu.clicked.connect(
+    lambda: Scroll.conj_lvl(self,self.conj_level,"future",2))
+        self.conj_menu.btn_gr3_im.clicked.connect(
+    lambda: Scroll.conj_lvl(self,self.conj_level,"imparfait",2))
+        self.conj_menu.btn_gr3_ps.clicked.connect(
+    lambda: Scroll.conj_lvl(self,self.conj_level,"passe simple",2))
+        self.conj_menu.btn_gr3_pc.clicked.connect(
+    lambda: Scroll.conj_lvl(self,self.conj_level,"passe compose",2))
+
+
 
     def connect_evaluation_menu_buttons(self):
         self.eval_menu.conj_buttons.buttonClicked.connect(
@@ -214,7 +250,8 @@ class Scroll:
         widget.setCurrentIndex(5)
 
     @staticmethod
-    def conj_lvl(widget):
+    def conj_lvl(widget,level_widget, temp,groupe):
+        generate_conjuguaison_level(level_widget, temp, groupe)
         widget.setCurrentIndex(6)
 
     @staticmethod
@@ -233,7 +270,7 @@ def generate_grammar_level(level_widget,genre,difficulty):
 
     level_widget.btn_correct.clicked.connect(
         lambda: correct(level, level_widget, level.words))
-def generate_vocabulary_level(level_widget, genre, difficulty,):
+def generate_vocabulary_level(level_widget, genre, difficulty):
 
     level = Vocabulary.Level(genre, difficulty)
     # write level title
@@ -246,7 +283,10 @@ def generate_vocabulary_level(level_widget, genre, difficulty,):
 
     level_widget.btn_correct.clicked.connect(
         lambda: correct(level, level_widget, level.words))
-
+def generate_conjuguaison_level(level_widget, temp, groupe):
+    level = Conjugaison.Level(temp, groupe)
+    level_widget.lvl_title.setText(level.title)
+    level_widget.lvl_verb.setText(level.verb)
 
 def correct(level, level_widget, orignal_words):
     guesses = get_guesses(level_widget, "vocab")
@@ -276,14 +316,6 @@ def get_guesses(widget, level_type):
         guesses.extend((widget.word1_guess.text(), widget.word2_guess.text(), widget.word3_guess.text(
         ), widget.word4_guess.text(), widget.word5_guess.text(), widget.word6_guess.text()))
     return guesses
-
-
-"""ERRORED
-def get_pressed_button(buttons_group):
-    for button in buttons_group.buttons():
-        if button.isDown():
-            return button"""
-
 
 # main
 app = QApplication(sys.argv)

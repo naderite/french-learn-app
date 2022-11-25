@@ -108,31 +108,6 @@ class Ui_MainWindow(object):
         self.gridLayout_5 = QGridLayout(self.main_menu)
         self.gridLayout_5.setObjectName(u"gridLayout_5")
         self.gridLayout_5.setContentsMargins(-1, 26, -1, -1)
-        self.title_frame = QFrame(self.main_menu)
-        self.title_frame.setObjectName(u"title_frame")
-        self.title_frame.setMaximumSize(QSize(16777215, 200))
-        self.title_frame.setStyleSheet(u"background-color: rgba(255, 255, 255,0);")
-        self.title_frame.setFrameShape(QFrame.StyledPanel)
-        self.title_frame.setFrameShadow(QFrame.Raised)
-        self.gridLayout_2 = QGridLayout(self.title_frame)
-        self.gridLayout_2.setSpacing(0)
-        self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.label = QLabel(self.title_frame)
-        self.label.setObjectName(u"label")
-        font = QFont()
-        font.setFamilies([u"Sitka Heading Semibold"])
-        font.setPointSize(61)
-        self.label.setFont(font)
-        self.label.setStyleSheet(u"color:rgb(255, 202, 71);\n"
-"background-color: rgba(255, 255, 255,0);")
-        self.label.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.label, 0, 0, 1, 1)
-
-
-        self.gridLayout_5.addWidget(self.title_frame, 0, 0, 1, 1)
-
         self.content_frame = QFrame(self.main_menu)
         self.content_frame.setObjectName(u"content_frame")
         self.content_frame.setStyleSheet(u"background-color: rgba(255, 255, 255,0);")
@@ -148,12 +123,12 @@ class Ui_MainWindow(object):
         self.btn_acc_lvl0.setObjectName(u"btn_acc_lvl0")
         self.btn_acc_lvl0.setMinimumSize(QSize(0, 70))
         self.btn_acc_lvl0.setMaximumSize(QSize(16777215, 16777215))
-        font1 = QFont()
-        font1.setFamilies([u"Tahoma"])
-        font1.setPointSize(20)
-        font1.setBold(True)
-        font1.setItalic(False)
-        self.btn_acc_lvl0.setFont(font1)
+        font = QFont()
+        font.setFamilies([u"Tahoma"])
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        self.btn_acc_lvl0.setFont(font)
         self.btn_acc_lvl0.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_acc_lvl0.setStyleSheet(u"border-radius:20px;\n"
 "background-color:rgb(102, 109, 198); \n"
@@ -181,12 +156,12 @@ class Ui_MainWindow(object):
         self.label_2.setObjectName(u"label_2")
         self.label_2.setMinimumSize(QSize(0, 0))
         self.label_2.setMaximumSize(QSize(16777215, 60))
-        font2 = QFont()
-        font2.setFamilies([u"Verdana"])
-        font2.setPointSize(30)
-        font2.setBold(True)
-        font2.setItalic(False)
-        self.label_2.setFont(font2)
+        font1 = QFont()
+        font1.setFamilies([u"Verdana"])
+        font1.setPointSize(30)
+        font1.setBold(True)
+        font1.setItalic(False)
+        self.label_2.setFont(font1)
         self.label_2.setStyleSheet(u"color:rgb(255, 202, 71);\n"
 "\n"
 "background-color: rgba(255, 255, 255,0);\n"
@@ -267,7 +242,7 @@ class Ui_MainWindow(object):
         self.label_3 = QLabel(self.content_frame)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setMaximumSize(QSize(16777215, 60))
-        self.label_3.setFont(font2)
+        self.label_3.setFont(font1)
         self.label_3.setStyleSheet(u"color:rgb(255, 202, 71);\n"
 "background-color: rgba(255, 255, 255,0);\n"
 "font: 700 30pt \"Verdana\";")
@@ -304,7 +279,36 @@ class Ui_MainWindow(object):
         self.gridLayout_3.addWidget(self.btn_acc_lvl2, 4, 0, 1, 1)
 
 
-        self.gridLayout_5.addWidget(self.content_frame, 1, 0, 1, 1)
+        self.gridLayout_5.addWidget(self.content_frame, 1, 1, 1, 1)
+
+        self.title_frame = QFrame(self.main_menu)
+        self.title_frame.setObjectName(u"title_frame")
+        self.title_frame.setMaximumSize(QSize(16777215, 200))
+        self.title_frame.setStyleSheet(u"background-color: rgba(255, 255, 255,0);")
+        self.title_frame.setFrameShape(QFrame.StyledPanel)
+        self.title_frame.setFrameShadow(QFrame.Raised)
+        self.gridLayout_2 = QGridLayout(self.title_frame)
+        self.gridLayout_2.setSpacing(0)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.label = QLabel(self.title_frame)
+        self.label.setObjectName(u"label")
+        font2 = QFont()
+        font2.setFamilies([u"Sitka Heading Semibold"])
+        font2.setPointSize(61)
+        self.label.setFont(font2)
+        self.label.setStyleSheet(u"color:rgb(255, 202, 71);\n"
+"background-color: rgba(255, 255, 255,0);")
+        self.label.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.label, 0, 0, 1, 1)
+
+
+        self.gridLayout_5.addWidget(self.title_frame, 0, 1, 1, 1)
+
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout_5.addItem(self.horizontalSpacer_2, 1, 0, 1, 1)
 
 
         self.gridLayout_4.addWidget(self.main_menu, 0, 1, 1, 1)
@@ -322,7 +326,6 @@ class Ui_MainWindow(object):
         self.btn_to_vocab.setText(QCoreApplication.translate("MainWindow", u"Vocabulaire", None))
         self.btn_to_conj.setText(QCoreApplication.translate("MainWindow", u"Conjugaison", None))
         self.toolButton_2.setText(QCoreApplication.translate("MainWindow", u"Grammaire", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"R\u00e9vision de grammaire", None))
         self.btn_acc_lvl0.setText(QCoreApplication.translate("MainWindow", u"Niveau 0", None))
         self.btn_acc_lvl1.setText(QCoreApplication.translate("MainWindow", u"Niveau 1", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Accord", None))
@@ -334,5 +337,6 @@ class Ui_MainWindow(object):
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Nominalisation", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u" des adjectives", None))
         self.btn_acc_lvl2.setText(QCoreApplication.translate("MainWindow", u"Niveau 2", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"R\u00e9vision de grammaire", None))
     # retranslateUi
 

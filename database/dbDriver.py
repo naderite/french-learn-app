@@ -10,3 +10,5 @@ class JSONDriver:
         return False if genre not in ["adj", "vrb"] else self.data[genre][index]
     def getGramWords(self, index,genre):
         return False if genre not in ["acc", "nom"] else self.data[genre][index]
+    def getConjAnswer(self, temp, groupe):
+        return False if temp not in ["present","passe compose","future","imparfait","passe simple"] else self.data[temp][groupe]
