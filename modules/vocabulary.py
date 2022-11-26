@@ -1,17 +1,13 @@
-import os
 import sys
-import playsound
-import database.json as database
+import database.dbDriver as database
+
 
 class Word:
-    def __init__(self, name, genre, synonym, audio):
+    def __init__(self, name, genre, answer):
         self.name = name
         self.genre = genre
-        self.synonym = synonym
-        self.audio = audio
-    
-    def playSound(self):
-        playsound.playsound(os.path.join('res','audio', self.audio))
+        self.answer = answer
+
 
 class Level:
     def __init__(self, genre, index):
@@ -23,18 +19,14 @@ class Level:
 
     def get_title(self, genre, index):
         if genre == "adj":
-            title = "Adjectifs " + str(index)
+            title = f"Adjectifs {str(index)}"
         elif genre == "vrb":
-            title = "Verbes " + str(index)
-        
+            title = f"Verbes {str(index)}"
+
         return title
 
     def get_words(self, genre, index):
-        words = self.driver.getWords(index, genre)
+        words = self.driver.getVocabWords(index, genre)
         if not words:
             sys.exit("Invalid genre")
-        res = []
-        for word in words:
-            res.append(Word(word["fr"], genre, word["ar"], word["audio"]))
-        
-        return res
+        return [Word(word["fr"], genre, word["ar"]) for word in words] 

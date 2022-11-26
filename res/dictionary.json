@@ -1,66 +1,1038 @@
 {
     "adj": [
         [
-        {
-            "fr": "Grand",
-            "ar": "كبير",
-            "audio": "word1.wav"
-        },
-        {
-            "fr": "Pauvre",
-            "ar": "فقير",
-            "audio": "word1.wav"
-        },
-        {
-            "fr": "Heureux",
-            "ar": "سعيد / فرحان",
-            "audio": "word1.wav"
-        },
-        {
-            "fr": "Triste",
-            "ar": "حزين",
-            "audio": "word1.wav"
-        },
-        {
-            "fr": "Faché",
-            "ar": "غاضب",
-            "audio": "word1.wav"
-        },
-        {
-            "fr": "Jeune",
-            "ar": "شاب",
-            "audio": "word1.wav"
-        },
-        {
-            "fr": "Bas",
-            "ar": "أسفل / الأسفل",
-            "audio": "word1.wav"
-        },
-        {
-            "fr": "Beau",
-            "ar": "جميل",
-            "audio": "word1.wav"
-        },
-        {
-            "fr": "Nouveau",
-            "ar": "جديد",
-            "audio": "word1.wav"
-        },
-        {
-            "fr": "Noir",
-            "ar": "أسود",
-            "audio": "word1.wav"
-        },
-        {
-            "fr": "Blanc",
-            "ar": "أبيض",
-            "audio": "word1.wav"
-        },
-        {
-            "fr": "Haut",
-            "ar": "عال / أعلى",
-            "audio": "word1.wav"
-        }
+            {
+                "fr": "Grand",
+                "ar": "كبير",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Pauvre",
+                "ar": "فقير",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Heureux",
+                "ar": "سعيد / فرحان",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Triste",
+                "ar": "حزين",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Faché",
+                "ar": "غاضب",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Jeune",
+                "ar": "شاب",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Bas",
+                "ar": "أسفل / الأسفل",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Beau",
+                "ar": "جميل",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Nouveau",
+                "ar": "جديد",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Noir",
+                "ar": "أسود",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Blanc",
+                "ar": "أبيض",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Haut",
+                "ar": "عال / أعلى",
+                "audio": "word1.wav"
+            }
+        ],
+        [
+            {
+                "fr": "Seul",
+                "ar": "وحيد",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Cher",
+                "ar": "غالي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Ancien",
+                "ar": "قديم",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Rouge",
+                "ar": "أحمر",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Simple",
+                "ar": "بسيط",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Possible",
+                "ar": "ممكن",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Grâve",
+                "ar": "خطير",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Prêt",
+                "ar": "جاهز",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Meilleur",
+                "ar": "الأفضل",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Ouvert",
+                "ar": "مفتوح",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "étranger",
+                "ar": "غريب",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Court",
+                "ar": "قصير",
+                "audio": "word1.wav"
+            }
+        ],
+        [
+            {
+                "fr": "Puissant",
+                "ar": "قوي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Clair",
+                "ar": "واضح",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Secret",
+                "ar": "سري",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Fier",
+                "ar": "فخور",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Immobile",
+                "ar": "ثابت / غير متحرك",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Fidèle",
+                "ar": "وفي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Précis",
+                "ar": "دقيق",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Nerveux",
+                "ar": "عصبي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Curieux",
+                "ar": "فضولي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Cruel",
+                "ar": "قاس",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Blond",
+                "ar": "أشقر",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Drôle",
+                "ar": "غريب / مضحك",
+                "audio": "word1.wav"
+            }
+        ],
+        [
+            {
+                "fr": "Mince",
+                "ar": "رقيق / نحيف",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Humide",
+                "ar": "رطب",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Divers",
+                "ar": "مختلف / منوع / متنوع",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Absolu",
+                "ar": "مطلق",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Vague",
+                "ar": "مبهم / غامض / غير واضح",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "épais",
+                "ar": "سميك / كثيف",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Dûr",
+                "ar": "صعب / قاس / صلب",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Tendre",
+                "ar": "لطيف",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Sauvage",
+                "ar": "متوحش/بري/همجي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Inutile",
+                "ar": "غير ضروري/غير قابل للإستعمال",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Sourd",
+                "ar": "أصم",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Commun",
+                "ar": "مشترك/عادي",
+                "audio": "word1.wav"
+            }
         ]
+    ],
+    "vrb": [
+        [
+            {
+                "fr": "Voir",
+                "ar": "يرى/ينظر",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Rester",
+                "ar": "يبقى",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Aller",
+                "ar": "يذهب",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Savoir",
+                "ar": "يعلم",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Parler",
+                "ar": "يتكلم",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Arriver",
+                "ar": "يأتي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Aimer",
+                "ar": "يحب",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Donner",
+                "ar": "يعطي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Trouver",
+                "ar": "يجد",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Chercher",
+                "ar": "يبحث",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Monter",
+                "ar": "يصعط",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Ouvrir",
+                "ar": "يفتح",
+                "audio": "word1.wav"
+            }
+        ],
+        [
+            {
+                "fr": "Entendre",
+                "ar": "يسمع",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Demander",
+                "ar": "يطلب/يسأل",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Permettre",
+                "ar": "يأذن/يسمح",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Finir",
+                "ar": "يكمل",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Rire",
+                "ar": "يضحك",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Crier",
+                "ar": "يصرخ",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Marcher",
+                "ar": "يمشي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Porter",
+                "ar": "يحمل",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Jeter",
+                "ar": "يرمي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Tomber",
+                "ar": "يسقط",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Commencer",
+                "ar": "يبدأ",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Perdre",
+                "ar": "يضيع",
+                "audio": "word1.wav"
+            }
+        ],
+        [
+            {
+                "fr": "Sentir",
+                "ar": "يحس",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Suivre",
+                "ar": "يتبع/يتتبع",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Asseoir",
+                "ar": "يجلس",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Décider",
+                "ar": "يقرر",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Tourner",
+                "ar": "يدور",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Oublier",
+                "ar": "ينسى",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Courir",
+                "ar": "يجري",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Exisiter",
+                "ar": "يوجد/يتواجد",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Produire",
+                "ar": "ينتج",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Expliquer",
+                "ar": "يفسر",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Exprimer",
+                "ar": "يعبر",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Craindre",
+                "ar": "يقلق/يخاف",
+                "audio": "word1.wav"
+            }
+        ],
+        [
+            {
+                "fr": "Mener",
+                "ar": "يصطحب/يؤدي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Juger",
+                "ar": "يحكم/يعطي رأيه",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Brûler",
+                "ar": "يحرق",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Exiger",
+                "ar": "يطالب/يتطلب",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Achever",
+                "ar": "ينهي/ينتهي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Soutenir",
+                "ar": "يساعد/يدعم",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Servir",
+                "ar": "يقدم/يتعمل/يستخدم",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Oser",
+                "ar": "يتجرأ",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Empêcher",
+                "ar": "يمنع",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Souffrir",
+                "ar": "يتألم",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "suffir",
+                "ar": "يكفي",
+                "audio": "word1.wav"
+            },
+            {
+                "fr": "Mêler",
+                "ar": "يمزج/يضيف",
+                "audio": "word1.wav"
+            }
+        ]
+    ],
+    "acc":[
+        [
+            {
+                "adj":"petit",
+                "fem":"petite"
+            },
+            {
+                "adj":"élégant",
+                "fem":"élégante"
+            },
+            {
+                "adj":"intelligent",
+                "fem":"intelligente"
+            },
+            {
+                "adj":"allemand",
+                "fem":"allemande"
+            },
+            {
+                "adj":"sympathique",
+                "fem":"sympathique"
+            },
+            {
+                "adj":"roux",
+                "fem":"rousse"
+            },
+            {
+                "adj":"frisé",
+                "fem":"firsée"
+            },
+            {
+                "adj":"souriant",
+                "fem":"sourinate"
+            },
+            {
+                "adj":"gentil",
+                "fem":"gentille"
+            },
+            {
+                "adj":"bavard",
+                "fem":"bavarde"
+            },
+            {
+                "adj":"matinal",
+                "fem":"matinale"
+            },
+            {
+                "adj":"idiot",
+                "fem":"idiote"
+            }
+            
+        ],
+        [
+            {
+                "adj":"paresseux",
+                "fem":"paresseuse"
+            },
+            {
+                "adj":"mignon",
+                "fem":"mignonne"
+            },
+            {
+                "adj":"neuf",
+                "fem":"neuve"
+            },
+            {
+                "adj":"sale",
+                "fem":"sale"
+            },
+            {
+                "adj":"frais",
+                "fem":"fraîche"
+            },
+            {
+                "adj":"ancien",
+                "fem":"ancienne"
+            },
+            {
+                "adj":"bleu",
+                "fem":"bleue"
+            },
+            {
+                "adj":"blanc",
+                "fem":"blanche"
+            },
+            {
+                "adj":"facile",
+                "fem":"facile"
+            },
+            {
+                "adj":"faux",
+                "fem":"fausse"
+            },
+            {
+                "adj":"mou",
+                "fem":"molle"
+            },
+            {
+                "adj":"beau",
+                "fem":"belle"
+            }
+            
+        ],
+        [
+            {
+                "adj":"vif",
+                "fem":"vive"
+            },
+            {
+                "adj":"grec",
+                "fem":"grecque"
+            },
+            {
+                "adj":"favori",
+                "fem":"favorite"
+            },
+            {
+                "adj":"aigu",
+                "fem":"aigüe"
+            },
+            {
+                "adj":"créateur",
+                "fem":"créatrice"
+            },
+            {
+                "adj":"ambigu",
+                "fem":"ambigüe"
+            },
+            {
+                "adj":"vengeur",
+                "fem":"vengeresse"
+            },
+            {
+                "adj":"flétri",
+                "fem":"flétrie"
+            },
+            {
+                "adj":"pointilleux",
+                "fem":"pointilleuse"
+            },
+            {
+                "adj":"endurant",
+                "fem":"endurante"
+            },
+            {
+                "adj":"amusant",
+                "fem":"amusante"
+            },
+            {
+                "adj":"propre",
+                "fem":"propre"
+            }
+            
+        ],
+        [
+            {
+                "adj":"gris",
+                "fem":"grise"
+            },
+            {
+                "adj":"dernier",
+                "fem":"dernière"
+            },
+            {
+                "adj":"violet",
+                "fem":"violette"
+            },
+            {
+                "adj":"marron",
+                "fem":"marron"
+            },
+            {
+                "adj":"mince",
+                "fem":"mince"
+            },
+            {
+                "adj":"sec",
+                "fem":"sèche"
+            },
+            {
+                "adj":"amer",
+                "fem":"amère"
+            },
+            {
+                "adj":"généreux",
+                "fem":"généreuse"
+            },
+            {
+                "adj":"fou",
+                "fem":"folle"
+            },
+            {
+                "adj":"gros",
+                "fem":"grosse"
+            },
+            {
+                "adj":"public",
+                "fem":"publique"
+            },
+            {
+                "adj":"trompeur",
+                "fem":"trompeuse"
+            }
+            
+        ]
+
+    ],
+    "nom":[
+        [
+            {
+                "vrb":"punir",
+                "nom":"punition"
+            },
+            {
+                "vrb":"déduire",
+                "nom":"déduction"
+            },
+            {
+                "vrb":"graduer",
+                "nom":"graduation"
+            },
+            {
+                "vrb":"exister",
+                "nom":"existence"
+            },
+            {
+                "vrb":"exploser",
+                "nom":"explosion"
+            },
+            {
+                "vrb":"monter",
+                "nom":"montée"
+            },
+            {
+                "vrb":"incendier",
+                "nom":"incendie"
+            },{
+                "vrb":"assassiner",
+                "nom":"assassinat"
+            },
+            {
+                "vrb":"plagier",
+                "nom":"plagiat"
+            },
+            {
+                "vrb":"tirer",
+                "nom":"tirade"
+            },
+            {
+                "vrb":"prendre",
+                "nom":"prise"
+            },
+            {
+                "vrb":"cuire",
+                "nom":"cuisson"
+            }
+        ],
+        [
+            {
+                "vrb":"rêver",
+                "nom":"rêverie"
+            },
+            {
+                "vrb":"lever",
+                "nom":"levée"
+            },
+            {
+                "vrb":"souder",
+                "nom":"soudure"
+            },
+            {
+                "vrb":"gager",
+                "nom":"gageure"
+            },
+            {
+                "vrb":"abattre",
+                "nom":"abattage"
+            },
+            {
+                "vrb":"envier",
+                "nom":"envie"
+            },
+            {
+                "vrb":"boire",
+                "nom":"boisson"
+            },
+            {
+                "vrb":"flâner",
+                "nom":"flânerie"
+            },
+            {
+                "vrb":"connecter",
+                "nom":"connexion"
+            },
+            {
+                "vrb":"raisonner",
+                "nom":"raisonnement"
+            },
+            {
+                "vrb":"passer",
+                "nom":"passage"
+            },
+            {
+                "vrb":"éroder",
+                "nom":"érosion"
+            }
+        ],
+        [
+            {
+                "vrb":"traduire",
+                "nom":"traduction"
+            },
+            {
+                "vrb":"dicter",
+                "nom":"dictée"
+            },
+            {
+                "vrb":"agoniser",
+                "nom":"agonie"
+            },
+            {
+                "vrb":"maîtriser",
+                "nom":"maîtrise"
+            },
+            {
+                "vrb":"réfléchir",
+                "nom":"réflexion"
+            },
+            {
+                "vrb":"ajouter",
+                "nom":"ajout"
+            },
+            {
+                "vrb":"rendre",
+                "nom":"rendement"
+            },{
+                "vrb":"traître",
+                "nom":"traîtrise"
+            },
+            {
+                "vrb":"vendre",
+                "nom":"vente"
+            },
+            {
+                "vrb":"assister",
+                "nom":"assistance"
+            },
+            {
+                "vrb":"débuter",
+                "nom":"début"
+            },
+            {
+                "vrb":"rire",
+                "nom":"rire"
+            }
+        ],
+        [
+            {
+                "vrb":"finir",
+                "nom":"fin"
+            },
+            {
+                "vrb":"souper",
+                "nom":"souper"
+            },
+            {
+                "vrb":"tolérer",
+                "nom":"tolérance"
+            },
+            {
+                "vrb":"élir",
+                "nom":"élection"
+            },
+            {
+                "vrb":"discuter",
+                "nom":"discussion"
+            },
+            {
+                "vrb":"mordre",
+                "nom":"morsure"
+            },
+            {
+                "vrb":"tomber",
+                "nom":"tombée"
+            },{
+                "vrb":"enlever",
+                "nom":"enlèvement"
+            },
+            {
+                "vrb":"adapter",
+                "nom":"adaptation"
+            },
+            {
+                "vrb":"manger",
+                "nom":"manger"
+            },
+            {
+                "vrb":"laver",
+                "nom":"lavage"
+            },
+            {
+                "vrb":"dériver",
+                "nom":"dérivation"
+            }
+        ]
+    ],
+    "present":[
+        {
+            "je":"achete",
+            "tu":"achetes",
+            "il":"achete",
+            "nous":"achetons",
+            "vous":"achetez",
+            "ils":"achetent"
+        },
+        {
+            "je":"finis",
+            "tu":"finis",
+            "il":"finit",
+            "nous":"finissons",
+            "vous":"finissez",
+            "ils":"finissent"
+        },
+        {
+            "je":"peux",
+            "tu":"peux",
+            "il":"peut",
+            "nous":"pouvons",
+            "vous":"pouvez",
+            "ils":"peuvent"
+        }
+    ],
+    "passe compose":[
+        {
+            "je":"ai acheté",
+            "tu":"as acheté",
+            "il":"a acheté",
+            "nous":"avons acheté",
+            "vous":"avez acheté",
+            "ils":"ont acheté"
+        },
+        {
+            "je":"ai fini",
+            "tu":"as fini",
+            "il":"a fini",
+            "nous":"avons fini",
+            "vous":"avez fini",
+            "ils":"ont fini"
+        },
+        {
+            "je":"ai pu",
+            "tu":"as pu",
+            "il":"a pu",
+            "nous":"avons pu",
+            "vous":"avez pu",
+            "ils":"ont pu"
+        }
+    ],
+    "future":[
+        {
+            "je":"acheterai",
+            "tu":"acheteras",
+            "il":"achetera",
+            "nous":"acheterons",
+            "vous":"acheterez",
+            "ils":"acheteront"
+        },
+        {
+            "je":"finirai",
+            "tu":"finiras",
+            "il":"finira",
+            "nous":"finirons",
+            "vous":"finirez",
+            "ils":"finiront"
+        },
+        {
+            "je":"pourrai",
+            "tu":"pourras",
+            "il":"pourra",
+            "nous":"pourrons",
+            "vous":"pourrez",
+            "ils":"pourront"
+        }
+    ],
+    "passe simple":[
+        {
+            "je":"achetai",
+            "tu":"achetas",
+            "il":"acheta",
+            "nous":"achetâmes",
+            "vous":"achetâtes",
+            "ils":"achetèrent"
+        },
+        {
+            "je":"finis",
+            "tu":"finis",
+            "il":"finit",
+            "nous":"finîmes",
+            "vous":"finîtes",
+            "ils":"finirent"
+        },
+        {
+            "je":"pus",
+            "tu":"pus",
+            "il":"put",
+            "nous":"pûmes",
+            "vous":"pûtes",
+            "ils":"purent"
+        }
+    ],
+    "imparfait":[
+        {
+            "je":"achetais",
+            "tu":"achetais",
+            "il":"achetait",
+            "nous":"achetions",
+            "vous":"achetiez",
+            "ils":"achetaient"
+        },
+        {
+            "je":"finissais",
+            "tu":"finissais",
+            "il":"finissait",
+            "nous":"finissions",
+            "vous":"finissiez",
+            "ils":"finissaient"
+        },
+        {
+            "je":"pouvais",
+            "tu":"pouvais",
+            "il":"pouvait",
+            "nous":"pouvions",
+            "vous":"pouviez",
+            "ils":"pouvaient"
+        }
     ]
 }
