@@ -209,12 +209,17 @@ class MessageBox(QDialog):
 
         # self.btn_return_home.clicked.connect(goto_home)
 
-    def solve(self, words, score):
+    def write_solution(self, words, score,level_type):
         solution_txt = f"Votre score est: {score}\ 12 \n\n"
-        for word in words:
-            solution_txt += f"{word.name} = {word.answer} \n"
+        if level_type in["gram","vocab"]:
+            for word in words:
+                solution_txt += f"{word.name} = {word.answer} \n"
+        else:
+            #convert the dictionary to a list of tuples of pronoun and answer pair
+            words = words.items()
+            for word in words:
+                solution_txt += f"{word[0]} {word[1]} \n"
         self.msg_txt.setText(solution_txt)
-
 
 class Scroll:
     # menus scrolling function
@@ -269,7 +274,7 @@ def generate_grammar_level(level_widget,genre,difficulty):
     # correct button
 
     level_widget.btn_correct.clicked.connect(
-        lambda: correct(level, level_widget, level.words))
+        lambda: correct(level_widget, level.words,"gram"))
 def generate_vocabulary_level(level_widget, genre, difficulty):
 
     level = Vocabulary.Level(genre, difficulty)
@@ -278,32 +283,36 @@ def generate_vocabulary_level(level_widget, genre, difficulty):
     # setup LevelScreen buttons text
     for button in level_widget.words_buttons.buttons():
         button.setText(level.words[level_widget.words_buttons.id(button)].name)
-
     # correct button
-
     level_widget.btn_correct.clicked.connect(
-        lambda: correct(level, level_widget, level.words))
+        lambda: correct(level_widget, level.words,"vocab"))
+
 def generate_conjuguaison_level(level_widget, temp, groupe):
     level = Conjugaison.Level(temp, groupe)
     level_widget.lvl_title.setText(level.title)
     level_widget.lvl_verb.setText(level.verb)
+    level_widget.btn_correct.clicked.connect(
+        lambda: correct(level_widget, level.answer,"conj"))
 
-def correct(level, level_widget, orignal_words):
-    guesses = get_guesses(level_widget, "vocab")
+def correct(level_widget, original_words,level_type):
+    guesses = get_guesses(level_widget, level_type)
     score = 0
-    for guess in guesses:
-        i = 0
-        answer = orignal_words[i].answer
-        guess = (guess.strip())
-        if guess in answer and len(guess) > 1:
-            score += 1
-        i += 1
+    if level_type in ["gram","vocab"]:
+        for guess in guesses:
+            index = 0
+            answer = original_words[index].answer
+            guess = (guess.strip())
+            if guess in answer and len(guess) > 1:
+                score += 1
+            index += 1
+    else:
+        answers = original_words.values()
+        score = sum(guess in answers for guess in guesses)
     # setup message box and show the solution
     solution_box = MessageBox()
-    solution_box.solve(level.words, score)
+    solution_box.write_solution(original_words, score,level_type)
     solution_box.show()
     solution_box.exec_()
-
 
 def get_guesses(widget, level_type):
 
