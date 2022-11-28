@@ -78,28 +78,6 @@
        <property name="spacing">
         <number>0</number>
        </property>
-       <item row="6" column="0">
-        <widget class="QToolButton" name="btn_to_eval">
-         <property name="maximumSize">
-          <size>
-           <width>500</width>
-           <height>70</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 202, 71);
-border-radius: 20px;
-color: white;
-font: 700 22pt &quot;Segoe UI Variable Display&quot;;</string>
-         </property>
-         <property name="text">
-          <string>Evaluation</string>
-         </property>
-        </widget>
-       </item>
        <item row="2" column="0">
         <widget class="QToolButton" name="toolButton">
          <property name="enabled">
@@ -133,6 +111,22 @@ font: 700 22pt &quot;Segoe UI Variable Display&quot;;</string>
           <string>Vocabulaire</string>
          </property>
         </widget>
+       </item>
+       <item row="1" column="0">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>41</width>
+           <height>56</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item row="5" column="0">
         <widget class="QToolButton" name="btn_to_conj">
@@ -177,22 +171,6 @@ font: 700 22pt &quot;Segoe UI Variable Display&quot;;</string>
           <string>Grammaire</string>
          </property>
         </widget>
-       </item>
-       <item row="1" column="0">
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>41</width>
-           <height>56</height>
-          </size>
-         </property>
-        </spacer>
        </item>
       </layout>
      </widget>

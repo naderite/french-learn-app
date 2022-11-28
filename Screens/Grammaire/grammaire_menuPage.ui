@@ -78,8 +78,11 @@
        <property name="spacing">
         <number>0</number>
        </property>
-       <item row="6" column="0">
-        <widget class="QToolButton" name="btn_to_eval">
+       <item row="3" column="0">
+        <widget class="QToolButton" name="toolButton_2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="maximumSize">
           <size>
            <width>500</width>
@@ -90,15 +93,31 @@
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 202, 71);
+          <string notr="true">background-color: rgba(255, 202, 71,70);
 border-radius: 20px;
-color: white;
+color: rgba(255,255,255,200);
 font: 700 22pt &quot;Segoe UI Variable Display&quot;;</string>
          </property>
          <property name="text">
-          <string>Evaluation</string>
+          <string>Grammaire</string>
          </property>
         </widget>
+       </item>
+       <item row="1" column="0">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>41</width>
+           <height>56</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item row="2" column="0">
         <widget class="QToolButton" name="btn_to_vocab">
@@ -155,47 +174,6 @@ font: 700 22pt &quot;Segoe UI Variable Display&quot;;</string>
           <string>Conjugaison</string>
          </property>
         </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QToolButton" name="toolButton_2">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>500</width>
-           <height>70</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgba(255, 202, 71,70);
-border-radius: 20px;
-color: rgba(255,255,255,200);
-font: 700 22pt &quot;Segoe UI Variable Display&quot;;</string>
-         </property>
-         <property name="text">
-          <string>Grammaire</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>41</width>
-           <height>56</height>
-          </size>
-         </property>
-        </spacer>
        </item>
       </layout>
      </widget>

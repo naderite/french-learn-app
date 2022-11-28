@@ -78,50 +78,6 @@
        <property name="spacing">
         <number>0</number>
        </property>
-       <item row="3" column="0">
-        <widget class="QToolButton" name="btn_to_gram">
-         <property name="maximumSize">
-          <size>
-           <width>500</width>
-           <height>70</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 202, 71);
-border-radius: 20px;
-color: white;
-font: 700 22pt &quot;Segoe UI Variable Display&quot;;</string>
-         </property>
-         <property name="text">
-          <string>Grammaire</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="0">
-        <widget class="QToolButton" name="btn_to_eval">
-         <property name="maximumSize">
-          <size>
-           <width>500</width>
-           <height>70</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 202, 71);
-border-radius: 20px;
-color: white;
-font: 700 22pt &quot;Segoe UI Variable Display&quot;;</string>
-         </property>
-         <property name="text">
-          <string>Evaluation</string>
-         </property>
-        </widget>
-       </item>
        <item row="5" column="0">
         <widget class="QToolButton" name="toolButton">
          <property name="enabled">
@@ -144,6 +100,28 @@ font: 700 22pt &quot;Segoe UI Variable Display&quot;;</string>
          </property>
          <property name="text">
           <string>Conjugaison</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QToolButton" name="btn_to_gram">
+         <property name="maximumSize">
+          <size>
+           <width>500</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 202, 71);
+border-radius: 20px;
+color: white;
+font: 700 22pt &quot;Segoe UI Variable Display&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Grammaire</string>
          </property>
         </widget>
        </item>
