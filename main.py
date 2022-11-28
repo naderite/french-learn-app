@@ -40,6 +40,8 @@ class MainScreen(QStackedWidget):
         self.gram_level = GrammaireLevelScreen()
         self.conj_level = ConjugaisonLevelScreen()
 
+        self.solution_box = MessageBox()
+
     def add_screens(self):
         # adding menu screens to main window
         self.addWidget(self.vocab_menu)  # index 0
@@ -80,6 +82,7 @@ class MainScreen(QStackedWidget):
             self.vocab_level.btn_goto_menu, 0)
         self.return_to_menu_buttons.addButton(self.gram_level.btn_goto_menu, 1)
         self.return_to_menu_buttons.addButton(self.conj_level.btn_goto_menu, 2)
+        self.return_to_menu_buttons.addButton(self.solution_box.btn_goto_menu, 2)
 
     def connect_side_menu_buttons(self):
         self.goto_vocab_buttons.buttonClicked.connect(
@@ -91,83 +94,83 @@ class MainScreen(QStackedWidget):
 
     def connect_vocabulary_menu_adj_buttons(self):
         self.vocab_menu.btn_adj_lvl0.clicked.connect(
-            lambda: Scroll.vocab_lvl(self, self.vocab_level, "adj", 0))
+            lambda: Scroll.vocab_lvl(self, self.vocab_level, "adj", 0,self.solution_box))
         self.vocab_menu.btn_adj_lvl1.clicked.connect(
-            lambda: Scroll.vocab_lvl(self, self.vocab_level, "adj", 1))
+            lambda: Scroll.vocab_lvl(self, self.vocab_level, "adj", 1,self.solution_box))
         self.vocab_menu.btn_adj_lvl2.clicked.connect(
-            lambda: Scroll.vocab_lvl(self, self.vocab_level, "adj", 2))
+            lambda: Scroll.vocab_lvl(self, self.vocab_level, "adj", 2,self.solution_box))
         self.vocab_menu.btn_adj_lvl3.clicked.connect(
-            lambda: Scroll.vocab_lvl(self, self.vocab_level, "adj", 3))
+            lambda: Scroll.vocab_lvl(self, self.vocab_level, "adj", 3,self.solution_box))
 
     def connect_vocabulary_menu_vrb_buttons(self):
         self.vocab_menu.btn_vrb_lvl0.clicked.connect(
-            lambda: Scroll.vocab_lvl(self, self.vocab_level, "vrb", 0))
+            lambda: Scroll.vocab_lvl(self, self.vocab_level, "vrb", 0,self.solution_box))
         self.vocab_menu.btn_vrb_lvl1.clicked.connect(
-            lambda: Scroll.vocab_lvl(self, self.vocab_level, "vrb", 1))
+            lambda: Scroll.vocab_lvl(self, self.vocab_level, "vrb", 1,self.solution_box))
         self.vocab_menu.btn_vrb_lvl2.clicked.connect(
-            lambda: Scroll.vocab_lvl(self, self.vocab_level, "vrb", 2))
+            lambda: Scroll.vocab_lvl(self, self.vocab_level, "vrb", 2,self.solution_box))
         self.vocab_menu.btn_vrb_lvl3.clicked.connect(
-            lambda: Scroll.vocab_lvl(self, self.vocab_level, "vrb", 3))
+            lambda: Scroll.vocab_lvl(self, self.vocab_level, "vrb", 3,self.solution_box))
 
     def connect_garmmair_menu_acc_buttons(self):
         self.gram_menu.btn_acc_lvl0.clicked.connect(
-            lambda: Scroll.gram_lvl(self, self.gram_level, "acc", 0))
+            lambda: Scroll.gram_lvl(self, self.gram_level, "acc", 0,self.solution_box))
         self.gram_menu.btn_acc_lvl1.clicked.connect(
-            lambda: Scroll.gram_lvl(self, self.gram_level, "acc", 1))
+            lambda: Scroll.gram_lvl(self, self.gram_level, "acc", 1,self.solution_box))
         self.gram_menu.btn_acc_lvl2.clicked.connect(
-            lambda: Scroll.gram_lvl(self, self.gram_level, "acc", 2))
+            lambda: Scroll.gram_lvl(self, self.gram_level, "acc", 2,self.solution_box))
         self.gram_menu.btn_acc_lvl3.clicked.connect(
-            lambda: Scroll.gram_lvl(self, self.gram_level, "acc", 3))
+            lambda: Scroll.gram_lvl(self, self.gram_level, "acc", 3,self.solution_box))
 
 
     def connect_garmmair_menu_nom_buttons(self):
       self.gram_menu.btn_nom_lvl0.clicked.connect(
-          lambda: Scroll.gram_lvl(self, self.gram_level, "nom", 0))
+          lambda: Scroll.gram_lvl(self, self.gram_level, "nom", 0,self.solution_box))
       self.gram_menu.btn_nom_lvl1.clicked.connect(
-          lambda: Scroll.gram_lvl(self, self.gram_level, "nom", 1))
+          lambda: Scroll.gram_lvl(self, self.gram_level, "nom", 1,self.solution_box))
       self.gram_menu.btn_nom_lvl2.clicked.connect(
-          lambda: Scroll.gram_lvl(self, self.gram_level, "nom", 2))
+          lambda: Scroll.gram_lvl(self, self.gram_level, "nom", 2,self.solution_box))
       self.gram_menu.btn_nom_lvl3.clicked.connect(
-          lambda: Scroll.gram_lvl(self, self.gram_level, "nom", 3))
+          lambda: Scroll.gram_lvl(self, self.gram_level, "nom", 3,self.solution_box))
 
     def connect_conjugaison_grp1_menu_buttons(self):
 
         self.conj_menu.btn_gr1_pr.clicked.connect(
-    lambda: Scroll.conj_lvl(self,self.conj_level,"present",0))
+    lambda: Scroll.conj_lvl(self,self.conj_level,"present",0,self.solution_box))
         self.conj_menu.btn_gr1_fu.clicked.connect(
-    lambda: Scroll.conj_lvl(self,self.conj_level,"future",0))
+    lambda: Scroll.conj_lvl(self,self.conj_level,"future",0,self.solution_box))
         self.conj_menu.btn_gr1_im.clicked.connect(
-    lambda: Scroll.conj_lvl(self,self.conj_level,"imparfait",0))
+    lambda: Scroll.conj_lvl(self,self.conj_level,"imparfait",0,self.solution_box))
         self.conj_menu.btn_gr1_ps.clicked.connect(
-    lambda: Scroll.conj_lvl(self,self.conj_level,"passe simple",0))
+    lambda: Scroll.conj_lvl(self,self.conj_level,"passe simple",0,self.solution_box))
         self.conj_menu.btn_gr1_pc.clicked.connect(
-    lambda: Scroll.conj_lvl(self,self.conj_level,"passe compose",0))
+    lambda: Scroll.conj_lvl(self,self.conj_level,"passe compose",0,self.solution_box))
 
     def connect_conjugaison_grp2_menu_buttons(self):    
 
         self.conj_menu.btn_gr2_pr.clicked.connect(
-    lambda: Scroll.conj_lvl(self,self.conj_level,"present",1))
+    lambda: Scroll.conj_lvl(self,self.conj_level,"present",1,self.solution_box))
         self.conj_menu.btn_gr2_fu.clicked.connect(
-    lambda: Scroll.conj_lvl(self,self.conj_level,"future",1))
+    lambda: Scroll.conj_lvl(self,self.conj_level,"future",1,self.solution_box))
         self.conj_menu.btn_gr2_im.clicked.connect(
-    lambda: Scroll.conj_lvl(self,self.conj_level,"imparfait",1))
+    lambda: Scroll.conj_lvl(self,self.conj_level,"imparfait",1,self.solution_box))
         self.conj_menu.btn_gr2_ps.clicked.connect(
-    lambda: Scroll.conj_lvl(self,self.conj_level,"passe simple",1))
+    lambda: Scroll.conj_lvl(self,self.conj_level,"passe simple",1,self.solution_box))
         self.conj_menu.btn_gr2_pc.clicked.connect(
-    lambda: Scroll.conj_lvl(self,self.conj_level,"passe compose",1))
+    lambda: Scroll.conj_lvl(self,self.conj_level,"passe compose",1,self.solution_box))
 
     def connect_conjugaison_grp3_menu_buttons(self):    
 
         self.conj_menu.btn_gr3_pr.clicked.connect(
-    lambda: Scroll.conj_lvl(self,self.conj_level,"present",2))
+    lambda: Scroll.conj_lvl(self,self.conj_level,"present",2,self.solution_box))
         self.conj_menu.btn_gr3_fu.clicked.connect(
-    lambda: Scroll.conj_lvl(self,self.conj_level,"future",2))
+    lambda: Scroll.conj_lvl(self,self.conj_level,"future",2,self.solution_box))
         self.conj_menu.btn_gr3_im.clicked.connect(
-    lambda: Scroll.conj_lvl(self,self.conj_level,"imparfait",2))
+    lambda: Scroll.conj_lvl(self,self.conj_level,"imparfait",2,self.solution_box))
         self.conj_menu.btn_gr3_ps.clicked.connect(
-    lambda: Scroll.conj_lvl(self,self.conj_level,"passe simple",2))
+    lambda: Scroll.conj_lvl(self,self.conj_level,"passe simple",2,self.solution_box))
         self.conj_menu.btn_gr3_pc.clicked.connect(
-    lambda: Scroll.conj_lvl(self,self.conj_level,"passe compose",2))
+    lambda: Scroll.conj_lvl(self,self.conj_level,"passe compose",2,self.solution_box))
 
     def connect_return_buttons(self):
         self.return_to_menu_buttons.buttonClicked.connect(
@@ -178,6 +181,8 @@ class MessageBox(QDialog):
     def __init__(self):
         super(MessageBox, self).__init__()
         loadUi("CorrectionMessageBox.ui", self)
+        
+
 
         # self.btn_return_home.clicked.connect(goto_home)
 
@@ -211,25 +216,23 @@ class Scroll:
     def conj_menu(widget):
         widget.setCurrentIndex(2)
 
-
-
     # levels scrolling functions
 
-    def vocab_lvl(self, level_widget, genre, difficulty):
-        generate_vocabulary_level(level_widget, genre, difficulty)
+    def vocab_lvl(self, level_widget, genre, difficulty,solution_box):
+        generate_vocabulary_level(level_widget, genre, difficulty,solution_box)
         self.setCurrentIndex(3)
 
     @staticmethod
-    def gram_lvl(widget,level_widget, genre, difficulty):
-        generate_grammar_level(level_widget,genre,difficulty)
+    def gram_lvl(widget,level_widget, genre, difficulty,solution_box):
+        generate_grammar_level(level_widget,genre,difficulty,solution_box)
         widget.setCurrentIndex(4)
 
     @staticmethod
-    def conj_lvl(widget,level_widget, temp,groupe):
-        generate_conjuguaison_level(level_widget, temp, groupe)
+    def conj_lvl(widget,level_widget, temp,groupe,solution_box):
+        generate_conjuguaison_level(level_widget, temp, groupe,solution_box)
         widget.setCurrentIndex(5)
 
-def generate_grammar_level(level_widget,genre,difficulty):
+def generate_grammar_level(level_widget,genre,difficulty,solution_box):
     level = Grammar.Level(genre, difficulty)
     # write level title
     level_widget.lvl_title.setText(level.title)
@@ -240,8 +243,8 @@ def generate_grammar_level(level_widget,genre,difficulty):
     # correct button
 
     level_widget.btn_correct.clicked.connect(
-        lambda: correct(level_widget, level.words,"gram"))
-def generate_vocabulary_level(level_widget, genre, difficulty):
+        lambda: correct(level_widget, level.words,"gram",solution_box))
+def generate_vocabulary_level(level_widget, genre, difficulty,solution_box):
 
     level = Vocabulary.Level(genre, difficulty)
     # write level title
@@ -251,16 +254,16 @@ def generate_vocabulary_level(level_widget, genre, difficulty):
         button.setText(level.words[level_widget.words_buttons.id(button)].name)
     # correct button
     level_widget.btn_correct.clicked.connect(
-        lambda: correct(level_widget, level.words,"vocab"))
+        lambda: correct(level_widget, level.words,"vocab",solution_box))
 
-def generate_conjuguaison_level(level_widget, temp, groupe):
+def generate_conjuguaison_level(level_widget, temp, groupe,solution_box):
     level = Conjugaison.Level(temp, groupe)
     level_widget.lvl_title.setText(level.title)
     level_widget.lvl_verb.setText(level.verb)
     level_widget.btn_correct.clicked.connect(
-        lambda: correct(level_widget, level.answer,"conj"))
+        lambda: correct(level_widget, level.answer,"conj",solution_box))
 
-def correct(level_widget, original_words,level_type):
+def correct(level_widget, original_words,level_type,solution_box):
     guesses = get_guesses(level_widget, level_type)
     score = 0
     if level_type in ["gram","vocab"]:
@@ -275,7 +278,7 @@ def correct(level_widget, original_words,level_type):
         answers = original_words.values()
         score = sum(guess in answers for guess in guesses)
     # setup message box and show the solution
-    solution_box = MessageBox()
+    
     solution_box.write_solution(original_words, score,level_type)
     solution_box.show()
     solution_box.exec_()

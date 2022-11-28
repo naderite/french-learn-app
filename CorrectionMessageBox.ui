@@ -17,7 +17,7 @@
    <string notr="true">background-color: rgb(1, 93, 191);
 border-radius: 20px;</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="btn_tryagain">
    <property name="geometry">
     <rect>
      <x>270</x>
@@ -36,7 +36,7 @@ font: 700 14pt &quot;Segoe UI&quot;;</string>
     <string>Ressayer</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_return_home">
+  <widget class="QPushButton" name="btn_goto_menu">
    <property name="geometry">
     <rect>
      <x>530</x>
