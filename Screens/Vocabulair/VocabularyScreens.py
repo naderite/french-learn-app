@@ -14,7 +14,7 @@ class VocabularyMenuScreen(QMainWindow):
         self.adj_buttons = QButtonGroup()
         self.vrb_buttons = QButtonGroup()
         self.add_buttons_to_groups()
-        
+
     def add_buttons_to_groups(self):
         self.adj_buttons.addButton(self.btn_adj_lvl0, 0)
         self.adj_buttons.addButton(self.btn_adj_lvl1, 1)
@@ -31,6 +31,8 @@ class VocabularyLevelScreen(QMainWindow):
     def __init__(self):
         super(VocabularyLevelScreen, self).__init__()
         loadUi(os.path.abspath("Screens/Vocabulair/vocabulair_levelPage.ui"), self)
+        self.words_guess_spaces = [self.word1_guess, self.word2_guess, self.word3_guess, self.word4_guess, self.word5_guess,
+                                   self.word6_guess, self.word7_guess, self.word8_guess, self.word9_guess, self.word10_guess, self.word11_guess, self.word12_guess]
 
         # setup words buttons
         self.words_buttons = QButtonGroup()

@@ -10,20 +10,21 @@ class GrammaireMenuScreen(QMainWindow):
         super(GrammaireMenuScreen, self).__init__()
         loadUi(os.path.abspath("Screens/Grammaire/grammaire_menuPage.ui"), self)
 
-        #creating button groups
+        # creating button groups
         self.acc_buttons = QButtonGroup()
         self.nom_buttons = QButtonGroup()
 
-        #adding buttons to groups
-        self.acc_buttons.addButton(self.btn_acc_lvl0,0)
-        self.acc_buttons.addButton(self.btn_acc_lvl1,1)
-        self.acc_buttons.addButton(self.btn_acc_lvl2,2)
-        self.acc_buttons.addButton(self.btn_acc_lvl3,3)
+        # adding buttons to groups
+        self.acc_buttons.addButton(self.btn_acc_lvl0, 0)
+        self.acc_buttons.addButton(self.btn_acc_lvl1, 1)
+        self.acc_buttons.addButton(self.btn_acc_lvl2, 2)
+        self.acc_buttons.addButton(self.btn_acc_lvl3, 3)
 
-        self.nom_buttons.addButton(self.btn_nom_lvl0,0)
-        self.nom_buttons.addButton(self.btn_nom_lvl1,1)
-        self.nom_buttons.addButton(self.btn_nom_lvl2,2)
-        self.nom_buttons.addButton(self.btn_nom_lvl3,3)
+        self.nom_buttons.addButton(self.btn_nom_lvl0, 0)
+        self.nom_buttons.addButton(self.btn_nom_lvl1, 1)
+        self.nom_buttons.addButton(self.btn_nom_lvl2, 2)
+        self.nom_buttons.addButton(self.btn_nom_lvl3, 3)
+
 
 class GrammaireLevelScreen(QMainWindow):
     def __init__(self):
@@ -32,6 +33,8 @@ class GrammaireLevelScreen(QMainWindow):
         self.words_buttons = QButtonGroup()
         self.add_buttons_first_half()
         self.add_buttons_second_half()
+        self.words_guess_spaces = [self.word1_guess, self.word2_guess, self.word3_guess, self.word4_guess, self.word5_guess,
+                                   self.word6_guess, self.word7_guess, self.word8_guess, self.word9_guess, self.word10_guess, self.word11_guess, self.word12_guess]
 
     def add_buttons_first_half(self):
         self.words_buttons.addButton(self.btn_word0, 0)
