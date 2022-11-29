@@ -2,17 +2,16 @@ import sys
 
 from PyQt5.uic import loadUi
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QStackedWidget, QApplication, QButtonGroup, QMainWindow, QDialog
-from Screens.Vocabulair.VocabularyScreens import VocabularyMenuScreen, VocabularyLevelScreen
-from Screens.Grammaire.GrammaireScreens import GrammaireMenuScreen, GrammaireLevelScreen
-from Screens.Conjugaison.ConjugaisonScreens import ConjugaisonMenuScreen, ConjugaisonLevelScreen
+from PyQt5.QtWidgets import QStackedWidget, QApplication, QButtonGroup, QDialog
+from Screens.Vocabulair.VocabularyScreens import VocabularyMenuScreen, VocabularyLevelScreen ,VocabularyLevel
+from Screens.Grammaire.GrammaireScreens import GrammaireMenuScreen, GrammaireLevelScreen, GrammaireLevel
+from Screens.Conjugaison.ConjugaisonScreens import ConjugaisonMenuScreen, ConjugaisonLevelScreen, ConjugaisonLevel
 
 
 import database.dbDriver as database
 import modules.vocabulary as Vocabulary
 import modules.grammar as Grammar
 import modules.conjugation as Conjugaison
-
 
 class MainScreen(QStackedWidget):
     def __init__(self):
@@ -186,11 +185,13 @@ class MessageBox(QDialog):
         # self.btn_return_home.clicked.connect(goto_home)
 
     def write_solution(self, words, score, level_type):
-        solution_txt = f"Votre score est: {score}\ 12 \n\n"
+        
         if level_type in ["gram", "vocab"]:
+            solution_txt = f"Votre score est: {score}\ 12 \n\n"
             for word in words:
                 solution_txt += f"{word.name} = {word.answer} \n"
         else:
+            solution_txt = f"Votre score est: {score}\ 6 \n\n"
             # convert the dictionary to a list of tuples of pronoun and answer pair
             words = words.items()
             for word in words:
@@ -254,7 +255,7 @@ class Scroll:
 
 
 def generate_grammar_level(level_widget, genre, difficulty, solution_box):
-    level = Grammar.Level(genre, difficulty)
+    level = GrammaireLevel(genre, difficulty)
     # write level title
     level_widget.lvl_title.setText(level.title)
     # setup LevelScreen buttons text
@@ -271,7 +272,7 @@ def generate_grammar_level(level_widget, genre, difficulty, solution_box):
 
 def generate_vocabulary_level(level_widget, genre, difficulty, solution_box):
 
-    level = Vocabulary.Level(genre, difficulty)
+    level = VocabularyLevel(genre, difficulty)
     # write level title
     level_widget.lvl_title.setText(level.title)
     # setup LevelScreen buttons text
@@ -287,13 +288,16 @@ def generate_vocabulary_level(level_widget, genre, difficulty, solution_box):
 
 
 def generate_conjuguaison_level(level_widget, temp, groupe, solution_box):
-    level = Conjugaison.Level(temp, groupe)
+    level = ConjugaisonLevel(temp, groupe)
+    #write level title
     level_widget.lvl_title.setText(level.title)
+    #setup level screen button
     level_widget.lvl_verb.setText(level.verb)
+    #correct button
     level_widget.btn_correct.clicked.connect(
         lambda: correct(level_widget, level.answer, "conj", solution_box))
 
-    # reset the words guess space
+    #reset the words guess space
     for guess_space in level_widget.words_guess_spaces:
         guess_space.setText("")
 

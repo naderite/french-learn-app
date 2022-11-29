@@ -1,9 +1,8 @@
 from PyQt5.uic import loadUi
-from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMainWindow, QButtonGroup
-import playsound
 import os
-
+import sys
+import database.dbDriver as database
 
 class VocabularyMenuScreen(QMainWindow):
     def __init__(self):
@@ -54,3 +53,31 @@ class VocabularyLevelScreen(QMainWindow):
         self.words_buttons.addButton(self.btn_word9, 9)
         self.words_buttons.addButton(self.btn_word10, 10)
         self.words_buttons.addButton(self.btn_word11, 11)
+
+class Word:
+    def __init__(self, name, genre, answer):
+        self.name = name
+        self.genre = genre
+        self.answer = answer
+
+class VocabularyLevel:
+    def __init__(self, genre, index):
+        self.driver = database.JSONDriver()
+        self.genre = genre
+        self.index = index
+        self.words = self.get_words(self.genre, self.index)
+        self.title = self.get_title(self.genre, self.index)
+
+    def get_title(self, genre, index):
+        if genre == "adj":
+            title = f"Adjectifs {str(index)}"
+        elif genre == "vrb":
+            title = f"Verbes {str(index)}"
+
+        return title
+
+    def get_words(self, genre, index):
+        words = self.driver.getVocabWords(index, genre)
+        if not words:
+            sys.exit("Invalid genre")
+        return [Word(word["fr"], genre, word["ar"]) for word in words] 

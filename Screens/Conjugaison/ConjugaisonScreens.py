@@ -1,9 +1,7 @@
 from PyQt5.uic import loadUi
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QMainWindow, QDialog, QButtonGroup
-import playsound
+from PyQt5.QtWidgets import QMainWindow, QButtonGroup
 import os
-
+import database.dbDriver as database
 
 class ConjugaisonMenuScreen(QMainWindow):
     def __init__(self):
@@ -41,3 +39,18 @@ class ConjugaisonLevelScreen(QMainWindow):
         loadUi(os.path.abspath("Screens/Conjugaison/conjugaison_levelPage.ui"), self)
         self.words_guess_spaces = [self.word1_guess, self.word2_guess,
                                    self.word3_guess, self.word4_guess, self.word5_guess, self.word6_guess]
+
+class ConjugaisonLevel:
+    def __init__(self, temp, groupe):
+        self.driver = database.JSONDriver()
+        self.groupe = groupe
+        self.temp = temp
+        self.verb = self.get_verb(self.groupe)
+        self.answer = self.driver.getConjAnswer(temp, groupe)
+        self.title = f"{self.verb} au {self.temp}"
+
+    def get_verb(self, groupe):
+        match groupe:
+            case 0: return "acheter"
+            case 1: return "finir"
+            case 2: return "pouvoir"
