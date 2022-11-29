@@ -24,7 +24,7 @@ class Scroll:
     # levels scrolling functions
     @staticmethod
     def vocab_lvl(widget, level_widget, genre, difficulty, solution_box):
-        generate_vocabulary_level(
+        generateLevel.vocabulary(
             level_widget, genre, difficulty, solution_box)
         widget.setCurrentIndex(3)
         solution_box.btn_tryagain.clicked.connect(lambda: Scroll.reload_lvl(
@@ -32,14 +32,14 @@ class Scroll:
 
     @staticmethod
     def gram_lvl(widget, level_widget, genre, difficulty, solution_box):
-        generate_grammar_level(level_widget, genre, difficulty, solution_box)
+        generateLevel.grammar(level_widget, genre, difficulty, solution_box)
         widget.setCurrentIndex(4)
         solution_box.btn_tryagain.clicked.connect(lambda: Scroll.reload_lvl(
             widget, level_widget, genre, difficulty, solution_box))
 
     @staticmethod
     def conj_lvl(widget, level_widget, temp, groupe, solution_box):
-        generate_conjuguaison_level(level_widget, temp, groupe, solution_box)
+        generateLevel.conjuguaison(level_widget, temp, groupe, solution_box)
         widget.setCurrentIndex(5)
         solution_box.btn_tryagain.clicked.connect(lambda: Scroll.reload_lvl(
             widget, level_widget, temp, groupe, solution_box))
@@ -60,7 +60,7 @@ class Scroll:
 class generateLevel:
 
     @staticmethod
-    def generate_grammar_level(level_widget, genre, difficulty, solution_box):
+    def grammar(level_widget, genre, difficulty, solution_box):
         level = GrammaireLevel(genre, difficulty)
         # write level title
         level_widget.lvl_title.setText(level.title)
@@ -73,11 +73,11 @@ class generateLevel:
             guess_space.setText("")
         # correct button
         level_widget.btn_correct.clicked.connect(
-            lambda: correct(level_widget, level.words, "gram", solution_box))
+            lambda: generateLevel.correct(level_widget, level.words, "gram", solution_box))
 
 
     @staticmethod
-    def generate_vocabulary_level(level_widget, genre, difficulty, solution_box):
+    def vocabulary(level_widget, genre, difficulty, solution_box):
 
         level = VocabularyLevel(genre, difficulty)
         # write level title
@@ -91,10 +91,10 @@ class generateLevel:
             guess_space.setText("")
         # correct button
         level_widget.btn_correct.clicked.connect(
-            lambda: correct(level_widget, level.words, "vocab", solution_box))
+            lambda: generateLevel.correct(level_widget, level.words, "vocab", solution_box))
 
     @staticmethod
-    def generate_conjuguaison_level(level_widget, temp, groupe, solution_box):
+    def conjuguaison(level_widget, temp, groupe, solution_box):
         level = ConjugaisonLevel(temp, groupe)
         #write level title
         level_widget.lvl_title.setText(level.title)
@@ -102,7 +102,7 @@ class generateLevel:
         level_widget.lvl_verb.setText(level.verb)
         #correct button
         level_widget.btn_correct.clicked.connect(
-            lambda: correct(level_widget, level.answer, "conj", solution_box))
+            lambda: generateLevel.correct(level_widget, level.answer, "conj", solution_box))
 
         #reset the words guess space
         for guess_space in level_widget.words_guess_spaces:
@@ -110,7 +110,7 @@ class generateLevel:
 
     @staticmethod
     def correct(level_widget, original_words, level_type, solution_box):
-        guesses = get_guesses(level_widget)
+        guesses = generateLevel.get_guesses(level_widget)
         score = 0
         if level_type in ["gram", "vocab"]:
             for guess in guesses:
