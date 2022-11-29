@@ -6,12 +6,7 @@ from PyQt5.QtWidgets import QStackedWidget, QApplication, QButtonGroup, QDialog
 from Screens.Vocabulair.VocabularyScreens import VocabularyMenuScreen, VocabularyLevelScreen ,VocabularyLevel
 from Screens.Grammaire.GrammaireScreens import GrammaireMenuScreen, GrammaireLevelScreen, GrammaireLevel
 from Screens.Conjugaison.ConjugaisonScreens import ConjugaisonMenuScreen, ConjugaisonLevelScreen, ConjugaisonLevel
-
-
-import database.dbDriver as database
-import modules.vocabulary as Vocabulary
-import modules.grammar as Grammar
-import modules.conjugation as Conjugaison
+from switchScreen import Scroll
 
 class MainScreen(QStackedWidget):
     def __init__(self):
