@@ -67,14 +67,13 @@ class GrammarLevel:
         self.index = index
         self.words = self.get_words(self.genre, self.index)
         self.title = self.get_title(self.genre, self.index)
+        self.question = self.get_question(self.genre)
 
     def get_title(self, genre, index):
-        if genre == "acc":
-            title = f"Accord des adjectifs {str(index)}"
-        elif genre == "nom":
-            title = f"Nominalisation {str(index)}"
+        return f"Accord {str(index)}" if genre == "acc" else f"Nominalisation {str(index)}"
 
-        return title
+    def get_question(self, genre):
+        return "accorder ces adjectifs au femenin" if genre == "acc" else "donner le correspendant à chaque verbe"
 
     def get_words(self, genre, index):
         words = self.driver.getGramWords(index, genre)

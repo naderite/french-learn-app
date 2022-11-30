@@ -49,10 +49,17 @@ class ConjugationLevel:
         self.temp = temp
         self.verb = self.get_verb(self.groupe)
         self.answer = self.driver.getConjAnswer(temp, groupe)
-        self.title = f"{self.verb} au {self.temp}"
+        self.title = self.get_title(self.groupe)
+        self.question = f"conjuguer {self.verb} au {self.temp}"
 
     def get_verb(self, groupe):
         match groupe:
             case 0: return "acheter"
             case 1: return "finir"
             case 2: return "pouvoir"
+
+    def get_title(self, groupe):
+        match groupe:
+            case 0: return "1ère groupe"
+            case 1: return "2éme groupe"
+            case 2: return "3éme groupe"

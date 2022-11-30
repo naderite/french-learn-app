@@ -6,8 +6,9 @@ from Screens.Conjugation.ConjugationScreens import ConjugationLevel
 class Scroll:
     # menus scrolling function
     @staticmethod
-    def main_menu(widget, index):
+    def main_menu(widget, index, solution_box):
         widget.setCurrentIndex(index)
+        solution_box.close()
 
     @staticmethod
     def vocab_menu(widget):
@@ -56,6 +57,7 @@ class Scroll:
             case 5:
                 Scroll.conj_lvl(widget, level_widget, param_1,
                                 param_2, solution_box)
+        solution_box.close()
 
 
 class generateLevel:
@@ -63,8 +65,9 @@ class generateLevel:
     @staticmethod
     def grammar(level_widget, genre, difficulty, solution_box):
         level = GrammarLevel(genre, difficulty)
-        # write level title
+        # write level title and question
         level_widget.lvl_title.setText(level.title)
+        level_widget.lvl_question.setText(level.question)
         # setup LevelScreen buttons text
         for button in level_widget.words_buttons.buttons():
             button.setText(
@@ -98,8 +101,9 @@ class generateLevel:
     @staticmethod
     def conjugation(level_widget, temp, groupe, solution_box):
         level = ConjugationLevel(temp, groupe)
-        # write level title
+        # write level title and level question
         level_widget.lvl_title.setText(level.title)
+        level_widget.lvl_question.setText(level.question)
         # setup level screen button
         level_widget.lvl_verb.setText(level.verb)
         # correct button

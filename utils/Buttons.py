@@ -153,4 +153,4 @@ class Connect:
     @staticmethod
     def return_buttons(widget):
         widget.return_to_menu_buttons.buttonClicked.connect(
-            lambda: Scroll.main_menu(widget, widget.currentIndex() - 3))
+            lambda: Scroll.main_menu(widget, widget.currentIndex() - 3, widget.solution_box))
