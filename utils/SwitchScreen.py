@@ -1,6 +1,6 @@
-from Screens.Vocabulair.VocabularyScreens import VocabularyLevel
-from Screens.Grammaire.GrammaireScreens import GrammaireLevel
-from Screens.Conjugaison.ConjugaisonScreens import  ConjugaisonLevel
+from Screens.Vocabulary.VocabularyScreens import VocabularyLevel
+from Screens.Grammar.GrammarScreens import GrammarLevel
+from Screens.Conjugation.ConjugationScreens import ConjugationLevel
 
 
 class Scroll:
@@ -39,7 +39,7 @@ class Scroll:
 
     @staticmethod
     def conj_lvl(widget, level_widget, temp, groupe, solution_box):
-        generateLevel.conjuguaison(level_widget, temp, groupe, solution_box)
+        generateLevel.conjugation(level_widget, temp, groupe, solution_box)
         widget.setCurrentIndex(5)
         solution_box.btn_tryagain.clicked.connect(lambda: Scroll.reload_lvl(
             widget, level_widget, temp, groupe, solution_box))
@@ -57,16 +57,18 @@ class Scroll:
                 Scroll.conj_lvl(widget, level_widget, param_1,
                                 param_2, solution_box)
 
+
 class generateLevel:
 
     @staticmethod
     def grammar(level_widget, genre, difficulty, solution_box):
-        level = GrammaireLevel(genre, difficulty)
+        level = GrammarLevel(genre, difficulty)
         # write level title
         level_widget.lvl_title.setText(level.title)
         # setup LevelScreen buttons text
         for button in level_widget.words_buttons.buttons():
-            button.setText(level.words[level_widget.words_buttons.id(button)].name)
+            button.setText(
+                level.words[level_widget.words_buttons.id(button)].name)
 
         # reset the words guess space
         for guess_space in level_widget.words_guess_spaces:
@@ -74,7 +76,6 @@ class generateLevel:
         # correct button
         level_widget.btn_correct.clicked.connect(
             lambda: generateLevel.correct(level_widget, level.words, "gram", solution_box))
-
 
     @staticmethod
     def vocabulary(level_widget, genre, difficulty, solution_box):
@@ -84,7 +85,8 @@ class generateLevel:
         level_widget.lvl_title.setText(level.title)
         # setup LevelScreen buttons text
         for button in level_widget.words_buttons.buttons():
-            button.setText(level.words[level_widget.words_buttons.id(button)].name)
+            button.setText(
+                level.words[level_widget.words_buttons.id(button)].name)
 
         # reset the words guess space
         for guess_space in level_widget.words_guess_spaces:
@@ -94,17 +96,17 @@ class generateLevel:
             lambda: generateLevel.correct(level_widget, level.words, "vocab", solution_box))
 
     @staticmethod
-    def conjuguaison(level_widget, temp, groupe, solution_box):
-        level = ConjugaisonLevel(temp, groupe)
-        #write level title
+    def conjugation(level_widget, temp, groupe, solution_box):
+        level = ConjugationLevel(temp, groupe)
+        # write level title
         level_widget.lvl_title.setText(level.title)
-        #setup level screen button
+        # setup level screen button
         level_widget.lvl_verb.setText(level.verb)
-        #correct button
+        # correct button
         level_widget.btn_correct.clicked.connect(
             lambda: generateLevel.correct(level_widget, level.answer, "conj", solution_box))
 
-        #reset the words guess space
+        # reset the words guess space
         for guess_space in level_widget.words_guess_spaces:
             guess_space.setText("")
 

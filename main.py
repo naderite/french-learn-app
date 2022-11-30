@@ -1,9 +1,9 @@
 import sys
 from PyQt5.QtWidgets import QStackedWidget, QApplication
 
-from Screens.Vocabulair.VocabularyScreens import VocabularyMenuScreen, VocabularyLevelScreen
-from Screens.Grammaire.GrammaireScreens import GrammaireMenuScreen, GrammaireLevelScreen
-from Screens.Conjugaison.ConjugaisonScreens import ConjugaisonMenuScreen, ConjugaisonLevelScreen
+from Screens.Vocabulary.VocabularyScreens import VocabularyMenuScreen, VocabularyLevelScreen
+from Screens.Grammar.GrammarScreens import GrammarMenuScreen, GrammarLevelScreen
+from Screens.Conjugation.ConjugationScreens import ConjugationMenuScreen, ConjugationLevelScreen
 from Screens.Solution.SolutionScreen import MessageBox
 import utils.Buttons as ButtonsUtils
 
@@ -19,13 +19,13 @@ class MainScreen(QStackedWidget):
     def create_screens(self):
         # creating menu screens
         self.vocab_menu = VocabularyMenuScreen()
-        self.gram_menu = GrammaireMenuScreen()
-        self.conj_menu = ConjugaisonMenuScreen()
+        self.gram_menu = GrammarMenuScreen()
+        self.conj_menu = ConjugationMenuScreen()
 
         # creating level screens
         self.vocab_level = VocabularyLevelScreen()
-        self.gram_level = GrammaireLevelScreen()
-        self.conj_level = ConjugaisonLevelScreen()
+        self.gram_level = GrammarLevelScreen()
+        self.conj_level = ConjugationLevelScreen()
 
         self.solution_box = MessageBox()
 

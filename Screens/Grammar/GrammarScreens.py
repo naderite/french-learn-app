@@ -4,10 +4,11 @@ import os
 import sys
 import database.dbDriver as database
 
-class GrammaireMenuScreen(QMainWindow):
+
+class GrammarMenuScreen(QMainWindow):
     def __init__(self):
-        super(GrammaireMenuScreen, self).__init__()
-        loadUi(os.path.abspath("Screens/Grammaire/grammaire_menuPage.ui"), self)
+        super(GrammarMenuScreen, self).__init__()
+        loadUi(os.path.abspath("Screens/Grammar/grammarMenuPage.ui"), self)
 
         # creating button groups
         self.acc_buttons = QButtonGroup()
@@ -25,10 +26,10 @@ class GrammaireMenuScreen(QMainWindow):
         self.nom_buttons.addButton(self.btn_nom_lvl3, 3)
 
 
-class GrammaireLevelScreen(QMainWindow):
+class GrammarLevelScreen(QMainWindow):
     def __init__(self):
-        super(GrammaireLevelScreen, self).__init__()
-        loadUi(os.path.abspath("Screens/Grammaire/grammaire_levelPage.ui"), self)
+        super(GrammarLevelScreen, self).__init__()
+        loadUi(os.path.abspath("Screens/Grammar/grammarLevelPage.ui"), self)
         self.words_buttons = QButtonGroup()
         self.add_buttons_first_half()
         self.add_buttons_second_half()
@@ -56,10 +57,10 @@ class Word:
     def __init__(self, name, genre, answer):
         self.name = name
         self.genre = genre
-        self.answer = answer # if verb its the noun, if an adjective its the female accord
-        
-    
-class GrammaireLevel:
+        self.answer = answer  # if verb its the noun, if an adjective its the female accord
+
+
+class GrammarLevel:
     def __init__(self, genre, index):
         self.driver = database.JSONDriver()
         self.genre = genre

@@ -5,12 +5,12 @@ from PyQt5.QtWidgets import QDialog
 class MessageBox(QDialog):
     def __init__(self):
         super(MessageBox, self).__init__()
-        loadUi("CorrectionMessageBox.ui", self)
+        loadUi("Screens/Solution/CorrectionMessageBox.ui", self)
 
         # self.btn_return_home.clicked.connect(goto_home)
 
     def write_solution(self, words, score, level_type):
-        
+
         if level_type in ["gram", "vocab"]:
             solution_txt = f"Votre score est: {score}\ 12 \n\n"
             for word in words:

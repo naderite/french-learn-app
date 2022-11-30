@@ -4,10 +4,11 @@ import os
 import sys
 import database.dbDriver as database
 
+
 class VocabularyMenuScreen(QMainWindow):
     def __init__(self):
         super(VocabularyMenuScreen, self).__init__()
-        loadUi(os.path.abspath("Screens/Vocabulair/vocabulair_menuPage.ui"), self)
+        loadUi(os.path.abspath("Screens/Vocabulary/vocabularyMenuPage.ui"), self)
 
         # creating button groups
         self.adj_buttons = QButtonGroup()
@@ -29,7 +30,7 @@ class VocabularyMenuScreen(QMainWindow):
 class VocabularyLevelScreen(QMainWindow):
     def __init__(self):
         super(VocabularyLevelScreen, self).__init__()
-        loadUi(os.path.abspath("Screens/Vocabulair/vocabulair_levelPage.ui"), self)
+        loadUi(os.path.abspath("Screens/Vocabulary/vocabularyLevelPage.ui"), self)
         self.words_guess_spaces = [self.word1_guess, self.word2_guess, self.word3_guess, self.word4_guess, self.word5_guess,
                                    self.word6_guess, self.word7_guess, self.word8_guess, self.word9_guess, self.word10_guess, self.word11_guess, self.word12_guess]
 
@@ -54,11 +55,13 @@ class VocabularyLevelScreen(QMainWindow):
         self.words_buttons.addButton(self.btn_word10, 10)
         self.words_buttons.addButton(self.btn_word11, 11)
 
+
 class Word:
     def __init__(self, name, genre, answer):
         self.name = name
         self.genre = genre
         self.answer = answer
+
 
 class VocabularyLevel:
     def __init__(self, genre, index):
@@ -80,4 +83,4 @@ class VocabularyLevel:
         words = self.driver.getVocabWords(index, genre)
         if not words:
             sys.exit("Invalid genre")
-        return [Word(word["fr"], genre, word["ar"]) for word in words] 
+        return [Word(word["fr"], genre, word["ar"]) for word in words]
