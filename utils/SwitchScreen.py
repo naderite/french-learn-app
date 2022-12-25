@@ -1,6 +1,6 @@
-from Screens.Vocabulary.Vocabulary import VocabularyLevel
-from Screens.Grammar.Grammar import GrammarLevel
-from Screens.Conjugation.Conjugation import ConjugationLevel
+from modules.Vocabulary import VocabularyLevel
+from modules.Grammar import GrammarLevel
+from modules.Conjugation import ConjugationLevel
 
 
 class Scroll:
