@@ -8,7 +8,7 @@ import database.dbDriver as database
 class GrammarMenuScreen(QMainWindow):
     def __init__(self):
         super(GrammarMenuScreen, self).__init__()
-        loadUi(os.path.abspath("Screens/Grammar/grammarMenuPage.ui"), self)
+        loadUi(os.path.abspath("ui/grammarMenuPage.ui"), self)
 
         # creating button groups
         self.acc_buttons = QButtonGroup()
@@ -29,7 +29,7 @@ class GrammarMenuScreen(QMainWindow):
 class GrammarLevelScreen(QMainWindow):
     def __init__(self):
         super(GrammarLevelScreen, self).__init__()
-        loadUi(os.path.abspath("Screens/Grammar/grammarLevelPage.ui"), self)
+        loadUi(os.path.abspath("ui/grammarLevelPage.ui"), self)
         self.words_buttons = QButtonGroup()
         self.add_buttons_first_half()
         self.add_buttons_second_half()

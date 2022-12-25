@@ -8,7 +8,7 @@ import database.dbDriver as database
 class VocabularyMenuScreen(QMainWindow):
     def __init__(self):
         super(VocabularyMenuScreen, self).__init__()
-        loadUi(os.path.abspath("Screens/Vocabulary/vocabularyMenuPage.ui"), self)
+        loadUi(os.path.abspath("ui/vocabularyMenuPage.ui"), self)
 
         # creating button groups
         self.adj_buttons = QButtonGroup()
@@ -31,7 +31,7 @@ class VocabularyLevelScreen(QMainWindow):
 
     def __init__(self):
         super(VocabularyLevelScreen, self).__init__()
-        loadUi(os.path.abspath("Screens/Vocabulary/vocabularyLevelPage.ui"), self)
+        loadUi(os.path.abspath("ui/vocabularyLevelPage.ui"), self)
         self.words_guess_spaces = [self.word1_guess, self.word2_guess, self.word3_guess, self.word4_guess, self.word5_guess,
                                    self.word6_guess, self.word7_guess, self.word8_guess, self.word9_guess, self.word10_guess, self.word11_guess, self.word12_guess]
 

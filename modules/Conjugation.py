@@ -7,7 +7,7 @@ import database.dbDriver as database
 class ConjugationMenuScreen(QMainWindow):
     def __init__(self):
         super(ConjugationMenuScreen, self).__init__()
-        loadUi(os.path.abspath("Screens/Conjugation/conjugationMenuPage.ui"), self)
+        loadUi(os.path.abspath("ui/conjugationMenuPage.ui"), self)
 
         # creating button groups
         self.gr1_buttons = QButtonGroup()
@@ -37,7 +37,7 @@ class ConjugationMenuScreen(QMainWindow):
 class ConjugationLevelScreen(QMainWindow):
     def __init__(self):
         super(ConjugationLevelScreen, self).__init__()
-        loadUi(os.path.abspath("Screens/Conjugation/conjugationLevelPage.ui"), self)
+        loadUi(os.path.abspath("ui/conjugationLevelPage.ui"), self)
         self.words_guess_spaces = [self.word1_guess, self.word2_guess,
                                    self.word3_guess, self.word4_guess, self.word5_guess, self.word6_guess]
         self.level = None

@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import QDialog
 class MessageBox(QDialog):
     def __init__(self):
         super(MessageBox, self).__init__()
-        loadUi("Screens/Solution/CorrectionMessageBox.ui", self)
+        loadUi("ui/CorrectionMessageBox.ui", self)
 
         # self.btn_return_home.clicked.connect(goto_home)
 
