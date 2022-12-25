@@ -1,10 +1,10 @@
 import sys
 from PyQt5.QtWidgets import QStackedWidget, QApplication
 
-from Screens.Vocabulary.VocabularyScreens import VocabularyMenuScreen, VocabularyLevelScreen
-from Screens.Grammar.GrammarScreens import GrammarMenuScreen, GrammarLevelScreen
-from Screens.Conjugation.ConjugationScreens import ConjugationMenuScreen, ConjugationLevelScreen
-from Screens.Solution.SolutionScreen import MessageBox
+from Screens.Vocabulary.Vocabulary import VocabularyMenuScreen, VocabularyLevelScreen
+from Screens.Grammar.Grammar import GrammarMenuScreen, GrammarLevelScreen
+from Screens.Conjugation.Conjugation import ConjugationMenuScreen, ConjugationLevelScreen
+from Screens.Solution.Solution import MessageBox
 import utils.Buttons as ButtonsUtils
 
 

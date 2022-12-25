@@ -35,6 +35,7 @@ class GrammarLevelScreen(QMainWindow):
         self.add_buttons_second_half()
         self.words_guess_spaces = [self.word1_guess, self.word2_guess, self.word3_guess, self.word4_guess, self.word5_guess,
                                    self.word6_guess, self.word7_guess, self.word8_guess, self.word9_guess, self.word10_guess, self.word11_guess, self.word12_guess]
+        self.level = None
 
     def add_buttons_first_half(self):
         self.words_buttons.addButton(self.btn_word0, 0)

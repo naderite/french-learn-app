@@ -40,6 +40,7 @@ class ConjugationLevelScreen(QMainWindow):
         loadUi(os.path.abspath("Screens/Conjugation/conjugationLevelPage.ui"), self)
         self.words_guess_spaces = [self.word1_guess, self.word2_guess,
                                    self.word3_guess, self.word4_guess, self.word5_guess, self.word6_guess]
+        self.level = None
 
 
 class ConjugationLevel:

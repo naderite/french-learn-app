@@ -28,6 +28,7 @@ class VocabularyMenuScreen(QMainWindow):
 
 
 class VocabularyLevelScreen(QMainWindow):
+
     def __init__(self):
         super(VocabularyLevelScreen, self).__init__()
         loadUi(os.path.abspath("Screens/Vocabulary/vocabularyLevelPage.ui"), self)
@@ -38,6 +39,8 @@ class VocabularyLevelScreen(QMainWindow):
         self.words_buttons = QButtonGroup()
         self.add_buttons_first_half()
         self.add_buttons_second_half()
+
+        self.level = None
 
     def add_buttons_first_half(self):
         self.words_buttons.addButton(self.btn_word0, 0)
