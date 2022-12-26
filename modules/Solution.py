@@ -1,11 +1,12 @@
-from PyQt5.uic import loadUi
+from ui import CorrectionMessageBox
 from PyQt5.QtWidgets import QDialog
 
 
 class MessageBox(QDialog):
     def __init__(self):
         super(MessageBox, self).__init__()
-        loadUi("Screens/Solution/CorrectionMessageBox.ui", self)
+        self.ui = CorrectionMessageBox.Ui_Dialog()
+        self.ui.setupUi(self)
 
         # self.btn_return_home.clicked.connect(goto_home)
 
@@ -21,4 +22,4 @@ class MessageBox(QDialog):
             words = words.items()
             for word in words:
                 solution_txt += f"{word[0]} {word[1]} \n"
-        self.msg_txt.setText(solution_txt)
+        self.ui.msg_txt.setText(solution_txt)
