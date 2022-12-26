@@ -28,21 +28,21 @@ class Scroll:
         generateLevel.vocabulary(
             level_widget, genre, difficulty, solution_box)
         widget.setCurrentIndex(3)
-        solution_box.btn_tryagain.clicked.connect(lambda: Scroll.reload_lvl(
+        solution_box.ui.btn_tryagain.clicked.connect(lambda: Scroll.reload_lvl(
             widget, level_widget, genre, difficulty, solution_box))
 
     @staticmethod
     def gram_lvl(widget, level_widget, genre, difficulty, solution_box):
         generateLevel.grammar(level_widget, genre, difficulty, solution_box)
         widget.setCurrentIndex(4)
-        solution_box.btn_tryagain.clicked.connect(lambda: Scroll.reload_lvl(
+        solution_box.ui.btn_tryagain.clicked.connect(lambda: Scroll.reload_lvl(
             widget, level_widget, genre, difficulty, solution_box))
 
     @staticmethod
     def conj_lvl(widget, level_widget, temp, groupe, solution_box):
         generateLevel.conjugation(level_widget, temp, groupe, solution_box)
         widget.setCurrentIndex(5)
-        solution_box.btn_tryagain.clicked.connect(lambda: Scroll.reload_lvl(
+        solution_box.ui.btn_tryagain.clicked.connect(lambda: Scroll.reload_lvl(
             widget, level_widget, temp, groupe, solution_box))
 
     @staticmethod
@@ -66,8 +66,8 @@ class generateLevel:
     def grammar(level_widget, genre, difficulty, solution_box):
         level = GrammarLevel(genre, difficulty)
         # write level title and question
-        level_widget.lvl_title.setText(level.title)
-        level_widget.lvl_question.setText(level.question)
+        level_widget.ui.lvl_title.setText(level.title)
+        level_widget.ui.lvl_question.setText(level.question)
         # setup LevelScreen buttons text
         for button in level_widget.words_buttons.buttons():
             button.setText(
@@ -77,7 +77,7 @@ class generateLevel:
         for guess_space in level_widget.words_guess_spaces:
             guess_space.setText("")
         # correct button
-        level_widget.btn_correct.clicked.connect(
+        level_widget.ui.btn_correct.clicked.connect(
             lambda: generateLevel.correct(level_widget, level.words, "gram", solution_box))
 
     @staticmethod
@@ -85,7 +85,7 @@ class generateLevel:
 
         level = VocabularyLevel(genre, difficulty)
         # write level title
-        level_widget.lvl_title.setText(level.title)
+        level_widget.ui.lvl_title.setText(level.title)
         # setup LevelScreen buttons text
         for button in level_widget.words_buttons.buttons():
             button.setText(
@@ -95,19 +95,19 @@ class generateLevel:
         for guess_space in level_widget.words_guess_spaces:
             guess_space.setText("")
         # correct button
-        level_widget.btn_correct.clicked.connect(
+        level_widget.ui.btn_correct.clicked.connect(
             lambda: generateLevel.correct(level_widget, level.words, "vocab", solution_box))
 
     @staticmethod
     def conjugation(level_widget, temp, groupe, solution_box):
         level = ConjugationLevel(temp, groupe)
         # write level title and level question
-        level_widget.lvl_title.setText(level.title)
-        level_widget.lvl_question.setText(level.question)
+        level_widget.ui.lvl_title.setText(level.title)
+        level_widget.ui.lvl_question.setText(level.question)
         # setup level screen button
-        level_widget.lvl_verb.setText(level.verb)
+        level_widget.ui.lvl_verb.setText(level.verb)
         # correct button
-        level_widget.btn_correct.clicked.connect(
+        level_widget.ui.btn_correct.clicked.connect(
             lambda: generateLevel.correct(level_widget, level.answer, "conj", solution_box))
 
         # reset the words guess space

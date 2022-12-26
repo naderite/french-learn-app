@@ -1,4 +1,4 @@
-from PyQt5.uic import loadUi
+from ui import conjugationLevelPage, conjugationMenuPage
 from PyQt5.QtWidgets import QMainWindow, QButtonGroup
 import os
 import database.dbDriver as database
@@ -7,7 +7,8 @@ import database.dbDriver as database
 class ConjugationMenuScreen(QMainWindow):
     def __init__(self):
         super(ConjugationMenuScreen, self).__init__()
-        loadUi(os.path.abspath("ui/conjugationMenuPage.ui"), self)
+        self.ui = conjugationMenuPage.Ui_MainWindow()
+        self.ui.setupUi(self)
 
         # creating button groups
         self.gr1_buttons = QButtonGroup()
@@ -15,31 +16,33 @@ class ConjugationMenuScreen(QMainWindow):
         self.gr3_buttons = QButtonGroup()
 
         # adding buttons to groups
-        self.gr1_buttons.addButton(self.btn_gr1_pr, 0)
-        self.gr1_buttons.addButton(self.btn_gr1_fu, 1)
-        self.gr1_buttons.addButton(self.btn_gr1_im, 2)
-        self.gr1_buttons.addButton(self.btn_gr1_ps, 3)
-        self.gr1_buttons.addButton(self.btn_gr1_pc, 4)
+        self.gr1_buttons.addButton(self.ui.btn_gr1_pr, 0)
+        self.gr1_buttons.addButton(self.ui.btn_gr1_fu, 1)
+        self.gr1_buttons.addButton(self.ui.btn_gr1_im, 2)
+        self.gr1_buttons.addButton(self.ui.btn_gr1_ps, 3)
+        self.gr1_buttons.addButton(self.ui.btn_gr1_pc, 4)
 
-        self.gr2_buttons.addButton(self.btn_gr2_pr, 0)
-        self.gr2_buttons.addButton(self.btn_gr2_fu, 1)
-        self.gr2_buttons.addButton(self.btn_gr2_im, 2)
-        self.gr2_buttons.addButton(self.btn_gr2_ps, 3)
-        self.gr2_buttons.addButton(self.btn_gr2_pc, 4)
+        self.gr2_buttons.addButton(self.ui.btn_gr2_pr, 0)
+        self.gr2_buttons.addButton(self.ui.btn_gr2_fu, 1)
+        self.gr2_buttons.addButton(self.ui.btn_gr2_im, 2)
+        self.gr2_buttons.addButton(self.ui.btn_gr2_ps, 3)
+        self.gr2_buttons.addButton(self.ui.btn_gr2_pc, 4)
 
-        self.gr3_buttons.addButton(self.btn_gr3_pr, 0)
-        self.gr3_buttons.addButton(self.btn_gr3_fu, 1)
-        self.gr3_buttons.addButton(self.btn_gr3_im, 2)
-        self.gr3_buttons.addButton(self.btn_gr3_ps, 3)
-        self.gr3_buttons.addButton(self.btn_gr3_pc, 4)
+        self.gr3_buttons.addButton(self.ui.btn_gr3_pr, 0)
+        self.gr3_buttons.addButton(self.ui.btn_gr3_fu, 1)
+        self.gr3_buttons.addButton(self.ui.btn_gr3_im, 2)
+        self.gr3_buttons.addButton(self.ui.btn_gr3_ps, 3)
+        self.gr3_buttons.addButton(self.ui.btn_gr3_pc, 4)
 
 
 class ConjugationLevelScreen(QMainWindow):
     def __init__(self):
         super(ConjugationLevelScreen, self).__init__()
-        loadUi(os.path.abspath("ui/conjugationLevelPage.ui"), self)
-        self.words_guess_spaces = [self.word1_guess, self.word2_guess,
-                                   self.word3_guess, self.word4_guess, self.word5_guess, self.word6_guess]
+        self.ui = conjugationLevelPage.Ui_MainWindow()
+        self.ui.setupUi(self)
+
+        self.words_guess_spaces = [self.ui.word1_guess, self.ui.word2_guess,
+                                   self.ui.word3_guess, self.ui.word4_guess, self.ui.word5_guess, self.ui.word6_guess]
         self.level = None
 
 
