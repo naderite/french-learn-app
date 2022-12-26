@@ -1,4 +1,4 @@
-from PyQt5.uic import loadUi
+from ui import grammarLevelPage, grammarMenuPage
 from PyQt5.QtWidgets import QMainWindow, QButtonGroup
 import os
 import sys
@@ -8,50 +8,53 @@ import database.dbDriver as database
 class GrammarMenuScreen(QMainWindow):
     def __init__(self):
         super(GrammarMenuScreen, self).__init__()
-        loadUi(os.path.abspath("ui/grammarMenuPage.ui"), self)
+        self.ui = grammarMenuPage.Ui_MainWindow()
+        self.ui.setupUi(self)
 
         # creating button groups
         self.acc_buttons = QButtonGroup()
         self.nom_buttons = QButtonGroup()
 
         # adding buttons to groups
-        self.acc_buttons.addButton(self.btn_acc_lvl0, 0)
-        self.acc_buttons.addButton(self.btn_acc_lvl1, 1)
-        self.acc_buttons.addButton(self.btn_acc_lvl2, 2)
-        self.acc_buttons.addButton(self.btn_acc_lvl3, 3)
+        self.acc_buttons.addButton(self.ui.btn_acc_lvl0, 0)
+        self.acc_buttons.addButton(self.ui.btn_acc_lvl1, 1)
+        self.acc_buttons.addButton(self.ui.btn_acc_lvl2, 2)
+        self.acc_buttons.addButton(self.ui.btn_acc_lvl3, 3)
 
-        self.nom_buttons.addButton(self.btn_nom_lvl0, 0)
-        self.nom_buttons.addButton(self.btn_nom_lvl1, 1)
-        self.nom_buttons.addButton(self.btn_nom_lvl2, 2)
-        self.nom_buttons.addButton(self.btn_nom_lvl3, 3)
+        self.nom_buttons.addButton(self.ui.btn_nom_lvl0, 0)
+        self.nom_buttons.addButton(self.ui.btn_nom_lvl1, 1)
+        self.nom_buttons.addButton(self.ui.btn_nom_lvl2, 2)
+        self.nom_buttons.addButton(self.ui.btn_nom_lvl3, 3)
 
 
 class GrammarLevelScreen(QMainWindow):
     def __init__(self):
         super(GrammarLevelScreen, self).__init__()
-        loadUi(os.path.abspath("ui/grammarLevelPage.ui"), self)
+        self.ui = grammarLevelPage.Ui_MainWindow()
+        self.ui.setupUi(self)
+
         self.words_buttons = QButtonGroup()
         self.add_buttons_first_half()
         self.add_buttons_second_half()
-        self.words_guess_spaces = [self.word1_guess, self.word2_guess, self.word3_guess, self.word4_guess, self.word5_guess,
-                                   self.word6_guess, self.word7_guess, self.word8_guess, self.word9_guess, self.word10_guess, self.word11_guess, self.word12_guess]
+        self.words_guess_spaces = [self.ui.word1_guess, self.ui.word2_guess, self.ui.word3_guess, self.ui.word4_guess, self.ui.word5_guess,
+                                   self.ui.word6_guess, self.ui.word7_guess, self.ui.word8_guess, self.ui.word9_guess, self.ui.word10_guess, self.ui.word11_guess, self.ui.word12_guess]
         self.level = None
 
     def add_buttons_first_half(self):
-        self.words_buttons.addButton(self.btn_word0, 0)
-        self.words_buttons.addButton(self.btn_word1, 1)
-        self.words_buttons.addButton(self.btn_word2, 2)
-        self.words_buttons.addButton(self.btn_word3, 3)
-        self.words_buttons.addButton(self.btn_word4, 4)
-        self.words_buttons.addButton(self.btn_word5, 5)
+        self.words_buttons.addButton(self.ui.btn_word0, 0)
+        self.words_buttons.addButton(self.ui.btn_word1, 1)
+        self.words_buttons.addButton(self.ui.btn_word2, 2)
+        self.words_buttons.addButton(self.ui.btn_word3, 3)
+        self.words_buttons.addButton(self.ui.btn_word4, 4)
+        self.words_buttons.addButton(self.ui.btn_word5, 5)
 
     def add_buttons_second_half(self):
-        self.words_buttons.addButton(self.btn_word6, 6)
-        self.words_buttons.addButton(self.btn_word7, 7)
-        self.words_buttons.addButton(self.btn_word8, 8)
-        self.words_buttons.addButton(self.btn_word9, 9)
-        self.words_buttons.addButton(self.btn_word10, 10)
-        self.words_buttons.addButton(self.btn_word11, 11)
+        self.words_buttons.addButton(self.ui.btn_word6, 6)
+        self.words_buttons.addButton(self.ui.btn_word7, 7)
+        self.words_buttons.addButton(self.ui.btn_word8, 8)
+        self.words_buttons.addButton(self.ui.btn_word9, 9)
+        self.words_buttons.addButton(self.ui.btn_word10, 10)
+        self.words_buttons.addButton(self.ui.btn_word11, 11)
 
 
 class Word:
